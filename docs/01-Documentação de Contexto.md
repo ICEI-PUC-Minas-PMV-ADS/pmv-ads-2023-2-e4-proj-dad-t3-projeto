@@ -1,18 +1,16 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Com o sonho de se tornar uma pessoa bom sucedida, empresas são abertas para que os seus donos possam ter uma qualidade de vida melhor do que se tivessem um emprego normal. Algumas dessas empresas dão certo e prosperam, trazendo uma melhor qualidade de vida para as pessoas envolvidas nela. Outras, no entanto, fecham as portas em um curto período de tempo, trazendo a frustração de não ter conseguido realizar o seu sonho e possíveis prejuízos pessoais.
+
+O fechamento dessas empresas pode acontecer por causa de diversos fatores, entre eles a má localização do empreendimento, a saturação do mercado do segmento escolhido (petshop, salão de beleza, entre outros), a não aceitação dos consumidores dos produtos escolhidos para venda, má gestão administrativa e/ou financeira entre outros fatores.
+
+Alguns desses fatores poderiam ser evitados quando é feito uma melhor análise administrativa antes de abrir as portas da loja, outros fatores, com um melhor acompanhamento financeiro do dia a dia da empresa.
+
+É nesse contesto financeiro que surge a necessidade de um projeto que ofereça uma visualização financeira/contábil ágil e simples para que o empreendedor, que está na sua faze inicial possa verificar com agilidade como a sua empresa está se saindo financeiramente.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Empresas que estão na fase inicial onde não há recursos para a contratação de uma equipe contábil para ficar à disposição e/ou para os administradores que ainda não estão totalmente preparados para gerenciar financeiramente o seu negócio necessitam de uma ferramenta para que os auxiliem de forma prática e rápida a verificar como está a sua empresa financeiramente.
 
 ## Objetivos
 
