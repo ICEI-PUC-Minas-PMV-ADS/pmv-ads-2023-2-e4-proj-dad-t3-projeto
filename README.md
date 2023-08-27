@@ -1,23 +1,25 @@
-# TÍTULO DO PROJETO
+# PROJETO Gerenciar
 
-`CURSO`
+`Analise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Distribuída`
 
-`SEMESTRE`
+`4ª Semestre`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Alex Vinicius Dutra Berton
+* Eduardo Ramos da Silva
+* Erick Machado Reis
+* Fernando Maia Torres Alves
+* Jhody Mike Possidonio Da Silva
+* Leticia Isabela Teodoro Campos
 
 ## Orientador
 
-* Nome completo do professor 1
+* Leonardo Vilela Cardoso
 
 ## Instruções de utilização
 
