@@ -37,8 +37,15 @@ Em resumo, a justificativa para o desenvolvimento dessa ferramenta decorre da ne
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+O público-alvo da ferramenta inclui empreendedores e administradores de empresas que se encontram em sua fase inicial de desenvolvimento e enfrentam desafios financeiros decorrentes da falta de recursos para contratar uma equipe contábil dedicada ou da ausência de conhecimentos financeiros aprofundados. Esses indivíduos podem estar à frente de startups, microempresas ou empreendimentos individuais que buscam estabelecer sua presença no mercado.
+
+Os administradores desse público-alvo muitas vezes possuem uma variedade de origens profissionais e podem não ter formação contábil ou financeira formal. Eles buscam uma solução que seja acessível, de fácil compreensão e utilização, a fim de gerenciar de maneira mais eficaz a parte financeira de seus negócios. Muitos deles podem sentir-se inseguros ou desconfortáveis ao lidar com números e indicadores financeiros, mas reconhecem a importância crucial de uma gestão financeira sólida para o crescimento e a sustentabilidade de suas empresas.
+
+Esse público valoriza soluções práticas e eficientes que possam ser integradas facilmente à sua rotina de trabalho. Eles procuram uma ferramenta que não apenas forneça informações relevantes sobre a saúde financeira de suas empresas, mas também ajude a orientar suas decisões, tornando-as mais informadas e estratégicas. A conveniência, a simplicidade e a capacidade de obtenção de insights imediatos são aspectos que esse público considera essenciais ao escolher uma ferramenta de apoio à gestão financeira.
+
+É importante observar que, embora este público-alvo possa não ter profundos conhecimentos contábeis, eles estão dispostos a aprender e a utilizar ferramentas tecnológicas que possam simplificar a complexidade financeira de seus negócios. Portanto, a ferramenta deve ser projetada de maneira a fornecer orientações claras e educativas, ajudando-os a adquirir gradualmente uma compreensão mais sólida de conceitos financeiros fundamentais.
+
+
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
