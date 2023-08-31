@@ -81,36 +81,36 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
   <tr>
    <td>28 Anos</td>
    <td>Belo Horizonte</td>
-   <td>Empreendedora</td>
+   <td>Administradora</td>
   </tr>
 
   <tr>
    <td colspan="3">
-    <strong>Personalidade</strong>: Marina é uma pessoa otimista e criativa. Ela tem uma mente empreendedora e está sempre procurando oportunidades para inovar. Ela é curiosa e gosta de aprender coisas novas, mas também pode ficar um pouco impaciente quando as coisas não acontecem tão rapidamente quanto ela gostaria
+    <strong>Personalidade</strong>: Marina é uma pessoa determinada e comprometida. Ela é meticulosa em seus processos de trabalho e valoriza a precisão e a organização. Sua abordagem é orientada para resultados, e ela gosta de enfrentar desafios complexos. Luísa também é uma líder inspiradora, motivando sua equipe a alcançar seus melhores desempenhos.
    </td>
   </tr>
 
   <tr>
    <td colspan="4">
-    <strong>Biografia</strong>: Marina é uma jovem empreendedora de 28 anos. Ela sempre teve o sonho de abrir sua própria loja de produtos artesanais, pois adora trabalhos manuais e acredita no valor do feito à mão. Ela já trabalhou em empregos corporativos, mas nunca sentiu que estava realizando seu potencial criativo. Decidiu deixar seu emprego recentemente para seguir seu sonho e lançar sua loja online de produtos artesanais.
+    <strong>Biografia</strong>: Marina é uma administradora dedicada com pouco mais de 2 anos de experiência em gerenciamento financeiro. Ela começou sua carreira como estagiária em uma pequena empresa e rapidamente progrediu para posições de liderança devido à sua habilidade de tomar decisões estratégicas e sua atenção aos detalhes. 
    </td>
   </tr>
 
   <tr>
    <td colspan="4">
-    <strong>Objetivos</strong>: O principal objetivo de Marina é estabelecer sua loja de produtos artesanais como uma marca reconhecida no mercado. Ela deseja criar peças únicas e de alta qualidade que encantem seus clientes. Além disso, quer conquistar uma base de clientes fiéis e alcançar uma renda estável o suficiente para viver confortavelmente com sua família.
+    <strong>Objetivos</strong>: Marina é apaixonada por garantir que as finanças de sua empresa estejam em ordem e que os recursos sejam alocados de forma eficiente. Seu objetivo é melhorar os processos financeiros da empresa, reduzir custos desnecessários, aumentar a lucratividade e garantir o cumprimento de todas as obrigações fiscais e regulatórias.
    </td>
   </tr>
 
   <tr>
    <td colspan="4">
-    <strong>Pontos de dor e frustração</strong>: Marina enfrenta desafios financeiros, já que não tem recursos para contratar uma equipe de finanças. Ela também se sente insegura em relação às estratégias de precificação e gerenciamento financeiro de sua empresa.
+    <strong>Pontos de dor e frustração</strong>: Marina frequentemente se depara com dificuldades em consolidar informações financeiras de várias fontes. Ela precisa lidar manualmente com planilhas e relatórios dispersos, o que consome muito tempo e deixa margem para erros. Além disso, ela enfrenta problemas para visualizar de forma clara e rápida a saúde financeira atual da empresa, o que dificulta a tomada de decisões estratégicas.
    </td>
   </tr>
 
   <tr>
    <td colspan="4">
-    <strong>Necessidades e expectativas</strong>: Marina precisa de uma solução que a ajude a gerenciar suas finanças e a tomar decisões de precificação de forma mais informada. Ela está buscando ferramentas simples e intuitivas que possam orientá-la sobre como calcular seus custos, definir preços competitivos e acompanhar suas vendas e despesas. 
+    <strong>Necessidades e expectativas</strong>: Marina está buscando um software de gerenciamento financeiro que possa integrar dados de diversas áreas, como contabilidade, folha de pagamento e vendas. Ela espera que o software seja intuitivo e fácil de usar, mesmo para os membros de sua equipe que não são especialistas em finanças. Além disso, ela espera que o software ofereça relatórios personalizáveis e análises em tempo real, para que ela possa tomar decisões informadas de maneira mais ágil.
    </td>
   </tr>
  </body>
