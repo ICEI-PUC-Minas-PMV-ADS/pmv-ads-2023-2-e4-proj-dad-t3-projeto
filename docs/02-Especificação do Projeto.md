@@ -127,8 +127,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |--------------------|------------------------------------|----------------------------------------|
 |Kellen Araújo  | Inserir a quantidade vendida de cada produto           | Saber quanto foi o retorno financeiro de cada protudo a venda  |
 |Kellen Araújo       | Fazer uma compraração com as vendas com diferentes meses    | Verificar quais meses a venda são maiores e quais são as menores |
-|Marina Costa    | Entender rapidamente como está a saúde financeira da minha loja online.  |  Tomar decisões informadas sobre compras de matéria-prima, promoções e investimentos. |
-|Marina Costa    |  Ter uma visão clara das despesas mensais da minha loja.   |   Planejar meu orçamento de forma eficaz e garantir que minhas despesas estejam sob controle. |
+|Marina Costa    | Entender rapidamente como está a saúde financeira da empresa.  |  Tomar decisões informadas sobre compras de matéria-prima e investimentos. |
+|Marina Costa    |  Ter uma visão clara das despesas mensais da empresa.   |   Planejar o orçamento de forma eficaz e garantir que as despesas estejam sob controle. |
 
 
 
