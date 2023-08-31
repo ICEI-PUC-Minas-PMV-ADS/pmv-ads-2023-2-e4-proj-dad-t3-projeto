@@ -14,12 +14,12 @@ Empresas que estão na fase inicial onde não há recursos para a contratação 
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Desenvolver um software acessível para auxiliar empresas e pequenos empreendedores a gerenciar a parte financeira de seu negócio, facilitando a tomada de decisões fundamentadas.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Objetivos Específicos:
+
+1- Projetar uma interface intuitiva e amigável que permita aos administradores inserir e visualizar dados financeiros de suas empresas de maneira simples, mesmo sem conhecimento contábil avançado.
+2- Implementar algoritmos de análise financeira automatizada que processem os dados inseridos e gerem relatórios precisos sobre indicadores-chave, como fluxo de caixa, margem de lucro e ponto de equilíbrio, fornecendo uma visão abrangente da situação financeira da empresa.
 
 ## Justificativa
 
