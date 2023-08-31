@@ -74,7 +74,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
  <table>
  <tbody>
   <tr>
-   <td rowspan="3"><img src = "img/people_images/ddddd.jpg" width="300" /></td>
+   <td rowspan="3"><img src = "img/people_images/ddddd.jpg" width="1600" /></td>
    <td colspan="3"><strong>Marina Costa</strong></td>
   </tr>
 
@@ -115,11 +115,6 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
   </tr>
  </body>
 <table>
- 
- <table>
- <tbody>
-  <tr>
-   <td rowspan="3"><img src="img/people_images/1149-1119.jpg" width="300"/></td>
 
 
    
