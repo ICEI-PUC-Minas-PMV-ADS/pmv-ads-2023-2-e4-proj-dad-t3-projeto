@@ -53,6 +53,61 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
  </body>
 <table>
 
+
+
+ <table>
+ <tbody>
+  <tr>
+   <td rowspan="3"><img src = "img/people_images/ddddd.jpg" width="300" /></td>
+   <td colspan="3"><strong>Marina Costa</strong></td>
+  </tr>
+
+  <tr>
+   <td>28 Anos</td>
+   <td>Belo Horizonte</td>
+   <td>Geógrafa</td>
+  </tr>
+
+  <tr>
+   <td colspan="3">
+    <strong>Personalidade</strong>: Marina é uma pessoa otimista e criativa. Ela tem uma mente empreendedora e está sempre procurando oportunidades para inovar. Ela é curiosa e gosta de aprender coisas novas, mas também pode ficar um pouco impaciente quando as coisas não acontecem tão rapidamente quanto ela gostaria
+   </td>
+  </tr>
+
+  <tr>
+   <td colspan="4">
+    <strong>Biografia</strong>: Marina é uma jovem empreendedora de 28 anos. Ela sempre teve o sonho de abrir sua própria loja de produtos artesanais, pois adora trabalhos manuais e acredita no valor do feito à mão. Ela já trabalhou em empregos corporativos, mas nunca sentiu que estava realizando seu potencial criativo. Decidiu deixar seu emprego recentemente para seguir seu sonho e lançar sua loja online de produtos artesanais.
+   </td>
+  </tr>
+
+  <tr>
+   <td colspan="4">
+    <strong>Objetivos</strong>: O principal objetivo de Marina é estabelecer sua loja de produtos artesanais como uma marca reconhecida no mercado. Ela deseja criar peças únicas e de alta qualidade que encantem seus clientes. Além disso, quer conquistar uma base de clientes fiéis e alcançar uma renda estável o suficiente para viver confortavelmente com sua família.
+   </td>
+  </tr>
+
+  <tr>
+   <td colspan="4">
+    <strong>Pontos de dor e frustração</strong>: Marina enfrenta desafios financeiros, já que não tem recursos para contratar uma equipe de finanças. Ela também se sente insegura em relação às estratégias de precificação e gerenciamento financeiro de sua empresa.
+   </td>
+  </tr>
+
+  <tr>
+   <td colspan="4">
+    <strong>Necessidades e expectativas</strong>: Marina precisa de uma solução que a ajude a gerenciar suas finanças e a tomar decisões de precificação de forma mais informada. Ela está buscando ferramentas simples e intuitivas que possam orientá-la sobre como calcular seus custos, definir preços competitivos e acompanhar suas vendas e despesas. 
+   </td>
+  </tr>
+ </body>
+<table>
+ 
+ <table>
+ <tbody>
+  <tr>
+   <td rowspan="3"><img src="img/people_images/1149-1119.jpg" width="300"/></td>
+
+
+   
+
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
