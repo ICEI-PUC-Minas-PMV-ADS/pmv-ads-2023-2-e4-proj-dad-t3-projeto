@@ -1,6 +1,22 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
+Nesta seção abordaremos a especificação do projeto, focando na resolução do problema identificado por meio da perspectiva do usuário. Para alcançar esse objetivo, utilizaremos uma série de técnicas e ferramentas que nos ajudarão a definir claramente as necessidades, expectativas e requisitos do público-alvo. A seguir, enumeramos os principais pontos que serão abordados nesta seção:
+
+Diagrama de Personas:
+Apresentaremos as personas que nos ajudará a visualizar as características, necessidades e expectativas dos usuários de forma mais tangível.
+
+Histórias de Usuários:
+Listaremos cenários e situações em que os usuários interagem com a solução. Isso nos permitirá entender como eles usarão a ferramenta em situações reais e quais objetivos esperam alcançar.
+
+Requisitos Funcionais e Não Funcionais:
+Especificaremos os recursos e funcionalidades que a solução deve incluir para atender às necessidades dos usuários. Além disso, abordaremos requisitos não funcionais, como desempenho, segurança e usabilidade.
+
+Restrições do Projeto:
+Identificaremos quaisquer limitações técnicas, financeiras ou de tempo que possam impactar o desenvolvimento da solução. Isso nos ajudará a definir um escopo realista para o projeto.
+
+Ao abordar cada um desses pontos de maneira abrangente e organizada, nossa especificação do projeto se tornará uma base sólida para o desenvolvimento da solução, garantindo que as necessidades dos usuários sejam atendidas de forma eficaz e satisfatória.
+
+///
 
 Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
 
