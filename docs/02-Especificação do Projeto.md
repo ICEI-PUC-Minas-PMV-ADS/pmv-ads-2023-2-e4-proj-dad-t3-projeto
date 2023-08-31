@@ -81,7 +81,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
   <tr>
    <td>28 Anos</td>
    <td>Belo Horizonte</td>
-   <td>Geógrafa</td>
+   <td>Empreendedora</td>
   </tr>
 
   <tr>
