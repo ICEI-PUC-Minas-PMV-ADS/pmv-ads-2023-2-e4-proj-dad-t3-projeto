@@ -14,7 +14,7 @@ Empresas que estão na fase inicial onde não há recursos para a contratação 
 
 ## Objetivos
 
-Desenvolver um software acessível para auxiliar empresas e pequenos empreendedores a gerenciar a parte financeira de seu negócio, facilitando a tomada de decisões fundamentadas.
+Desenvolver um software acessível para auxiliar a empresa a gerenciar a parte financeira de seu negócio, facilitando a tomada de decisões fundamentadas.
 
 Objetivos Específicos:
 
@@ -24,26 +24,24 @@ Objetivos Específicos:
 
 ## Justificativa
 
-A falta de recursos financeiros e a ausência de uma equipe contábil disponível são desafios significativos enfrentados por empresas e empreendedores em fase inicial. Nesse contexto, é crucial desenvolver uma solução que atenda às necessidades dessas empresas, permitindo uma avaliação rápida e precisa de sua situação financeira. O objetivo dessa ferramenta é oferecer suporte aos administradores sem formação contábil, permitindo que eles monitorem e compreendam melhor a saúde financeira de suas empresas.
+A falta de recursos financeiros e a ausência de uma equipe contábil disponível são desafios significativos enfrentados por empresas em fase inicial. Nesse contexto, é crucial desenvolver uma solução que atenda às necessidades da empresa, permitindo uma avaliação rápida e precisa de sua situação financeira. O objetivo dessa ferramenta é oferecer suporte aos administradores, permitindo que eles monitorem e compreendam melhor a saúde financeira de sua empresa.
 
-A importância desse projeto reside na criação de uma abordagem acessível e prática para a gestão financeira, que pode ser utilizada mesmo por indivíduos com pouca experiência em finanças. Ao fornecer uma plataforma intuitiva para inserção de dados financeiros e geração automática de relatórios-chave, os administradores poderão tomar decisões embasadas em informações concretas. Isso reduzirá os riscos de decisões precipitadas e contribuirá para a sustentabilidade financeira das empresas em seu estágio inicial.
+A importância desse projeto reside na criação de uma abordagem acessível e prática para a gestão financeira, que pode ser utilizada mesmo por indivíduos com pouca experiência em finanças. Ao fornecer uma plataforma intuitiva para inserção de dados financeiros e geração automática de relatórios-chave, os administradores poderão tomar decisões embasadas em informações concretas. Isso reduzirá os riscos de decisões precipitadas e contribuirá para a sustentabilidade financeira da empresa.
 
-Além disso, a ferramenta também funcionará como um apoio valioso no desenvolvimento da capacidade de gestão financeira dos administradores. Ao compreenderem melhor os números e indicadores financeiros, eles estarão mais preparados para enfrentar os desafios inerentes ao crescimento empresarial. Essa abordagem contribuirá para uma cultura de gestão mais informada e responsável dentro das empresas.
+Além disso, a ferramenta também funcionará como um apoio valioso no desenvolvimento da capacidade de gestão financeira dos administradores. Ao compreenderem melhor os números e indicadores financeiros, eles estarão mais preparados para enfrentar os desafios inerentes ao crescimento empresarial. Essa abordagem contribuirá para uma cultura de gestão mais informada e responsável dentro da empresa.
 
-Em resumo, a justificativa para o desenvolvimento dessa ferramenta decorre da necessidade de fornecer às empresas e emprendedores em fase inicial uma solução prática e acessível para a gestão financeira, suprindo a falta de recursos e conhecimentos contábeis. Ao alcançar esse objetivo, a ferramenta se tornará uma aliada fundamental no crescimento sustentável dessas empresas, capacitando os administradores a tomar decisões mais informadas e estratégicas.
+Em resumo, a justificativa para o desenvolvimento dessa ferramenta decorre da necessidade de fornecer à empresa uma solução prática e acessível para a gestão financeira, suprindo a falta de recursos e conhecimentos contábeis. Ao alcançar esse objetivo, a ferramenta se tornará uma aliada fundamental no crescimento sustentável dessa empresa, capacitando os administradores a tomar decisões mais informadas e estratégicas.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-O público-alvo da ferramenta inclui empreendedores e administradores de empresas que se encontram em sua fase inicial de desenvolvimento e enfrentam desafios financeiros decorrentes da falta de recursos para contratar uma equipe contábil dedicada ou da ausência de conhecimentos financeiros aprofundados. Esses indivíduos podem estar à frente de startups, microempresas ou empreendimentos individuais que buscam estabelecer sua presença no mercado.
+O público-alvo da ferramenta são os administradores da empresa que enfrentam desafios financeiros decorrentes da falta de recursos para contratar uma equipe contábil dedicada ou da ausência de conhecimentos financeiros aprofundados.
 
-Os administradores desse público-alvo muitas vezes possuem uma variedade de origens profissionais e podem não ter formação contábil ou financeira formal. Eles buscam uma solução que seja acessível, de fácil compreensão e utilização, a fim de gerenciar de maneira mais eficaz a parte financeira de seus negócios. Muitos deles podem sentir-se inseguros ou desconfortáveis ao lidar com números e indicadores financeiros, mas reconhecem a importância crucial de uma gestão financeira sólida para o crescimento e a sustentabilidade de suas empresas.
+Os administradores desse público-alvo muitas vezes possuem uma variedade de origens profissionais e podem não ter formação contábil ou financeira formal. Eles buscam uma solução que seja acessível, de fácil compreensão e utilização, a fim de gerenciar de maneira mais eficaz a parte financeira de seu negócio. Muitos deles podem sentir-se inseguros ou desconfortáveis ao lidar com números e indicadores financeiros, mas reconhecem a importância crucial de uma gestão financeira sólida para o crescimento e a sustentabilidade de sua empresa.
 
-Esse público valoriza soluções práticas e eficientes que possam ser integradas facilmente à sua rotina de trabalho. Eles procuram uma ferramenta que não apenas forneça informações relevantes sobre a saúde financeira de suas empresas, mas também ajude a orientar suas decisões, tornando-as mais informadas e estratégicas. A conveniência, a simplicidade e a capacidade de obtenção de insights imediatos são aspectos que esse público considera essenciais ao escolher uma ferramenta de apoio à gestão financeira.
+Esse público valoriza soluções práticas e eficientes que possam ser integradas facilmente à sua rotina de trabalho. Eles procuram uma ferramenta que não apenas forneça informações relevantes sobre a saúde financeira de sua empresa, mas também ajude a orientar suas decisões, tornando-as mais informadas e estratégicas. A conveniência, a simplicidade e a capacidade de obtenção de insights imediatos são aspectos que esse público considera essenciais ao escolher uma ferramenta de apoio à gestão financeira.
 
-É importante observar que, embora este público-alvo possa não ter profundos conhecimentos contábeis, eles estão dispostos a aprender e a utilizar ferramentas tecnológicas que possam simplificar a complexidade financeira de seus negócios. Portanto, a ferramenta deve ser projetada de maneira a fornecer orientações claras e educativas, ajudando-os a adquirir gradualmente uma compreensão mais sólida de conceitos financeiros fundamentais.
+É importante observar que, embora este público-alvo possa não ter profundos conhecimentos contábeis, eles estão dispostos a aprender e a utilizar ferramentas tecnológicas que possam simplificar a complexidade financeira de seu negócio. Portanto, a ferramenta deve ser projetada de maneira a fornecer orientações claras e educativas, ajudando-os a adquirir gradualmente uma compreensão mais sólida de conceitos financeiros fundamentais.
 
 
 
