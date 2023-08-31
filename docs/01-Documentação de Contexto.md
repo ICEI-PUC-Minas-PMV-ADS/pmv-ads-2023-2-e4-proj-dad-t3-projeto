@@ -19,6 +19,7 @@ Desenvolver um software acessível para auxiliar empresas e pequenos empreendedo
 Objetivos Específicos:
 
 1- Projetar uma interface intuitiva e amigável que permita aos administradores inserir e visualizar dados financeiros de suas empresas de maneira simples, mesmo sem conhecimento contábil avançado.
+
 2- Implementar algoritmos de análise financeira automatizada que processem os dados inseridos e gerem relatórios precisos sobre indicadores-chave, como fluxo de caixa, margem de lucro e ponto de equilíbrio, fornecendo uma visão abrangente da situação financeira da empresa.
 
 ## Justificativa
