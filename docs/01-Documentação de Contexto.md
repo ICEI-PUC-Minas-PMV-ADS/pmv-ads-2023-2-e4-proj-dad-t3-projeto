@@ -24,9 +24,13 @@ Objetivos Específicos:
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A falta de recursos financeiros e a ausência de uma equipe contábil disponível são desafios significativos enfrentados por empresas e empreendedores em fase inicial. Nesse contexto, é crucial desenvolver uma solução que atenda às necessidades dessas empresas, permitindo uma avaliação rápida e precisa de sua situação financeira. O objetivo dessa ferramenta é oferecer suporte aos administradores sem formação contábil, permitindo que eles monitorem e compreendam melhor a saúde financeira de suas empresas.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+A importância desse projeto reside na criação de uma abordagem acessível e prática para a gestão financeira, que pode ser utilizada mesmo por indivíduos com pouca experiência em finanças. Ao fornecer uma plataforma intuitiva para inserção de dados financeiros e geração automática de relatórios-chave, os administradores poderão tomar decisões embasadas em informações concretas. Isso reduzirá os riscos de decisões precipitadas e contribuirá para a sustentabilidade financeira das empresas em seu estágio inicial.
+
+Além disso, a ferramenta também funcionará como um apoio valioso no desenvolvimento da capacidade de gestão financeira dos administradores. Ao compreenderem melhor os números e indicadores financeiros, eles estarão mais preparados para enfrentar os desafios inerentes ao crescimento empresarial. Essa abordagem contribuirá para uma cultura de gestão mais informada e responsável dentro das empresas.
+
+Em resumo, a justificativa para o desenvolvimento dessa ferramenta decorre da necessidade de fornecer às empresas e emprendedores em fase inicial uma solução prática e acessível para a gestão financeira, suprindo a falta de recursos e conhecimentos contábeis. Ao alcançar esse objetivo, a ferramenta se tornará uma aliada fundamental no crescimento sustentável dessas empresas, capacitando os administradores a tomar decisões mais informadas e estratégicas.
 
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
