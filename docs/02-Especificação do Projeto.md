@@ -86,7 +86,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
   <tr>
    <td colspan="3">
-    <strong>Personalidade</strong>: Marina é uma pessoa determinada e comprometida. Ela é meticulosa em seus processos de trabalho e valoriza a precisão e a organização. Sua abordagem é orientada para resultados, e ela gosta de enfrentar desafios complexos. Luísa também é uma líder inspiradora, motivando sua equipe a alcançar seus melhores desempenhos.
+    <strong>Personalidade</strong>: Marina é uma pessoa determinada e comprometida. Ela é meticulosa em seus processos de trabalho e valoriza a precisão e a organização. Sua abordagem é orientada para resultados, e ela gosta de enfrentar desafios complexos. Marina também é uma líder inspiradora, motivando sua equipe a alcançar seus melhores desempenhos.
    </td>
   </tr>
 
