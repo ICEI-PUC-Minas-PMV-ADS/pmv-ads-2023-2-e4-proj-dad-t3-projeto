@@ -31,7 +31,7 @@ namespace APIEmpresarial.Controllers
             return produto;
 
         }
-        [HttpPost]
+        [HttpPost("NovoProduto")]
         public ActionResult Post(Livro livro)
         {
 
@@ -51,6 +51,7 @@ namespace APIEmpresarial.Controllers
             _context.SaveChanges();
             return Ok(livro);
         }
+
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
