@@ -178,8 +178,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| A API deve ser acompanhada por uma documentação completa e atualizada que descreva todos os endpoints, parâmetros de solicitação, tipos de resposta e exemplos de uso. | Alta | 
+|RNF-002| A API deve estar disponível para uso 24/7, com um tempo de atividade mínimo de 99,9% do tempo. |  Média | 
+|RNF-003| A API deve registrar eventos importantes, erros e atividades críticas para fins de auditoria, solução de problemas e segurança.| Alta | 
+|RNF-004| A documentação deve ser de fácil compreensão e acessível para desenvolvedores que desejam integrar a API, incluindo guias de início rápido e exemplos de código. | Alta |
+|RNF-005| A API deve implementar autenticação baseada em tokens JWT (JSON Web Tokens) e autorização baseada em funções para garantir que apenas usuários autorizados tenham acesso a recursos específicos. | Média |
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
