@@ -21,14 +21,14 @@ namespace APIEmpresarial.Model
         [Required]
         [MaxLength(300)]
         public string? ImagemUrl { get; set; }
-        public int EstoqueId { get; set; }
         public Estoque?  _Estoque { get; set; }
+        [Required]
+        public int Quantidade { get; set; }
         
         public DateTime DataCadastro { get; set; }
         public int CategoriaId { get; set; }
         [JsonIgnore]
         public Categoria? Categoria { get; set; }
-        public int VendaId { get; set; }
-        public Vendas? Venda { get; set; }
+
     }
 }

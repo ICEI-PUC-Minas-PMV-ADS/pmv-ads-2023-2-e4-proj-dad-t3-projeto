@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace APIEmpresarial.Model
 {
@@ -7,6 +8,7 @@ namespace APIEmpresarial.Model
     {
         [Key]
         public int VendaId { get; set; }
+        [JsonIgnore]
         public Collection<Livro>? Livros { get; set; }
         public DateTime? DataVenda { get; set; }
         public int LivroId { get; set; }    

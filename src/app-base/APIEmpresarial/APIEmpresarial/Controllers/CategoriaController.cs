@@ -18,10 +18,10 @@ public class CategoriaController : ControllerBase
     {
         _context = context;
     }
-    [HttpGet("produtos")]
+    [HttpGet("categoria/produtos")]
     public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
     {
-        return _context.Categorias.AsNoTracking().ToList();
+        return _context.Categorias.Include(p => p.Livros).ToList();
     }
     [HttpGet("ObterCategoria")]
     public ActionResult<IEnumerable<Categoria>> Get()

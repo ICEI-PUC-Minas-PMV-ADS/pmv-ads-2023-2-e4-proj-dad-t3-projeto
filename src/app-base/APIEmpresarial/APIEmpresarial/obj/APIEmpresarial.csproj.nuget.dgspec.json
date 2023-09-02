@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\APIEmpresarial.csproj": {}
+    "C:\\Users\\Eduardo\\source\\repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\APIEmpresarial.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\APIEmpresarial.csproj": {
+    "C:\\Users\\Eduardo\\source\\repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\APIEmpresarial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\APIEmpresarial.csproj",
+        "projectUniqueName": "C:\\Users\\Eduardo\\source\\repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\APIEmpresarial.csproj",
         "projectName": "APIEmpresarial",
-        "projectPath": "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\APIEmpresarial.csproj",
+        "projectPath": "C:\\Users\\Eduardo\\source\\repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\APIEmpresarial.csproj",
         "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\obj\\",
+        "outputPath": "C:\\Users\\Eduardo\\source\\repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

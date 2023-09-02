@@ -3,6 +3,7 @@ using System;
 using API.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APIEmpresarial.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230902172505_EmptyMigration")]
+    partial class EmptyMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,7 +40,7 @@ namespace APIEmpresarial.Migrations
 
                     b.HasKey("CategoriaId");
 
-                    b.ToTable("Categoria", (string)null);
+                    b.ToTable("Categoria");
                 });
 
             modelBuilder.Entity("APIEmpresarial.Model.Entities.Funcionario", b =>
@@ -62,7 +65,7 @@ namespace APIEmpresarial.Migrations
 
                     b.HasIndex("RecursosHumanosId");
 
-                    b.ToTable("Funcionarios", (string)null);
+                    b.ToTable("Funcionarios");
                 });
 
             modelBuilder.Entity("APIEmpresarial.Model.Entities.RecursosHumanos", b =>
@@ -76,7 +79,7 @@ namespace APIEmpresarial.Migrations
 
                     b.HasKey("RecursosHumanosId");
 
-                    b.ToTable("RecursHumanos", (string)null);
+                    b.ToTable("RecursHumanos");
                 });
 
             modelBuilder.Entity("APIEmpresarial.Model.Estoque", b =>
@@ -92,7 +95,7 @@ namespace APIEmpresarial.Migrations
 
                     b.HasKey("EstoqueId");
 
-                    b.ToTable("Estoques", (string)null);
+                    b.ToTable("Estoques");
                 });
 
             modelBuilder.Entity("APIEmpresarial.Model.Gastos", b =>
@@ -109,7 +112,7 @@ namespace APIEmpresarial.Migrations
 
                     b.HasKey("GastosId");
 
-                    b.ToTable("Gastos", (string)null);
+                    b.ToTable("Gastos");
                 });
 
             modelBuilder.Entity("APIEmpresarial.Model.Livro", b =>
@@ -159,7 +162,7 @@ namespace APIEmpresarial.Migrations
 
                     b.HasIndex("_EstoqueEstoqueId");
 
-                    b.ToTable("Livros", (string)null);
+                    b.ToTable("Livros");
                 });
 
             modelBuilder.Entity("APIEmpresarial.Model.Vendas", b =>
@@ -188,7 +191,7 @@ namespace APIEmpresarial.Migrations
 
                     b.HasIndex("GastosId");
 
-                    b.ToTable("Vends", (string)null);
+                    b.ToTable("Vends");
                 });
 
             modelBuilder.Entity("APIEmpresarial.Model.Entities.Funcionario", b =>

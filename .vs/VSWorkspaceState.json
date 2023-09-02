@@ -1,7 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app-base",
+    "\\src\\app-base\\APIEmpresarial",
+    "\\src\\app-base\\APIEmpresarial\\APIEmpresarial",
+    "\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\Context",
+    "\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\Migrations",
+    "\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\Model"
   ],
-  "SelectedNode": "\\C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto",
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }
