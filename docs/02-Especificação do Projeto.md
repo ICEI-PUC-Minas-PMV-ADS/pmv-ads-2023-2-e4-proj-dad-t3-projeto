@@ -205,8 +205,11 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|01| A equipe de desenvolvimento disponível para o projeto é limitada a um número específico de membros e não pode ser aumentada. |
+|02| O projeto deve ser desenvolvido utilizando tecnologias específicas já em uso na organização, sem a introdução de novas tecnologias. |
+|03| Deve ser seguido um conjunto rigoroso de políticas de segurança que impõe restrições sobre o armazenamento, acesso e proteção dos dados do projeto.|
+|04| O projeto não pode ser desenvolvido por terceiros que não fazem parte da equipe de desenvolvedores.|
+|05| As tecnologias ou software utilizados no projeto devem estar em conformidade com licenças específicas (por exemplo, licenças de código aberto) e não podem infringir direitos autorais ou licenças.|
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
