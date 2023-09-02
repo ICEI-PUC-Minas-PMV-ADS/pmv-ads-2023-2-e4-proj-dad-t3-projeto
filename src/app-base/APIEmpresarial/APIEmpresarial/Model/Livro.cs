@@ -28,6 +28,7 @@ namespace APIEmpresarial.Model
         public int CategoriaId { get; set; }
         [JsonIgnore]
         public Categoria? Categoria { get; set; }
+        public int VendaId { get; set; }
         public Vendas? Venda { get; set; }
     }
 }
