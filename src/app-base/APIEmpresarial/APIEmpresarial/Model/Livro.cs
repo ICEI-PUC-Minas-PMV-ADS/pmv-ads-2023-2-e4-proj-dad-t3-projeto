@@ -21,6 +21,7 @@ namespace APIEmpresarial.Model
         [Required]
         [MaxLength(300)]
         public string? ImagemUrl { get; set; }
+        [JsonIgnore]
         public Estoque?  _Estoque { get; set; }
         [Required]
         public int Quantidade { get; set; }
