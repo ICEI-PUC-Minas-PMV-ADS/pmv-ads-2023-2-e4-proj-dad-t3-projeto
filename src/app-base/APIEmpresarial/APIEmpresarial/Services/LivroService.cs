@@ -6,41 +6,62 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APIEmpresarial.Services
 {
-    public class LivroService : ILivroInterface 
+    public class LivroService : ILivroInterface
     {
         private readonly AppDbContext _context;
         public LivroService(AppDbContext context)
         {
             _context = context;
-        }   
+        }
         public void Create(Livro livro)
         {
-            if(livro != null)
+            if (_context.Livros is not null)
             {
                 _context.Livros.Add(livro);
                 _context.SaveChanges();
             }
         }
-        public IEnumerable<Livro> GetAll()
+        public ActionResult<IEnumerable<Livro>> GetAll()
         {
-            return _context.Livros.ToList();
+            if (_context.Livros is not null)
+            {
+                return _context.Livros.ToList();
+            }
+            else
+            {
+                return new BadRequestResult();
+            }
         }
-        public Livro GetLivro(int id)
+        public ActionResult<Livro> GetLivro(int id)
         {
-            var livro = _context.Livros.FirstOrDefault(p => p.LivroId == id);
-            return livro;
+            if (_context.Livros is not null)
+            {
+                var livro = _context.Livros.FirstOrDefault(p => p.LivroId == id);
+                if (livro != null)
+                {
+                    return livro;
+                }
+            }
+            return new NotFoundResult();
         }
-        public void UpdateLivro(Livro livro)
+        public ActionResult UpdateLivro(Livro livro)
         {
-           _context.Entry(livro).State = EntityState.Modified;
-           _context.SaveChanges();
-        }
-        public void Delete(int id)
-        {
-           var livro =  _context.Livros.FirstOrDefault(p => p.LivroId == id);
-            _context.Livros.Remove(livro);
+            _context.Entry(livro).State = EntityState.Modified;
             _context.SaveChanges();
+            return new OkResult();
         }
-        
+        public ActionResult Delete(int id)
+        {
+            if (_context.Livros is not null)
+            {
+                var livro = _context.Livros.FirstOrDefault(p => p.LivroId == id);
+                if (livro != null)
+                {
+                    _context.Livros.Remove(livro);
+                    _context.SaveChanges();
+                }
+            }
+            return new NotFoundResult();
+        }
     }
 }

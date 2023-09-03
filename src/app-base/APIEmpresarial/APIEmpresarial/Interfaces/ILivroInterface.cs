@@ -1,5 +1,6 @@
 ﻿using API.Context;
 using APIEmpresarial.Model;
+using Microsoft.AspNetCore.Mvc;
 
 namespace APIEmpresarial.Interfaces
 {
@@ -7,9 +8,9 @@ namespace APIEmpresarial.Interfaces
     {
         
         void Create(Livro livro);
-        IEnumerable<Livro> GetAll();
-        Livro GetLivro(int id);
-        void UpdateLivro(Livro livro);
-        void Delete(int id);
+        ActionResult<IEnumerable<Livro>> GetAll();
+        ActionResult<Livro> GetLivro(int id);
+        ActionResult UpdateLivro(Livro livro);
+        ActionResult Delete(int id);
     }
 }

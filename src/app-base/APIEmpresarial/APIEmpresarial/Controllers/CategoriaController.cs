@@ -21,7 +21,7 @@ namespace APIEmpresarial.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
         {
-            return _context.Categorias.AsNoTracking().Include(p => p.Livros).Where(c => c.CategoriaId <= 5).ToList();
+            return _categoriainterface.GetAll();
         }
         [HttpGet("ObterProdutos")]
         public ActionResult<IEnumerable<Categoria>> Get()
@@ -29,10 +29,6 @@ namespace APIEmpresarial.Controllers
             try
             {
                 return _categoriainterface.GetAll();
-            }
-            catch (NullReferenceException)
-            {
-                return NotFound();
             }
             catch (Exception)
             {
@@ -106,8 +102,6 @@ namespace APIEmpresarial.Controllers
             {
                 return BadRequest();
             }
-
-
         }
     }
 }

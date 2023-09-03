@@ -17,11 +17,9 @@ namespace APIEmpresarial.Controllers
             _livrointerface = livroInterface;
         }
         [HttpGet]
-        public IEnumerable<Livro> GetLivros()
+        public ActionResult<IEnumerable<Livro>> GetLivros()
         {
             return _livrointerface.GetAll();
-
-
         }
         [HttpGet("{id:int}", Name = "ObterProduto")]
         public ActionResult<Livro> GetLivro(int id)
@@ -29,18 +27,7 @@ namespace APIEmpresarial.Controllers
             try
             {
                 var livro = _livrointerface.GetLivro(id);
-                if (livro != null)
-                {
                     return livro;
-                }
-                else
-                {
-                    return BadRequest(livro);
-                }
-            }
-            catch (NullReferenceException)
-            {
-                return NotFound();
             }
             catch (Exception)
             {
@@ -56,10 +43,6 @@ namespace APIEmpresarial.Controllers
                 _livrointerface.Create(livro);
                 return new CreatedAtRouteResult("ObterProduto",
                 new { id = livro.LivroId }, livro);
-            }
-            catch (NullReferenceException)
-            {
-                return NotFound();
             }
             catch (Exception)
             {

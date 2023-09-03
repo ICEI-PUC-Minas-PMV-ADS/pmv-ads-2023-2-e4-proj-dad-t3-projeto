@@ -18,7 +18,11 @@ namespace APIEmpresarial.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Estoque>> GetEstoque()
         {
-           return _context.Estoques.AsNoTracking().ToList();  // Falta implementar a interface..
+            if(_context.Estoques is not null)
+            {
+                return _context.Estoques.AsNoTracking().ToList();  // Falta implementar a interface..
+            }
+            return new NotFoundResult();
         }
     }
 }
