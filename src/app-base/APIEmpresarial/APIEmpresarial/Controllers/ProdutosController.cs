@@ -1,7 +1,9 @@
 ﻿using API.Context;
+using APIEmpresarial.Interfaces;
 using APIEmpresarial.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.ObjectModel;
 
 namespace APIEmpresarial.Controllers
 {
@@ -9,60 +11,96 @@ namespace APIEmpresarial.Controllers
     [Route("[controller]")]
     public class ProdutosController : ControllerBase
     {
-        private readonly AppDbContext _context;
-        public ProdutosController(AppDbContext appDbContext)
+        private readonly ILivroInterface _livrointerface;
+        public ProdutosController(ILivroInterface livroInterface)
         {
-            _context = appDbContext;
+            _livrointerface = livroInterface;
         }
         [HttpGet]
-        public ActionResult<IEnumerable<Livro>> GetLivros()
+        public IEnumerable<Livro> GetLivros()
         {
-            return _context.Livros.ToList();
+            return _livrointerface.GetAll();
+
+
         }
         [HttpGet("{id:int}", Name = "ObterProduto")]
         public ActionResult<Livro> GetLivro(int id)
         {
-
-            var produto = _context.Livros.FirstOrDefault(l => l.LivroId == id);
-            if (produto is null)
+            try
             {
-                return NotFound("Livro não encontrado!");
+                var livro = _livrointerface.GetLivro(id);
+                if (livro != null)
+                {
+                    return livro;
+                }
+                else
+                {
+                    return BadRequest(livro);
+                }
             }
-            return produto;
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
 
         }
         [HttpPost("NovoProduto")]
         public ActionResult Post(Livro livro)
         {
-
-            if (livro is null) { return BadRequest(); }
-            _context.Livros.Add(livro);
-            _context.SaveChanges();
-            return new CreatedAtRouteResult("ObterProduto",
+            try
+            {
+                _livrointerface.Create(livro);
+                return new CreatedAtRouteResult("ObterProduto",
                 new { id = livro.LivroId }, livro);
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+
 
         }
         [HttpPut("{id:int}")]
         public ActionResult Put(int id, Livro livro)
         {
-            if (livro is null) { return NotFound(livro); }
-            if (id != livro.LivroId) { return BadRequest(); }
-            _context.Livros.Entry(livro).State = EntityState.Modified;
-            _context.SaveChanges();
-            return Ok(livro);
+            try
+            {
+                if (livro is null) { return NotFound(livro); }
+                if (id != livro.LivroId) { return BadRequest(); }
+                _livrointerface.UpdateLivro(livro);
+                return Ok(livro);
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
         }
 
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            var livro = _context.Livros.FirstOrDefault(p => p.LivroId == id);
-            if(livro is null)
+            try
             {
-                return NotFound(livro);
+                _livrointerface.Delete(id);
+                return Ok();
             }
-            _context.Livros.Remove(livro);
-            _context.SaveChanges();
-            return Ok(livro);   
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, "Ocorreu um erro ao deletar o item!");
+            }
+
         }
     }
 }

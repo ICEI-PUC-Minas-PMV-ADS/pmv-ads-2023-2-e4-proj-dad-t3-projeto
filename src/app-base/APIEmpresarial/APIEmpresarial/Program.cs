@@ -1,5 +1,8 @@
 using API.Context;
+using APIEmpresarial.Interfaces;
+using APIEmpresarial.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Text.Json.Serialization;
 
@@ -11,6 +14,8 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<ILivroInterface, LivroService>();
+builder.Services.AddScoped<ICategoriaInterface, CategoriasService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
                     ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))));
