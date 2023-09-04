@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AITXEwvnq2BS8ci+879WwWu5Y57PxvzXRr6AtAWszoPmP3XuTbndduPQzZaIYGyM/7b5HKS+f6JAelycqcg0IA==",
+  "dgSpecHash": "i9d4Y4Ec90e4r+fbeD14ojc/VuE2Nit/EhyBGdoNCSyHMNFRWvjhRN0C2ISAyMqwsnCt0EcSOaJl2ps7VVZbHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eduardo\\source\\repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\APIEmpresarial.csproj",
+  "projectFilePath": "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\APIEmpresarial.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eduardo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Eduardo\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
