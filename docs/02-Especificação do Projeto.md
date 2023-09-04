@@ -116,6 +116,45 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
  </body>
 <table>
 
+<table>
+ <tbody>
+  <tr>
+   <td rowspan="3"><img src="img/people_images/Philippe_Alves.jpg" width="300"  /></td>
+   <td colspan="3"><strong> Philippe Alves</strong></td>
+  </tr>
+  <tr>
+   <td>25 Anos</td>
+   <td>São Paulo/SP </td>
+   <td>Desenvolvedor de Software</td>
+  </tr>
+  <tr>
+   <td colspan="3">
+    <strong>Personalidade</strong>: Criativo, focado e apaixonado por tecnologia
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4">
+    <strong>Biografia</strong>: Formado em Ciência da Computação, Philippe é um desenvolvedor de software talentoso e apaixonado por programação desde criança. Ele é CEO de uma startup de tecnologia, onde ajuda a criar aplicativos inovadores.
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4">
+    <strong>Objetivos</strong>: Desenvolver aplicativos e soluções tecnológicas que melhorem a vida das pessoas e impulsionem o crescimento da sua startup.
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4">
+    <strong>Pontos de dor e frustração</strong>: Enfrenta dificuldades em lidar com a comlexidade na parte da contabilidade da empresa.
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4">
+    <strong>Necessidades e expectativas</strong>: Descomplicar a contabilidade da startup para que possam focar mais no desenvolvimento de software.
+   </td>
+  </tr>
+ </body>
+<table>
+
 
    
 
@@ -129,6 +168,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Kellen Araújo       | Fazer uma compraração com as vendas com diferentes meses    | Verificar quais meses a venda são maiores e quais são as menores |
 |Marina Costa    | Entender rapidamente como está a saúde financeira da empresa.  |  Tomar decisões informadas sobre compras de matéria-prima e investimentos. |
 |Marina Costa    |  Ter uma visão clara das despesas mensais da empresa.   |   Planejar o orçamento de forma eficaz e garantir que as despesas estejam sob controle. |
+|Philippe Alves    |  Visão Geral das Finanças  |  Ter uma visão clara e simplificada das finanças da startup para tomar decisões rápidas. |
+|Philippe Alves    |  Comparação de Desempenho Mensal  |  Comparar o desempenho financeiro de diferentes meses e entender como anda a sua startup. |
 
 
 
@@ -268,4 +309,4 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
 
-![Orçamento](img/02-orcamento.png)
+![Orçamento](img/Doc/Orçamento.png)
