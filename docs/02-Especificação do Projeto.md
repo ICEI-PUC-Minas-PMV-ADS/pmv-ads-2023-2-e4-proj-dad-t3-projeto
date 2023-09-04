@@ -168,6 +168,8 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Kellen Araújo       | Fazer uma compraração com as vendas com diferentes meses    | Verificar quais meses a venda são maiores e quais são as menores |
 |Marina Costa    | Entender rapidamente como está a saúde financeira da empresa.  |  Tomar decisões informadas sobre compras de matéria-prima e investimentos. |
 |Marina Costa    |  Ter uma visão clara das despesas mensais da empresa.   |   Planejar o orçamento de forma eficaz e garantir que as despesas estejam sob controle. |
+|Philippe Alves    |  Visão Geral das Finanças  |  Ter uma visão clara e simplificada das finanças da startup para tomar decisões rápidas. |
+|Philippe Alves    |  Comparação de Desempenho Mensal  |  Comparar o desempenho financeiro de diferentes meses e entender como anda a sua startup. |
 
 
 
