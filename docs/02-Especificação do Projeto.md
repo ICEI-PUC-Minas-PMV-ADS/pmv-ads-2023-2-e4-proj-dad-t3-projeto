@@ -212,8 +212,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-01| A aplicação deve permitir o usuário acessar sua conta. | ALTA | 
+|RF-02| A aplicação deve permitir o usuário cadastrar novos dados.| ALTA |
+|RF-03| A aplicação deve permitir o usuário realizar alterações nos dados cadastrados/preenchidos.| ALTA |
+|RF-04| A aplicação deve permitir o usuário o acesso aos dados fornecidos anteriormente.| ALTA |
+|RF-05| A aplicação deve permitir o usuário visualizar comparações feitas apartir de dados cadastrados.| ALTA |
+
 
 ### Requisitos não Funcionais
 
