@@ -116,6 +116,45 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
  </body>
 <table>
 
+<table>
+ <tbody>
+  <tr>
+   <td rowspan="3"><img src="img/people_images/Philippe_Alves.jpg" width="300"  /></td>
+   <td colspan="3"><strong> Philippe Alves</strong></td>
+  </tr>
+  <tr>
+   <td>25 Anos</td>
+   <td>São Paulo/SP </td>
+   <td>Desenvolvedor de Software</td>
+  </tr>
+  <tr>
+   <td colspan="3">
+    <strong>Personalidade</strong>: Criativo, focado e apaixonado por tecnologia
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4">
+    <strong>Biografia</strong>: Formado em Ciência da Computação, Philippe é um desenvolvedor de software talentoso e apaixonado por programação desde criança. Ele é CEO de uma startup de tecnologia, onde ajuda a criar aplicativos inovadores.
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4">
+    <strong>Objetivos</strong>: Desenvolver aplicativos e soluções tecnológicas que melhorem a vida das pessoas e impulsionem o crescimento da sua startup.
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4">
+    <strong>Pontos de dor e frustração</strong>: Enfrenta dificuldades em lidar com a comlexidade na parte da contabilidade da empresa.
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4">
+    <strong>Necessidades e expectativas</strong>: Descomplicar a contabilidade da startup para que possam focar mais no desenvolvimento de software.
+   </td>
+  </tr>
+ </body>
+<table>
+
 
    
 
