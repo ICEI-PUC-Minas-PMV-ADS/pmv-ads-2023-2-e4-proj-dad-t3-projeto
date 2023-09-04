@@ -136,11 +136,11 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Na situação atual, pequenas empresas no Brasil enfrentam desafios significativos em relação à gestão financeira. Muitas delas ainda dependem de métodos manuais ou planilhas desatualizadas para acompanhar suas finanças, resultando em erros e falta de visibilidade em tempo real. A ausência de uma plataforma centralizada dificulta o acesso rápido a informações financeiras importantes, o que prejudica a avaliação do desempenho financeiro e a tomada de decisões corretivas.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Propomos desenvolver uma aplicação de gestão financeira personalizada para atender às necessidades específicas de uma empresa. Esta aplicação facilitará o monitoramento do estado da empresa e facilitará o controle das finanças. Além disso, a aplicação estará acessível através de dispositivos móveis e desktops, permitindo que os usuários acessem suas informações financeiras de qualquer lugar, a qualquer momento. A interface será projetada com foco na usabilidade, sendo intuitiva e fácil de usar, mesmo para aqueles sem experiência financeira.
 
 ### Processo 1 – NOME DO PROCESSO
 
