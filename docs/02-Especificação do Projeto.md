@@ -187,7 +187,7 @@ Propomos desenvolver uma aplicação de gestão financeira personalizada para at
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
-![Processo 1](img/02-bpmn-proc1.png)
+![Processo 1](img/processo1.png)
 
 ### Processo 2 – NOME DO PROCESSO
 
