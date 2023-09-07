@@ -183,15 +183,15 @@ Na situação atual, pequenas empresas no Brasil enfrentam desafios significativ
 
 Propomos desenvolver uma aplicação de gestão financeira personalizada para atender às necessidades específicas de uma empresa. Esta aplicação facilitará o monitoramento do estado da empresa e facilitará o controle das finanças. Além disso, a aplicação estará acessível através de dispositivos móveis e desktops, permitindo que os usuários acessem suas informações financeiras de qualquer lugar, a qualquer momento. A interface será projetada com foco na usabilidade, sendo intuitiva e fácil de usar, mesmo para aqueles sem experiência financeira.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – MODELAGEM AS IS
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+O AS-IS é a situação atual dos processos, ou seja, como os processos funcionam hoje. Pode-se melhorar com a criação do controle financeiro mais detalhado da empresa.
 
 ![Processo 1](img/processo1.png)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – MODELAGEM TO BE 
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+O TO-BE é o processo futuro, ou seja, ele é o processo melhorado, aquele processo que queremos que a empresa venha a seguir. Ele é o processo onde as melhorias estão sendo implementadas.
 
 ![Processo 2](img/processo2.png)
 
