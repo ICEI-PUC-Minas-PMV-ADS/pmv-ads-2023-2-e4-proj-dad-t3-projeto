@@ -220,9 +220,21 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-01| A aplicação deve permitir o usuário acessar sua conta. | ALTA | 
 |RF-02| A aplicação deve permitir o usuário cadastrar novos dados.| ALTA |
 |RF-03| A aplicação deve permitir o usuário realizar alterações nos dados cadastrados/preenchidos.| ALTA |
+|RF-| A aplicação deve permitir o usuário excluir dados das tabelas. | ALTA |
 |RF-04| A aplicação deve permitir o usuário o acesso aos dados fornecidos anteriormente.| ALTA |
 |RF-05| A aplicação deve permitir o usuário visualizar comparações feitas apartir de dados cadastrados.| ALTA |
-
+|RF-| A aplicação deve trazer os valores do mês anterior de cada item no módulo Custos Fixos. | ALTA |
+|RF-| A aplicação deve deixar os campos de valores em branco para o início de cada mês no módulo Custos Variáveis. | ALTA |
+|RF-| A aplicação deve calcular o custo mensal dos empregados, levando em consideração todos os itens que estão descritos no seu cadastro. | ALTA |
+|RF-| A aplicação deve calcular a quantidade a ser comprada com os dados inseridos em cada produto no módulo Estoque. | ALTA |
+|RF-| A aplicação deve calcular o faturamento mensal com base nas vendas dos produtos inseridos no módulo Estoque. | ALTA |
+|RF-| A aplicação deve possuir um buscador de produto no módulo Estoque | Média |
+|RF-| A aplicação deve gerar gráficos comparando as vendas dos produtos no módulo Estoque | Baixa |
+|RF-| A aplicação deve possuir filtros para separa/organizar as categorias no módulo RH | Baixa |
+|RF-| A aplicação deve gerar gráficos comparando cargo e salários no módulo RH | Baixa |
+|RF-| A aplicação deve possuir filtro de categoria nos módulos de Custos Fixos e Variáveis | Médio |
+|RF-| A aplicação deve gerar gráficos comparativo dos itens nos módulos de Custo Fixos e Variáveis | Médio |
+|RF-| A aplicação deve gerar gráfico em pizza demostrando os gastos totais de cada módulo | Médio |
 
 ### Requisitos não Funcionais
 
