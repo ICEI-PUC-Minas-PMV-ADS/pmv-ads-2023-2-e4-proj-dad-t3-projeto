@@ -193,7 +193,7 @@ O AS-IS é a situação atual dos processos, ou seja, como os processos funciona
 
 O TO-BE é o processo futuro, ou seja, ele é o processo melhorado, aquele processo que queremos que a empresa venha a seguir. Ele é o processo onde as melhorias estão sendo implementadas.
 
-![Processo 2](img/processo2-1.png)
+![Processo 2](img/processos.png)
 
 ## Indicadores de Desempenho
 
