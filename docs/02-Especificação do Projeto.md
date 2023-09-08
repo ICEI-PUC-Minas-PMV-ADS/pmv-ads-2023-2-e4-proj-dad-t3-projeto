@@ -199,9 +199,14 @@ O TO-BE é o processo futuro, ou seja, ele é o processo melhorado, aquele proce
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
 
-Usar o seguinte modelo: 
+| Indicador | Objetivos | Descrição | Cálculo | Fonte de dados | Perspectiva|
+| ------------ |------------- |-------------- |----------- |--------------------- |--------------- |
+| Estoque Mínimo | Não ficar sem estoque | Mede o ponto de pedido dos produtos | | Tabela Quantidade de produto | Setor de Estoque |
+| Total Custo Fixo | Preparar a empresa para os gastos futuros | Mede os valores que a empresa possui todos os meses | | Tabela Custo Fixo | Gestor |
+| Comparativo Custo Variável mensal | Projetar uma possibilidade de gastos futuros | Informa uma tendencia de quanto vai ser o gasto desses custos | | Tabela Custo Variável | Gestor |
+| Gasto com pessoal | Verificar o valor gasto com funcionários | Mostrar a soma do salário e os benefícios dos funcionários | | Tabela RH | Gestor | 
+| Relatório geral mensal | Verifica a saúde financeira da empresa | Mostra o lucro ou prejuízo da empresa ao longo dos meses |  | Tabela DRE | Gestor |
 
-![Indicadores de Desempenho](img/02-indic-desemp.png)
 Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
 
 ## Requisitos
