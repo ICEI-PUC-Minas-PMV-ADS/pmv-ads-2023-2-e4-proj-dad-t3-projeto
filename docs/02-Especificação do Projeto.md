@@ -206,8 +206,10 @@ Apresente aqui os principais indicadores de desempenho e algumas metas para o pr
 | Comparativo Custo Variável mensal | Projetar uma possibilidade de gastos futuros | Informa uma tendencia de quanto vai ser o gasto desses custos | | Tabela Custo Variável | Gestor |
 | Gasto com pessoal | Verificar o valor gasto com funcionários | Mostrar a soma do salário e os benefícios dos funcionários | | Tabela RH | Gestor | 
 | Relatório geral mensal | Verifica a saúde financeira da empresa | Mostra o lucro ou prejuízo da empresa ao longo dos meses |  | Tabela DRE | Gestor |
+| Taxa de Adesão ao Orçamento | Avaliar o quão bem os departamentos ou equipes estão aderindo ao orçamento planejado | Gerênciamento Financeiro e responsabilizar departamentos | (Despesas Reais / Orçamento Planejado) x 100 | Tabela Custos | Gestor |
+| Variação Orçamentária | Medir a diferença entre o orçamento planejado e os gastos reais | Orçamento Planejado e Despesas Reais |  Orçamento Planejado - Despesas Reais | Tabela Custos | Gestor |
 
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori 
 
 ## Requisitos
 
