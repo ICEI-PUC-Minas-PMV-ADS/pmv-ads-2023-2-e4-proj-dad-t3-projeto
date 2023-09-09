@@ -316,14 +316,14 @@ De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar 
 
 O gerente de projetos pode utilizar desse recurso para agendar e coordenar tarefas dentro de um projeto fazendo a estimativa de tempo necessário para a conclusão.
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/63081926/5b63bf03-1a2e-4c30-bd61-a10f52e82bf4)
+![Gerenciamento de Tempo](img/Doc/gerenciamento_de_tempo.png)
 
 
 ## Gerenciamento de Equipe
 
 O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
 
-![Simple Project Timeline](img/02-project-timeline.png)
+![Gerenciamento de Equipe](img/Doc/gerenciamento_de_equipe.png)
 
 ## Gestão de Orçamento
 
