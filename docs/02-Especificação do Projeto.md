@@ -241,10 +241,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         | Descrição do Requisito  |Prioridade |
 |--------|-------------------------|----|
-|RNF-01  | A API deve ser acompanhada por uma documentação completa e atualizada que descreva todos os endpoints, parâmetros de solicitação, tipos de resposta e exemplos de uso. | Alta | 
-|RNF-02  | A API deve registrar eventos importantes, erros e atividades críticas para fins de auditoria, solução de problemas e segurança.| Alta | 
+|RNF-01  | A aplicação deve ser acompanhada por uma documentação completa e atualizada que descreva todos os endpoints, parâmetros de solicitação, tipos de resposta e exemplos de uso. | Alta | 
+|RNF-02  | A aplicação deve registrar eventos importantes, erros e atividades críticas para fins de auditoria, solução de problemas e segurança.| Alta | 
 |RNF-03  | A documentação deve ser de fácil compreensão e acessível para desenvolvedores que desejam integrar a API, incluindo guias de início rápido e exemplos de código. | Alta |
-|RNF-04  | A API deve implementar autenticação baseada em tokens JWT (JSON Web Tokens) e autorização baseada em funções para garantir que apenas usuários autorizados tenham acesso a recursos específicos. | Média |
+|RNF-04  | A aplicação deve implementar autenticação baseada em tokens JWT (JSON Web Tokens) e autorização baseada em funções para garantir que apenas usuários autorizados tenham acesso a recursos específicos. | Média |
 |RNF-05  | A API deve estar disponível para uso 24/7, com um tempo de atividade mínimo de 99,9% do tempo. |  Média | 
 
 
