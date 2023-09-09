@@ -241,11 +241,16 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         | Descrição do Requisito  |Prioridade |
 |--------|-------------------------|----|
-|RNF-01  | A aplicação deve ser acompanhada por uma documentação completa e atualizada que descreva todos os endpoints, parâmetros de solicitação, tipos de resposta e exemplos de uso. | Alta | 
+|RNF-01  | A API deve ser acompanhada por uma documentação completa e atualizada que descreva todos os endpoints, parâmetros de solicitação, tipos de resposta e exemplos de uso. | Alta | 
 |RNF-02  | A aplicação deve registrar eventos importantes, erros e atividades críticas para fins de auditoria, solução de problemas e segurança.| Alta | 
-|RNF-03  | A documentação deve ser de fácil compreensão e acessível para desenvolvedores que desejam integrar a API, incluindo guias de início rápido e exemplos de código. | Alta |
+|RNF-03  | A documentação deve ser de fácil compreensão e acessível para desenvolvedores que desejam integrar a aplicação, incluindo guias de início rápido e exemplos de código. | Alta |
 |RNF-04  | A aplicação deve implementar autenticação baseada em tokens JWT (JSON Web Tokens) e autorização baseada em funções para garantir que apenas usuários autorizados tenham acesso a recursos específicos. | Média |
 |RNF-05  | A API deve estar disponível para uso 24/7, com um tempo de atividade mínimo de 99,9% do tempo. |  Média | 
+|RNF-06  | A aplicação deve ser acessível para dispostivos móveis | Alta |
+|RNF-07  | A aplicação deve ser compatível com os principais navegadores web (Chrome, Firefox, Safari, Edge) | Média |
+|RNF-08  | A aplicação deve ter uma interface intuitiva e de fácil utilização | Alta |
+|RNF-09  | A aplicação deve ser desenvolvida utilizando práticas de programação seguras e seguir padrões de segurança recomendados | Alta |
+|RNF-10  | A aplicação deve ser desenvolvida seguindo os princípios de design responsivo para garantir uma boa experiência em dispositivos de diferentes tamanhos de tela | Alta |
 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
