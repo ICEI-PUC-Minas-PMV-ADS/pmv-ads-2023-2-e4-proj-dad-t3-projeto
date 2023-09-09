@@ -215,36 +215,38 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-01| A aplicação deve permitir o usuário acessar sua conta. | ALTA | 
-|RF-02| A aplicação deve permitir o usuário cadastrar novos dados.| ALTA |
-|RF-03| A aplicação deve permitir o usuário realizar alterações nos dados cadastrados/preenchidos.| ALTA |
-|RF-| A aplicação deve permitir o usuário excluir dados das tabelas. | ALTA |
-|RF-04| A aplicação deve permitir o usuário o acesso aos dados fornecidos anteriormente.| ALTA |
-|RF-05| A aplicação deve permitir o usuário visualizar comparações feitas apartir de dados cadastrados.| ALTA |
-|RF-| A aplicação deve trazer os valores do mês anterior de cada item no módulo Custos Fixos. | ALTA |
-|RF-| A aplicação deve deixar os campos de valores em branco para o início de cada mês no módulo Custos Variáveis. | ALTA |
-|RF-| A aplicação deve calcular o custo mensal dos empregados, levando em consideração todos os itens que estão descritos no seu cadastro. | ALTA |
-|RF-| A aplicação deve calcular a quantidade a ser comprada com os dados inseridos em cada produto no módulo Estoque. | ALTA |
-|RF-| A aplicação deve calcular o faturamento mensal com base nas vendas dos produtos inseridos no módulo Estoque. | ALTA |
-|RF-| A aplicação deve possuir um buscador de produto no módulo Estoque | Média |
-|RF-| A aplicação deve gerar gráficos comparando as vendas dos produtos no módulo Estoque | Baixa |
-|RF-| A aplicação deve possuir filtros para separa/organizar as categorias no módulo RH | Baixa |
-|RF-| A aplicação deve gerar gráficos comparando cargo e salários no módulo RH | Baixa |
-|RF-| A aplicação deve possuir filtro de categoria nos módulos de Custos Fixos e Variáveis | Médio |
-|RF-| A aplicação deve gerar gráficos comparativo dos itens nos módulos de Custo Fixos e Variáveis | Médio |
-|RF-| A aplicação deve gerar gráfico em pizza demostrando os gastos totais de cada módulo | Médio |
+|ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    | Descrição do Requisito  | Prioridade |
+|-------|-----------------------------------------|----|
+|RF-01  | A aplicação deve permitir o usuário acessar sua conta. | Alta | 
+|RF-02  | A aplicação deve permitir o usuário cadastrar novos dados.| Alta |
+|RF-03  | A aplicação deve permitir o usuário realizar alterações nos dados cadastrados/preenchidos.| Alta |
+|RF-04  | A aplicação deve permitir o usuário excluir dados das tabelas. | Alta |
+|RF-04  | A aplicação deve permitir o usuário o acesso aos dados fornecidos anteriormente.| Alta |
+|RF-05  | A aplicação deve permitir o usuário visualizar comparações feitas apartir de dados cadastrados.| Alta |
+|RF-06  | A aplicação deve trazer os valores do mês anterior de cada item no módulo Custos Fixos. | Alta |
+|RF-07  | A aplicação deve deixar os campos de valores em branco para o início de cada mês no módulo Custos Variáveis. | Alta |
+|RF-08  | A aplicação deve calcular o custo mensal dos empregados, levando em consideração todos os itens que estão descritos no seu cadastro. | Alta |
+|RF-09  | A aplicação deve calcular a quantidade a ser comprada com os dados inseridos em cada produto no módulo Estoque. | Alta |
+|RF-10  | A aplicação deve calcular o faturamento mensal com base nas vendas dos produtos inseridos no módulo Estoque. | Alta |
+|RF-11  | A aplicação deve possuir um buscador de produto no módulo Estoque | Média |
+|RF-12  | A aplicação deve possuir filtro de categoria nos módulos de Custos Fixos e Variáveis | Médio |
+|RF-13  | A aplicação deve gerar gráficos comparativo dos itens nos módulos de Custo Fixos e Variáveis | Médio |
+|RF-14  | A aplicação deve gerar gráfico em pizza demostrando os gastos totais de cada módulo | Médio |
+|RF-15  | A aplicação deve possuir filtros para separa/organizar as categorias no módulo RH | Baixa |
+|RF-16  | A aplicação deve gerar gráficos comparando as vendas dos produtos no módulo Estoque | Baixa |
+|RF-17  | A aplicação deve gerar gráficos comparando cargo e salários no módulo RH | Baixa |
+
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| A API deve ser acompanhada por uma documentação completa e atualizada que descreva todos os endpoints, parâmetros de solicitação, tipos de resposta e exemplos de uso. | Alta | 
-|RNF-002| A API deve estar disponível para uso 24/7, com um tempo de atividade mínimo de 99,9% do tempo. |  Média | 
-|RNF-003| A API deve registrar eventos importantes, erros e atividades críticas para fins de auditoria, solução de problemas e segurança.| Alta | 
-|RNF-004| A documentação deve ser de fácil compreensão e acessível para desenvolvedores que desejam integrar a API, incluindo guias de início rápido e exemplos de código. | Alta |
-|RNF-005| A API deve implementar autenticação baseada em tokens JWT (JSON Web Tokens) e autorização baseada em funções para garantir que apenas usuários autorizados tenham acesso a recursos específicos. | Média |
+|ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         | Descrição do Requisito  |Prioridade |
+|--------|-------------------------|----|
+|RNF-01  | A API deve ser acompanhada por uma documentação completa e atualizada que descreva todos os endpoints, parâmetros de solicitação, tipos de resposta e exemplos de uso. | Alta | 
+|RNF-02  | A API deve registrar eventos importantes, erros e atividades críticas para fins de auditoria, solução de problemas e segurança.| Alta | 
+|RNF-03  | A documentação deve ser de fácil compreensão e acessível para desenvolvedores que desejam integrar a API, incluindo guias de início rápido e exemplos de código. | Alta |
+|RNF-04  | A API deve implementar autenticação baseada em tokens JWT (JSON Web Tokens) e autorização baseada em funções para garantir que apenas usuários autorizados tenham acesso a recursos específicos. | Média |
+|RNF-05  | A API deve estar disponível para uso 24/7, com um tempo de atividade mínimo de 99,9% do tempo. |  Média | 
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -300,12 +302,8 @@ A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualizaç
 
 A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
 
-![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/63081926/7d14e8f8-0aed-42c4-bbc2-66f7edca6dab)
 
-> **Links Úteis**:
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
 
 
 # Gerenciamento de Projeto
