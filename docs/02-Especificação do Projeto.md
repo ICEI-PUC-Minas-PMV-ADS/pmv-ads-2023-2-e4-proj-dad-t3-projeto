@@ -237,6 +237,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-15  | A aplicação deve possuir filtros para separa/organizar as categorias no módulo RH | Baixa |
 |RF-16  | A aplicação deve gerar gráficos comparando as vendas dos produtos no módulo Estoque | Baixa |
 |RF-17  | A aplicação deve gerar gráficos comparando cargo e salários no módulo RH | Baixa |
+|RF-18  | A aplicação deve possuir um alerta de solicitação de compra quando um produto atingir o estoque mínimo | Médio |
 
 
 ### Requisitos não Funcionais
