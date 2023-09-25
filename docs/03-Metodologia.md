@@ -3,7 +3,11 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Metodologia de trabalho: A equipe está usando a metodologia Agile para gerenciar o desenvolvimento do software. O Agile é uma abordagem iterativa e incremental para o desenvolvimento de software que enfatiza a colaboração entre a equipe, a entrega de software funcionando em intervalos regulares e a resposta às mudanças do projeto. A equipe está utilizando scrum.
+
+Ambiente de trabalho: A equipe está usando o Visual Studio, React Native e o Visual Studio Code para desenvolver a aplicação.
+
+Processo de gestão de times: A equipe também está usando o Git e o GitHub para controle de versão e distribuição de tarefas. O Git é um sistema de controle de versão distribuído que permite que várias pessoas trabalhem em um mesmo código fonte e registrem as alterações. O GitHub é uma plataforma baseada em nuvem para hospedar repositórios Git e gerenciar colaboração em projetos de software. A equipe também está usando o Microsoft Teams para comunicação. O Microsoft Teams é uma plataforma de comunicação baseada em nuvem que permite que a equipe se comunique por chat, vídeo e chamadas de áudio. Ele também possui recursos de colaboração, como compartilhamento de arquivos e edição colaborativa.
 
 ## Relação de Ambientes de Trabalho
 
@@ -45,38 +49,32 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
+A equipe utiliza a metodologia ágil "Scrum" para maior compreendimento do projeto e organização da equipe, sendo realizado a divisão de papéis entre os membros da equipe e reuniões diárias para a distribuição das tarefas.
 
-Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Felipe Domingos;
-- Product Owner: Rommel Carneiro;
-- Equipe de Desenvolvimento: Pedro Penna, Pedro Ivo, Rodrigo Richard;
-- Equipe de Design: Simone Nogueira.
-
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
+Scrum Master: Fernando Alves;
+Product Owner: Jhody Mike Possidonio Da Silva;
+Equipe de Desenvolvimento: Leticia Isabela Teodoro Campos, Eduardo Ramos da Silva, Alex Vinicius Dutra Berton;
+Equipe de Design: Erick Machado Reis.
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+Para o acompanhamento e organização do projeto, a equipe de desenvolvimento realizou a criação de um 'BackLog' a partir das ferramentas oferecidas pelo Github, sendo possível realizar a distribuição das tarefas e visualizar os status de cada uma.
+
+Produto backlog: todas as tarefas
+To do: tarefas a serem feitas
+In progress: tarefas que estão sendo feitas
+Done: tarefas já realizadas
  
-> **Links Úteis**:
-> - [Planejamento e Gestáo Ágil de Projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+
 
 ### Ferramentas
 
 As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+- Editor de código : Visual Studio, Visual Studio Code, Expo Dev, MongoDB
+- Ferramentas de comunicação: Microsoft Teams
+- Ferramentas de desenho de tela: LucidHart
+- Versionamento do projeto: Git
 
 O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas. Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução.
 
