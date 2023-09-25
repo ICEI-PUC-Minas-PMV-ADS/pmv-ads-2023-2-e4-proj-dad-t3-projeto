@@ -51,19 +51,18 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 A equipe utiliza a metodologia ágil "Scrum" para maior compreendimento do projeto e organização da equipe, sendo realizado a divisão de papéis entre os membros da equipe e reuniões diárias para a distribuição das tarefas.
 
-Scrum Master: Fernando Alves;
-Product Owner: Jhody Mike Possidonio Da Silva;
-Equipe de Desenvolvimento: Leticia Isabela Teodoro Campos, Eduardo Ramos da Silva, Alex Vinicius Dutra Berton;
-Equipe de Design: Erick Machado Reis.
+- Scrum Master: Fernando Alves;
+- Product Owner: Jhody Mike Possidonio Da Silva;
+- Equipe de Desenvolvimento: Leticia Isabela Teodoro Campos, Eduardo Ramos da Silva, Alex Vinicius Dutra Berton;
+- Equipe de Design: Erick Machado Reis.
 
 ### Processo
 
 Para o acompanhamento e organização do projeto, a equipe de desenvolvimento realizou a criação de um 'BackLog' a partir das ferramentas oferecidas pelo Github, sendo possível realizar a distribuição das tarefas e visualizar os status de cada uma.
 
-Produto backlog: todas as tarefas
-To do: tarefas a serem feitas
-In progress: tarefas que estão sendo feitas
-Done: tarefas já realizadas
+- To do: tarefas a serem feitas
+- In progress: tarefas que estão sendo feitas
+- Done: tarefas já realizadas
  
 ![Backlog](img/Doc/backlog.png)
 
