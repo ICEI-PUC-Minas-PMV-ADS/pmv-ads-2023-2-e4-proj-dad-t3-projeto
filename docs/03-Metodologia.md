@@ -65,7 +65,7 @@ To do: tarefas a serem feitas
 In progress: tarefas que estão sendo feitas
 Done: tarefas já realizadas
  
-
+![Backlog](img/Doc/backlog.png)
 
 ### Ferramentas
 
