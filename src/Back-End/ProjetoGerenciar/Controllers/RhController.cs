@@ -1,6 +1,8 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class RhController : ControllerBase

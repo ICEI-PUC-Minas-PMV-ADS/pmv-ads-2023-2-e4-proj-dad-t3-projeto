@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using ProjetoGerenciar.Models;
 
 public class MongoDBContext
     {
@@ -8,9 +9,14 @@ public class MongoDBContext
     {
         var client = new MongoClient(connectionString);
         _database = client.GetDatabase(databaseName);
+
+        var usersCollection = _database.GetCollection<User>("User");
+        var emailIndex = Builders<User>.IndexKeys.Ascending(u => u.Email);
+        var uniqueEmailIndexModel = new CreateIndexModel<User>(emailIndex, new CreateIndexOptions { Unique = true });
     }
 
-    public IMongoCollection<Estoque> Products => _database.GetCollection<Estoque>("Estoque");
+    public IMongoCollection<Estoque> Produtos => _database.GetCollection<Estoque>("Estoque");
     public IMongoCollection<Rh> Pessoas => _database.GetCollection<Rh>("Rh");
+    public IMongoCollection<User> Users => _database.GetCollection<User>("User");
 }
 

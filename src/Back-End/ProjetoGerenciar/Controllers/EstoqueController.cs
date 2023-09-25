@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class EstoqueController : ControllerBase
@@ -17,13 +19,13 @@ public class EstoqueController : ControllerBase
     [HttpGet]
     public async Task<IEnumerable<Estoque>> Get()
     {
-        return await _context.Products.Find(_ => true).ToListAsync();
+        return await _context.Produtos.Find(_ => true).ToListAsync();
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<Estoque>> GetById(string id)
     {
-        var product = await _context.Products.Find(p => p.Id == id).FirstOrDefaultAsync();
+        var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
 
         if (product == null)
         {
@@ -40,11 +42,11 @@ public class EstoqueController : ControllerBase
 
         if (string.IsNullOrEmpty(Mes))
         {
-            product = await _context.Products.Find(p => p.AnoLancamento == Ano).ToListAsync();
+            product = await _context.Produtos.Find(p => p.AnoLancamento == Ano).ToListAsync();
         }
         else
         {
-            product = await _context.Products.Find(p => p.MesLancamento == Mes && p.AnoLancamento == Ano).ToListAsync();
+            product = await _context.Produtos.Find(p => p.MesLancamento == Mes && p.AnoLancamento == Ano).ToListAsync();
         }
 
 
@@ -59,21 +61,21 @@ public class EstoqueController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Estoque>> Create(Estoque product)
     {
-        await _context.Products.InsertOneAsync(product);
+        await _context.Produtos.InsertOneAsync(product);
         return CreatedAtRoute(new { id = product.Id }, product);
     }
 
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(string id, Estoque productIn)
     {
-        var product = await _context.Products.Find(p => p.Id == id).FirstOrDefaultAsync();
+        var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
 
         if (product == null)
         {
             return NotFound();
         }
 
-        await _context.Products.ReplaceOneAsync(p => p.Id == id, productIn);
+        await _context.Produtos.ReplaceOneAsync(p => p.Id == id, productIn);
 
         return NoContent();
     }
@@ -81,14 +83,14 @@ public class EstoqueController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(string id)
     {
-        var product = await _context.Products.Find(p => p.Id == id).FirstOrDefaultAsync();
+        var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
 
         if (product == null)
         {
             return NotFound();
         }
 
-        await _context.Products.DeleteOneAsync(p => p.Id == id);
+        await _context.Produtos.DeleteOneAsync(p => p.Id == id);
 
         return NoContent();
     }
