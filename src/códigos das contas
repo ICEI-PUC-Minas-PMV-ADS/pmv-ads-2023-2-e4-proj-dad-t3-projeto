@@ -1,0 +1,56 @@
+if(salarioBruto <= 1320)
+{
+descontoInss = salarioBruto * 0.075;
+}
+       
+else if (salarioBruto >= 1320.01 && salarioBruto <= 2571.29)
+{
+descontoInss = (1320 * 0.075) + ((salarioBruto - 1320.01) * 0.09);
+}
+    
+else if (salarioBruto >= 2571.30 && salarioBruto <= 3856.94)
+{
+descontoInss = (1320 * 0.075) + ((2571.29 - 1320.01) * 0.09) + ((salarioBruto - 2571.30) * 0.12);
+}
+
+else if (salarioBruto >= 3856.95 and salarioBruto <= 7507.49 )
+{
+descontoInss = (1320 * 0.075) + ((2571.29 - 1320.01) * 0.09) + ((3856.94 - 2571.30) * 0.12) + (salarioBruto - 3856.94) * 0.14);
+}
+
+else
+{
+descontoInss = 877.24;
+}
+
+
+
+salarioDescInss = salarioBruto - descontoInss
+
+if (salarioDescInss <= 2112)
+{
+descontoIr = 0;
+}
+
+else if (salarioDescInss>=2112.01 && salarioDescInss<=2826.65)
+{
+descontoIr = (salarioDescInss) * 0.075) - 158.40;
+}
+      
+else if (salarioDescInss>=2826.66 && salarioDescInss<=3751.05)
+{
+descontoIr = (salarioDescInss) * 0.15) - 370.40;
+}
+    
+else if (salarioDescInss>=3751.06 && salarioDescInss<=4664.68)
+{
+descontoIr = (salarioDescInss) * 0.225) - 651.73;
+}
+      
+else
+{
+descontoIr = (salarioDescInss) * 0.275) - 884.96;
+}
+
+
+salarioLiquido = salarioBruto - descontoInss - descontoIr
