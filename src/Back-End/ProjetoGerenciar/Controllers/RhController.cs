@@ -36,7 +36,7 @@ public class RhController : ControllerBase
     }
 
     [AllowAnonymous]
-    [HttpGet("data/{Ano}/{Mes?}}")]
+    [HttpGet("data")]
     public async Task<ActionResult<List<Rh>>> GetByDate(int Ano, string? Mes)
     {
         List<Rh> pessoa = new();
