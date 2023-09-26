@@ -16,85 +16,125 @@ public class EstoqueController : ControllerBase
         _context = context;
     }
 
-    [AllowAnonymous]
     [HttpGet]
+    [Authorize(Roles = "AdminEstoque, Usuario, AdminGeral,AdminRh")]
     public async Task<IEnumerable<Estoque>> Get()
     {
         return await _context.Produtos.Find(_ => true).ToListAsync();
     }
 
-    [AllowAnonymous]
     [HttpGet("{id}")]
+    [Authorize(Roles = "AdminEstoque, Usuario, AdminGeral,AdminRh")]
     public async Task<ActionResult<Estoque>> GetById(string id)
     {
-        var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-        if (product == null)
+        try
         {
-            return NotFound();
-        }
+            var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
 
-        return product;
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return product;
+        }
+        catch (UnauthorizedAccessException)
+        {
+            return Unauthorized("Usuário não autorizado");
+        }
     }
 
-    [AllowAnonymous]
     [HttpGet("data")]
+    [Authorize(Roles = "AdminEstoque, Usuario, AdminGeral,AdminRh")]
     public async Task<ActionResult<List<Estoque>>> GetByDate(int Ano, string? Mes)
     {
-        List<Estoque> product = new();
-
-        if (string.IsNullOrEmpty(Mes))
+        try
         {
-            product = await _context.Produtos.Find(p => p.AnoLancamento == Ano).ToListAsync();
+            List<Estoque> product = new();
+
+            if (string.IsNullOrEmpty(Mes))
+            {
+                product = await _context.Produtos.Find(p => p.AnoLancamento == Ano).ToListAsync();
+            }
+            else
+            {
+                product = await _context.Produtos.Find(p => p.MesLancamento == Mes && p.AnoLancamento == Ano).ToListAsync();
+            }
+
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return product;
         }
-        else
+        catch (UnauthorizedAccessException)
         {
-            product = await _context.Produtos.Find(p => p.MesLancamento == Mes && p.AnoLancamento == Ano).ToListAsync();
+            return Unauthorized("Usuário não autorizado");
         }
 
-
-        if (product == null)
-        {
-            return NotFound();
-        }
-
-        return product;
     }
 
     [HttpPost]
+    [Authorize(Roles = "AdminEstoque")]
     public async Task<ActionResult<Estoque>> Create(Estoque product)
     {
-        await _context.Produtos.InsertOneAsync(product);
-        return CreatedAtRoute(new { id = product.Id }, product);
+        try
+        {
+            await _context.Produtos.InsertOneAsync(product);
+            return CreatedAtRoute(new { id = product.Id }, product);
+        }
+        catch (UnauthorizedAccessException)
+        {
+            return Unauthorized("Usuário não autorizado");
+        }
+
     }
 
     [HttpPut("{id}")]
+    [Authorize(Roles = "AdminEstoque, AdminGeral")]
     public async Task<IActionResult> Update(string id, Estoque productIn)
     {
-        var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-        if (product == null)
+        try
         {
-            return NotFound();
+            var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            await _context.Produtos.ReplaceOneAsync(p => p.Id == id, productIn);
+
+            return NoContent();
         }
-
-        await _context.Produtos.ReplaceOneAsync(p => p.Id == id, productIn);
-
-        return NoContent();
+        catch (UnauthorizedAccessException)
+        {
+            return Unauthorized("Usuário não autorizado");
+        }
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Roles = "AdminEstoque")]
     public async Task<IActionResult> Delete(string id)
     {
-        var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-        if (product == null)
+        try
         {
-            return NotFound();
+            var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            await _context.Produtos.DeleteOneAsync(p => p.Id == id);
+
+            return NoContent();
         }
-
-        await _context.Produtos.DeleteOneAsync(p => p.Id == id);
-
-        return NoContent();
+        catch (UnauthorizedAccessException)
+        {
+            return Unauthorized("Usuário não autorizado");
+        }
     }
 }

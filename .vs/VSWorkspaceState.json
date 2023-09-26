@@ -1,14 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\app-base",
-    "\\src\\app-base\\APIEmpresarial",
-    "\\src\\app-base\\APIEmpresarial\\APIEmpresarial",
-    "\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\Context",
-    "\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\Migrations",
-    "\\src\\app-base\\APIEmpresarial\\APIEmpresarial\\Model"
+    ""
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\APIEmpresarial.sln",
   "PreviewInSolutionExplorer": false
 }

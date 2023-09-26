@@ -13,16 +13,14 @@ public class RhController : ControllerBase
     {
         _context = context;
     }
-
-    [AllowAnonymous]
     [HttpGet]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
     public async Task<IEnumerable<Rh>> Get()
     {
         return await _context.Pessoas.Find(_ => true).ToListAsync();
     }
-
-    [AllowAnonymous]
     [HttpGet("{id}")]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
     public async Task<ActionResult<Rh>> GetById(string id)
     {
         var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
@@ -31,12 +29,10 @@ public class RhController : ControllerBase
         {
             return NotFound();
         }
-
         return pessoa;
     }
-
-    [AllowAnonymous]
     [HttpGet("data")]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
     public async Task<ActionResult<List<Rh>>> GetByDate(int Ano, string? Mes)
     {
         List<Rh> pessoa = new();
@@ -54,44 +50,52 @@ public class RhController : ControllerBase
         {
             return NotFound();
         }
-
         return pessoa;
     }
-
     [HttpPost]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
     public async Task<ActionResult<Rh>> Create(Rh pessoa)
     {
         await _context.Pessoas.InsertOneAsync(pessoa);
         return CreatedAtRoute(new { id = pessoa.Id }, pessoa);
     }
-
     [HttpPut("{id}")]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
     public async Task<IActionResult> Update(string id, Rh pessoaIn)
     {
-        var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-        if (pessoa == null)
+        try
         {
-            return NotFound();
+            var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
+
+            if (pessoa == null)
+            {
+                return NotFound();
+            }
+            await _context.Pessoas.ReplaceOneAsync(p => p.Id == id, pessoaIn);
+            return NoContent();
         }
-
-        await _context.Pessoas.ReplaceOneAsync(p => p.Id == id, pessoaIn);
-
-        return NoContent();
+        catch (UnauthorizedAccessException)
+        {
+            return Unauthorized("Usuário não autorizado");
+        }
     }
-
+    [Authorize(Roles = "AdminRh")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(string id)
     {
-        var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-        if (pessoa == null)
+        try
         {
-            return NotFound();
+            var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
+            if (pessoa == null)
+            {
+                return NotFound();
+            }
+            await _context.Pessoas.DeleteOneAsync(p => p.Id == id);
+            return NoContent();
         }
-
-        await _context.Pessoas.DeleteOneAsync(p => p.Id == id);
-
-        return NoContent();
+        catch (UnauthorizedAccessException)
+        {
+            return Unauthorized("Usuário não autorizado");
+        }
     }
 }
