@@ -14,12 +14,14 @@ public class RhController : ControllerBase
         _context = context;
     }
 
+    [AllowAnonymous]
     [HttpGet]
     public async Task<IEnumerable<Rh>> Get()
     {
         return await _context.Pessoas.Find(_ => true).ToListAsync();
     }
 
+    [AllowAnonymous]
     [HttpGet("{id}")]
     public async Task<ActionResult<Rh>> GetById(string id)
     {
@@ -33,7 +35,8 @@ public class RhController : ControllerBase
         return pessoa;
     }
 
-    [HttpGet("data")]
+    [AllowAnonymous]
+    [HttpGet("data/{Ano}/{Mes?}}")]
     public async Task<ActionResult<List<Rh>>> GetByDate(int Ano, string? Mes)
     {
         List<Rh> pessoa = new();

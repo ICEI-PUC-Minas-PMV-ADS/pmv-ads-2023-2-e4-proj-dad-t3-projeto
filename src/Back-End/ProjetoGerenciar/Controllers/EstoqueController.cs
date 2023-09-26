@@ -16,12 +16,14 @@ public class EstoqueController : ControllerBase
         _context = context;
     }
 
+    [AllowAnonymous]
     [HttpGet]
     public async Task<IEnumerable<Estoque>> Get()
     {
         return await _context.Produtos.Find(_ => true).ToListAsync();
     }
 
+    [AllowAnonymous]
     [HttpGet("{id}")]
     public async Task<ActionResult<Estoque>> GetById(string id)
     {
@@ -35,6 +37,7 @@ public class EstoqueController : ControllerBase
         return product;
     }
 
+    [AllowAnonymous]
     [HttpGet("data")]
     public async Task<ActionResult<List<Estoque>>> GetByDate(int Ano, string? Mes)
     {
