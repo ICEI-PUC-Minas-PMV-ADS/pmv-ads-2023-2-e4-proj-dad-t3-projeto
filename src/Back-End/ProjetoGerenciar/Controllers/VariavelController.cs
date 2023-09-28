@@ -105,7 +105,7 @@ public class VariavelController : ControllerBase
 
             await _context.Variaveis.ReplaceOneAsync(p => p.Id == id, productIn);
 
-            return NoContent();
+            return Content("Atualização concluida com sucesso!");
         }
         catch (UnauthorizedAccessException)
         {
@@ -128,7 +128,7 @@ public class VariavelController : ControllerBase
 
             await _context.Variaveis.DeleteOneAsync(p => p.Id == id);
 
-            return NoContent();
+            return Content("Custo deletado com sucesso!");
         }
         catch (UnauthorizedAccessException)
         {

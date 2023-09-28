@@ -107,7 +107,7 @@ public class FixoController : ControllerBase
 
             await _context.Fixos.ReplaceOneAsync(p => p.Id == id, productIn);
 
-            return NoContent();
+            return Content("Atualização concluida com sucesso!");
         }
         catch (UnauthorizedAccessException)
         {
@@ -130,7 +130,7 @@ public class FixoController : ControllerBase
 
             await _context.Fixos.DeleteOneAsync(p => p.Id == id);
 
-            return NoContent();
+            return Content("Custo deletado com sucesso!");
         }
         catch (UnauthorizedAccessException)
         {
