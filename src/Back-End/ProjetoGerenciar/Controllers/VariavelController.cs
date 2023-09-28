@@ -3,34 +3,33 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using ProjetoGerenciar.Models;
-using System.Collections;
 
 [Authorize]
 [Route("api/[controller]")]
 [ApiController]
-public class FixoController : ControllerBase
+public class VariavelController : ControllerBase
 {
     private readonly MongoDBContext _context;
 
-    public FixoController(MongoDBContext context)
+    public VariavelController(MongoDBContext context)
     {
         _context = context;
     }
 
     [HttpGet]
     [Authorize(Roles = "AdminGeral, AdminCusto")]
-    public async Task<IEnumerable<Fixo>> Get()
+    public async Task<IEnumerable<Variavel>> Get()
     {
-        return await _context.Fixos.Find(_ => true).ToListAsync();
+        return await _context.Variaveis.Find(_ => true).ToListAsync();
     }
 
     [HttpGet("{id}")]
     [Authorize(Roles = "AdminGeral, AdminCusto")]
-    public async Task<ActionResult<Fixo>> GetById(string id)
+    public async Task<ActionResult<Variavel>> GetById(string id)
     {
         try
         {
-            var product = await _context.Fixos.Find(p => p.Id == id).FirstOrDefaultAsync();
+            var product = await _context.Variaveis.Find(p => p.Id == id).FirstOrDefaultAsync();
 
             if (product == null)
             {
@@ -47,21 +46,20 @@ public class FixoController : ControllerBase
 
     [HttpGet("data")]
     [Authorize(Roles = "AdminGeral, AdminCusto")]
-    public async Task<ActionResult<List<Fixo>>> GetByDate(int Ano, string? Mes)
+    public async Task<ActionResult<List<Variavel>>> GetByDate(int Ano, string? Mes)
     {
         try
         {
-            List<Fixo> product = new();
+            List<Variavel> product = new();
 
             if (string.IsNullOrEmpty(Mes))
             {
-                product = await _context.Fixos.Find(p => p.AnoLancamento == Ano).ToListAsync();
+                product = await _context.Variaveis.Find(p => p.AnoLancamento == Ano).ToListAsync();
             }
             else
             {
-                product = await _context.Fixos.Find(p => p.MesLancamento == Mes && p.AnoLancamento == Ano).ToListAsync();
+                product = await _context.Variaveis.Find(p => p.MesLancamento == Mes && p.AnoLancamento == Ano).ToListAsync();
             }
-
 
             if (product == null)
             {
@@ -79,11 +77,11 @@ public class FixoController : ControllerBase
 
     [HttpPost]
     [Authorize(Roles = "AdminCusto")]
-    public async Task<ActionResult<Fixo>> Create(Fixo product)
+    public async Task<ActionResult<Variavel>> Create(Variavel product)
     {
         try
         {
-            await _context.Fixos.InsertOneAsync(product);
+            await _context.Variaveis.InsertOneAsync(product);
             return CreatedAtRoute(new { id = product.Id }, product);
         }
         catch (UnauthorizedAccessException)
@@ -94,18 +92,18 @@ public class FixoController : ControllerBase
 
     [HttpPut("{id}")]
     [Authorize(Roles = "AdminCusto, AdminGeral")]
-    public async Task<IActionResult> Update(string id, Fixo productIn)
+    public async Task<IActionResult> Update(string id, Variavel productIn)
     {
         try
         {
-            var product = await _context.Fixos.Find(p => p.Id == id).FirstOrDefaultAsync();
+            var product = await _context.Variaveis.Find(p => p.Id == id).FirstOrDefaultAsync();
 
             if (product == null)
             {
                 return NotFound();
             }
 
-            await _context.Fixos.ReplaceOneAsync(p => p.Id == id, productIn);
+            await _context.Variaveis.ReplaceOneAsync(p => p.Id == id, productIn);
 
             return NoContent();
         }
@@ -121,14 +119,14 @@ public class FixoController : ControllerBase
     {
         try
         {
-            var product = await _context.Fixos.Find(p => p.Id == id).FirstOrDefaultAsync();
+            var product = await _context.Variaveis.Find(p => p.Id == id).FirstOrDefaultAsync();
 
             if (product == null)
             {
                 return NotFound();
             }
 
-            await _context.Fixos.DeleteOneAsync(p => p.Id == id);
+            await _context.Variaveis.DeleteOneAsync(p => p.Id == id);
 
             return NoContent();
         }
