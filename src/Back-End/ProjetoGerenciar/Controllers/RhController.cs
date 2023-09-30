@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 [Authorize]
 [ApiController]
@@ -97,5 +100,101 @@ public class RhController : ControllerBase
         {
             return Unauthorized("Usuário não autorizado");
         }
+}
+
+    [HttpPut("{id}/salariobruto")]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
+    public async Task<IActionResult> UpdateSalaryBruto(string id, [FromBody] double novoSalarioBruto)
+    {
+        var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
+
+        if (pessoa == null)
+        {
+            return NotFound();
+        }
+
+        pessoa.SalarioBruto = novoSalarioBruto;
+        await _context.Pessoas.ReplaceOneAsync(p => p.Id == id, pessoa);
+        return NoContent();
+    }
+
+    [HttpPatch("{id}/nome")]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
+    public async Task<IActionResult> UpdateName(string id, [FromBody] string nome)
+    {
+        var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
+
+        if (pessoa == null)
+        {
+            return NotFound();
+        }
+
+        pessoa.Nome = nome;
+        await _context.Pessoas.ReplaceOneAsync(p => p.Id == id, pessoa);
+        return NoContent();
+    }
+
+    [HttpPatch("{id}/cargo")]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
+    public async Task<IActionResult> UpdatePosition(string id, [FromBody] string cargo)
+    {
+        var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
+
+        if (pessoa == null)
+        {
+            return NotFound();
+        }
+
+        pessoa.Cargo = cargo;
+        await _context.Pessoas.ReplaceOneAsync(p => p.Id == id, pessoa);
+        return NoContent();
+    }
+
+    [HttpPatch("{id}/setor")]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
+    public async Task<IActionResult> UpdateSector(string id, [FromBody] string setor)
+    {
+        var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
+
+        if (pessoa == null)
+        {
+            return NotFound();
+        }
+
+        pessoa.Setor = setor;
+        await _context.Pessoas.ReplaceOneAsync(p => p.Id == id, pessoa);
+        return NoContent();
+    }
+
+    [HttpPatch("{id}/meslancamento")]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
+    public async Task<IActionResult> UpdateLaunchMonth(string id, [FromBody] string mesLancamento)
+    {
+        var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
+
+        if (pessoa == null)
+        {
+            return NotFound();
+        }
+
+        pessoa.MesLancamento = mesLancamento;
+        await _context.Pessoas.ReplaceOneAsync(p => p.Id == id, pessoa);
+        return NoContent();
+    }
+
+    [HttpPatch("{id}/anolancamento")]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
+    public async Task<IActionResult> UpdateLaunchYear(string id, [FromBody] int anoLancamento)
+    {
+        var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
+
+        if (pessoa == null)
+        {
+            return NotFound();
+        }
+
+        pessoa.AnoLancamento = anoLancamento;
+        await _context.Pessoas.ReplaceOneAsync(p => p.Id == id, pessoa);
+        return NoContent();
     }
 }
