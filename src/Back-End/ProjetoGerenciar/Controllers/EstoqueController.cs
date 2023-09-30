@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using ProjetoGerenciar.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -18,9 +19,15 @@ public class EstoqueController : ControllerBase
 
     [HttpGet]
     [Authorize(Roles = "AdminEstoque, Usuario, AdminGeral,AdminRh")]
-    public async Task<IEnumerable<Estoque>> Get()
+    public async Task<ActionResult<EstoqueDto>> Get()
     {
-        return await _context.Produtos.Find(_ => true).ToListAsync();
+        var estoque = await _context.Produtos.Find(_ => true).ToListAsync();
+        var resultado = new EstoqueDto();
+        {
+            resultado.Produtos = estoque;
+            resultado.Total = estoque.Sum(p => p.Quantidade * p.Preco); ;
+        }
+        return resultado;
     }
 
     [HttpGet("{id}")]
@@ -46,7 +53,7 @@ public class EstoqueController : ControllerBase
 
     [HttpGet("data")]
     [Authorize(Roles = "AdminEstoque, Usuario, AdminGeral,AdminRh")]
-    public async Task<ActionResult<List<Estoque>>> GetByDate(int Ano, string? Mes)
+    public async Task<ActionResult<EstoqueDto>> GetByDate(int Ano, string? Mes)
     {
         try
         {
@@ -67,7 +74,13 @@ public class EstoqueController : ControllerBase
                 return NotFound();
             }
 
-            return product;
+            var resultado = new EstoqueDto();
+            {
+                resultado.Produtos = product;
+                resultado.Total = product.Sum(p => p.Quantidade * p.Preco);
+            }
+
+            return resultado;
         }
         catch (UnauthorizedAccessException)
         {
@@ -77,7 +90,7 @@ public class EstoqueController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize(Roles = "AdminEstoque")]
+    [Authorize(Roles = "AdminEstoque,AdminGeral")]
     public async Task<ActionResult<Estoque>> Create(Estoque product)
     {
         try
@@ -116,7 +129,7 @@ public class EstoqueController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    [Authorize(Roles = "AdminEstoque")]
+    [Authorize(Roles = "AdminEstoque,AdminGeral")]
     public async Task<IActionResult> Delete(string id)
     {
         try

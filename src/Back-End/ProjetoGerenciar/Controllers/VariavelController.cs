@@ -76,7 +76,7 @@ public class VariavelController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize(Roles = "AdminCusto")]
+    [Authorize(Roles = "AdminCusto,AdminGeral")]
     public async Task<ActionResult<Variavel>> Create(Variavel product)
     {
         try
@@ -114,7 +114,7 @@ public class VariavelController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    [Authorize(Roles = "AdminCusto")]
+    [Authorize(Roles = "AdminCusto,AdminGeral")]
     public async Task<IActionResult> Delete(string id)
     {
         try
