@@ -82,7 +82,7 @@ public class RhController : ControllerBase
             return Unauthorized("Usuário não autorizado");
         }
     }
-    [Authorize(Roles = "AdminRh")]
+    [Authorize(Roles = "AdminRh, AdminGeral")]
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(string id)
     {
