@@ -72,7 +72,7 @@ public class Rh
         }
         else
         {
-            desconto = 877.24;
+            desconto = 876.97;
         }
         return desconto;
     }
