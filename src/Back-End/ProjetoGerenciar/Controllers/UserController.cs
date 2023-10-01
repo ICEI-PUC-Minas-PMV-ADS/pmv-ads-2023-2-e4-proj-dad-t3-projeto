@@ -59,7 +59,7 @@ public class UserController : ControllerBase
         return CreatedAtRoute(new { id = novoUser.Id }, novoUser);
     }
     [HttpPut("{id}")]
-    [Authorize(Roles = "AdminRh")]
+    [Authorize(Roles = "AdminRh,AdminGeral")]
     public async Task<IActionResult> Update(string id, UserDto userIn)
     {
         var user = await _context.Users.Find(u => u.Id == id).FirstOrDefaultAsync();
@@ -69,7 +69,7 @@ public class UserController : ControllerBase
             {
                 return NotFound();
             }
-            var userHasPermission = User.IsInRole("AdminRh");
+            var userHasPermission = User.IsInRole("AdminRh") || User.IsInRole("AdminGeral");
             if (!userHasPermission)
             {
                 return Unauthorized("Usuário não autorizado");
@@ -90,7 +90,7 @@ public class UserController : ControllerBase
         }
     }
     [HttpDelete("{id}")]
-    [Authorize(Roles = "AdminRh")]
+    [Authorize(Roles = "AdminRh,AdminGeral")]
     public async Task<IActionResult> Delete(string id)
     {
         try
@@ -101,7 +101,7 @@ public class UserController : ControllerBase
             {
                 return NotFound();
             }
-            var userHasPermission = User.IsInRole("AdminRh");
+            var userHasPermission = User.IsInRole("AdminRh") || User.IsInRole("AdminGeral");
 
             if (!userHasPermission)
             {

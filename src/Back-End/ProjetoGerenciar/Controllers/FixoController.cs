@@ -78,7 +78,7 @@ public class FixoController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize(Roles = "AdminCusto")]
+    [Authorize(Roles = "AdminCusto,AdminGeral")]
     public async Task<ActionResult<Fixo>> Create(Fixo product)
     {
         try
@@ -116,7 +116,7 @@ public class FixoController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    [Authorize(Roles = "AdminCusto")]
+    [Authorize(Roles = "AdminCusto,AdminGeral")]
     public async Task<IActionResult> Delete(string id)
     {
         try
