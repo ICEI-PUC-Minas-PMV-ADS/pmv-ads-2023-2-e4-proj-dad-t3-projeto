@@ -4,6 +4,14 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ![Diagrama_Arquitetura](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/63081926/927768f0-9f8c-4e8c-b035-6d03add99345)
 
+# Documentação API
+
+![Imagem Api no Swagger](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/63081926/6a8e181f-8cde-4dd8-ba4f-57a24d55d4f5)
+
+Documentação oficial da nossa API, criada usando o Swagger.
+Nesta documentação, você encontrará informações detalhadas sobre os endpoints da nossa API, parâmetros de solicitação, respostas e exemplos de uso.
+
+[Arquivo da Documentação](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e4-proj-dad-t3-projeto/)
 
 ## Diagrama de Classes
 
