@@ -25,7 +25,7 @@ public class EstoqueController : ControllerBase
         var resultado = new EstoqueDto();
         {
             resultado.Produtos = estoque;
-            resultado.Total = estoque.Sum(p => p.Quantidade * p.Preco); ;
+            resultado.TotalEstoque = estoque.Sum(p => p.ValorTotal);
         }
         return resultado;
     }
@@ -77,7 +77,7 @@ public class EstoqueController : ControllerBase
             var resultado = new EstoqueDto();
             {
                 resultado.Produtos = product;
-                resultado.Total = product.Sum(p => p.Quantidade * p.Preco);
+                resultado.TotalEstoque = product.Sum(p => p.ValorTotal);
             }
 
             return resultado;

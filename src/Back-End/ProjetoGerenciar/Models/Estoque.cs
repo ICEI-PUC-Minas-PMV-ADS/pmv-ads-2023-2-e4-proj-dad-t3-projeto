@@ -15,10 +15,23 @@ public class Estoque
     [Required]
     [BsonElement("Preço")]
     public double Preco { get; set; }
+    [BsonElement("ValorTotal")]
+    public double ValorTotal { get; private set; }
+
     [Required]
     [BsonElement("MesLancamento")]
     public string? MesLancamento { get; set; }
     [Required]
     [BsonElement("AnoLancamento")]
     public int AnoLancamento { get; set; }
+
+    public Estoque(string nome, int quantidade, double preco, string mesLancamento, int anoLancamento)
+    {
+        Nome = nome;
+        Quantidade = quantidade;
+        Preco = preco;
+        MesLancamento = mesLancamento;
+        AnoLancamento = anoLancamento;
+        ValorTotal = Quantidade * Preco;
+    }
 }
