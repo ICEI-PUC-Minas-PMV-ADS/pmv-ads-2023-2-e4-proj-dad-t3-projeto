@@ -727,6 +727,11 @@
       "type" : "number",
       "format" : "double"
     },
+    "valorTotal" : {
+      "type" : "number",
+      "format" : "double",
+      "readOnly" : true
+    },
     "mesLancamento" : {
       "minLength" : 1,
       "type" : "string"
@@ -748,9 +753,54 @@
         "$ref" : "#/components/schemas/Estoque"
       }
     },
-    "total" : {
+    "totalEstoque" : {
       "type" : "number",
       "format" : "double"
+    }
+  },
+  "additionalProperties" : false
+};
+            defs["Faturamento"] = {
+  "required" : [ "anoLancamento", "clientesAtendidos", "mesLancamento", "numeroItensVendidos", "numeroVendas", "precoMedioProduto", "taxaConversao", "valorFaturadoMes" ],
+  "type" : "object",
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "nullable" : true
+    },
+    "clientesAtendidos" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "numeroVendas" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "taxaConversao" : {
+      "type" : "number",
+      "format" : "double",
+      "readOnly" : true
+    },
+    "numeroItensVendidos" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
+    "precoMedioProduto" : {
+      "type" : "number",
+      "format" : "double",
+      "readOnly" : true
+    },
+    "valorFaturadoMes" : {
+      "type" : "number",
+      "format" : "double"
+    },
+    "mesLancamento" : {
+      "minLength" : 1,
+      "type" : "string"
+    },
+    "anoLancamento" : {
+      "type" : "integer",
+      "format" : "int32"
     }
   },
   "additionalProperties" : false
@@ -944,6 +994,25 @@
                     </li>
                     <li data-group="Estoque" data-name="apiEstoquePost" class="">
                       <a href="#api-Estoque-apiEstoquePost">apiEstoquePost</a>
+                    </li>
+                  <li class="nav-header" data-group="Faturamento"><a href="#api-Faturamento">API Methods - Faturamento</a></li>
+                    <li data-group="Faturamento" data-name="apiFaturamentoDataGet" class="">
+                      <a href="#api-Faturamento-apiFaturamentoDataGet">apiFaturamentoDataGet</a>
+                    </li>
+                    <li data-group="Faturamento" data-name="apiFaturamentoGet" class="">
+                      <a href="#api-Faturamento-apiFaturamentoGet">apiFaturamentoGet</a>
+                    </li>
+                    <li data-group="Faturamento" data-name="apiFaturamentoIdDelete" class="">
+                      <a href="#api-Faturamento-apiFaturamentoIdDelete">apiFaturamentoIdDelete</a>
+                    </li>
+                    <li data-group="Faturamento" data-name="apiFaturamentoIdGet" class="">
+                      <a href="#api-Faturamento-apiFaturamentoIdGet">apiFaturamentoIdGet</a>
+                    </li>
+                    <li data-group="Faturamento" data-name="apiFaturamentoIdPut" class="">
+                      <a href="#api-Faturamento-apiFaturamentoIdPut">apiFaturamentoIdPut</a>
+                    </li>
+                    <li data-group="Faturamento" data-name="apiFaturamentoPost" class="">
+                      <a href="#api-Faturamento-apiFaturamentoPost">apiFaturamentoPost</a>
                     </li>
                   <li class="nav-header" data-group="Fixo"><a href="#api-Fixo">API Methods - Fixo</a></li>
                     <li data-group="Fixo" data-name="apiFixoDataGet" class="">
@@ -2816,6 +2885,1791 @@ except ApiException as e:
                                     </script>
                                   </div>
                                   <input id='responses-apiEstoquePost-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                  </section>
+                <section id="api-Faturamento">
+                  <h1>Faturamento</h1>
+                    <div id="api-Faturamento-apiFaturamentoDataGet">
+                      <article id="api-Faturamento-apiFaturamentoDataGet-0" data-group="User" data-name="apiFaturamentoDataGet" data-version="0">
+                        <div class="pull-left">
+                          <h1>apiFaturamentoDataGet</h1>
+                          <p></p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/api/Faturamento/data</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Faturamento-apiFaturamentoDataGet-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoDataGet-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoDataGet-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoDataGet-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoDataGet-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoDataGet-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoDataGet-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoDataGet-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoDataGet-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoDataGet-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoDataGet-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Faturamento-apiFaturamentoDataGet-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: text/plain,application/json,text/json"\
+"//api/Faturamento/data?Ano=&Mes="</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoDataGet-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.FaturamentoApi;
+
+import java.io.File;
+import java.util.*;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        Integer ano = 56; // Integer | 
+        String mes = mes_example; // String | 
+        try {
+            array[Faturamento] result = apiInstance.apiFaturamentoDataGet(ano, mes);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoDataGet");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoDataGet-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FaturamentoApi;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        Integer ano = 56; // Integer | 
+        String mes = mes_example; // String | 
+        try {
+            array[Faturamento] result = apiInstance.apiFaturamentoDataGet(ano, mes);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoDataGet");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Faturamento-apiFaturamentoDataGet-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoDataGet-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Integer *ano = 56; //  (optional)
+String *mes = mes_example; //  (optional)
+
+FaturamentoApi *apiInstance = [[FaturamentoApi alloc] init];
+
+[apiInstance apiFaturamentoDataGetWith:ano
+    mes:mes
+              completionHandler: ^(array[Faturamento] output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoDataGet-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var ProjetoGerenciar = require('projeto_gerenciar');
+
+var api = new ProjetoGerenciar.FaturamentoApi()
+var opts = { 
+  'ano': 56, // {{Integer}} 
+  'mes': mes_example // {{String}} 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.apiFaturamentoDataGet(opts, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Faturamento-apiFaturamentoDataGet-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoDataGet-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class apiFaturamentoDataGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new FaturamentoApi();
+            var ano = 56;  // Integer |  (optional) 
+            var mes = mes_example;  // String |  (optional) 
+
+            try
+            {
+                array[Faturamento] result = apiInstance.apiFaturamentoDataGet(ano, mes);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaturamentoApi.apiFaturamentoDataGet: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoDataGet-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiFaturamentoApi();
+$ano = 56; // Integer | 
+$mes = mes_example; // String | 
+
+try {
+    $result = $api_instance->apiFaturamentoDataGet($ano, $mes);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FaturamentoApi->apiFaturamentoDataGet: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoDataGet-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::FaturamentoApi;
+
+my $api_instance = WWW::SwaggerClient::FaturamentoApi->new();
+my $ano = 56; # Integer | 
+my $mes = mes_example; # String | 
+
+eval { 
+    my $result = $api_instance->apiFaturamentoDataGet(ano => $ano, mes => $mes);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling FaturamentoApi->apiFaturamentoDataGet: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoDataGet-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.FaturamentoApi()
+ano = 56 # Integer |  (optional)
+mes = mes_example # String |  (optional)
+
+try: 
+    api_response = api_instance.api_faturamento_data_get(ano=ano, mes=mes)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling FaturamentoApi->apiFaturamentoDataGet: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+
+
+
+
+                            <div class="methodsubtabletitle">Query parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">Ano</td>
+                                <td>
+                                
+                                
+                                    <div id="d2e199_apiFaturamentoDataGet_ano">
+                                        <div class="json-schema-view">
+                                            <div class="primitive">
+                                                <span class="type">
+                                                    Integer
+                                                </span>
+                                                    <span class="format">
+                                                        (int32)
+                                                    </span>
+                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                                <tr><td style="width:150px;">Mes</td>
+                                <td>
+                                
+                                
+                                    <div id="d2e199_apiFaturamentoDataGet_mes">
+                                        <div class="json-schema-view">
+                                            <div class="primitive">
+                                                <span class="type">
+                                                    String
+                                                </span>
+                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                            </table>
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Success </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-apiFaturamentoDataGet-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-apiFaturamentoDataGet-200-schema">
+                                  <div id='responses-apiFaturamentoDataGet-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "Success",
+  "content" : {
+    "text/plain" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Faturamento"
+        },
+        "x-content-type" : "text/plain"
+      }
+    },
+    "application/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Faturamento"
+        }
+      }
+    },
+    "text/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Faturamento"
+        }
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["text/plain"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-apiFaturamentoDataGet-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-apiFaturamentoDataGet-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-apiFaturamentoDataGet-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-Faturamento-apiFaturamentoGet">
+                      <article id="api-Faturamento-apiFaturamentoGet-0" data-group="User" data-name="apiFaturamentoGet" data-version="0">
+                        <div class="pull-left">
+                          <h1>apiFaturamentoGet</h1>
+                          <p></p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/api/Faturamento</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Faturamento-apiFaturamentoGet-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoGet-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoGet-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoGet-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoGet-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoGet-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoGet-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoGet-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoGet-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoGet-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoGet-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Faturamento-apiFaturamentoGet-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: text/plain,application/json,text/json"\
+"//api/Faturamento"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoGet-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.FaturamentoApi;
+
+import java.io.File;
+import java.util.*;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        try {
+            array[Faturamento] result = apiInstance.apiFaturamentoGet();
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoGet");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoGet-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FaturamentoApi;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        try {
+            array[Faturamento] result = apiInstance.apiFaturamentoGet();
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoGet");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Faturamento-apiFaturamentoGet-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoGet-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">
+FaturamentoApi *apiInstance = [[FaturamentoApi alloc] init];
+
+[apiInstance apiFaturamentoGetWithCompletionHandler: 
+              ^(array[Faturamento] output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoGet-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var ProjetoGerenciar = require('projeto_gerenciar');
+
+var api = new ProjetoGerenciar.FaturamentoApi()
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.apiFaturamentoGet(callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Faturamento-apiFaturamentoGet-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoGet-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class apiFaturamentoGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new FaturamentoApi();
+
+            try
+            {
+                array[Faturamento] result = apiInstance.apiFaturamentoGet();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaturamentoApi.apiFaturamentoGet: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoGet-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiFaturamentoApi();
+
+try {
+    $result = $api_instance->apiFaturamentoGet();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FaturamentoApi->apiFaturamentoGet: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoGet-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::FaturamentoApi;
+
+my $api_instance = WWW::SwaggerClient::FaturamentoApi->new();
+
+eval { 
+    my $result = $api_instance->apiFaturamentoGet();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling FaturamentoApi->apiFaturamentoGet: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoGet-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.FaturamentoApi()
+
+try: 
+    api_response = api_instance.api_faturamento_get()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling FaturamentoApi->apiFaturamentoGet: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Success </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-apiFaturamentoGet-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-apiFaturamentoGet-200-schema">
+                                  <div id='responses-apiFaturamentoGet-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "Success",
+  "content" : {
+    "text/plain" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Faturamento"
+        },
+        "x-content-type" : "text/plain"
+      }
+    },
+    "application/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Faturamento"
+        }
+      }
+    },
+    "text/json" : {
+      "schema" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Faturamento"
+        }
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["text/plain"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-apiFaturamentoGet-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-apiFaturamentoGet-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-apiFaturamentoGet-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-Faturamento-apiFaturamentoIdDelete">
+                      <article id="api-Faturamento-apiFaturamentoIdDelete-0" data-group="User" data-name="apiFaturamentoIdDelete" data-version="0">
+                        <div class="pull-left">
+                          <h1>apiFaturamentoIdDelete</h1>
+                          <p></p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="delete"><code><span class="pln">/api/Faturamento/{id}</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Faturamento-apiFaturamentoIdDelete-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdDelete-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdDelete-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoIdDelete-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdDelete-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdDelete-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoIdDelete-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdDelete-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdDelete-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdDelete-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdDelete-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Faturamento-apiFaturamentoIdDelete-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X DELETE\
+"//api/Faturamento/{id}"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdDelete-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.FaturamentoApi;
+
+import java.io.File;
+import java.util.*;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        String id = id_example; // String | 
+        try {
+            apiInstance.apiFaturamentoIdDelete(id);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoIdDelete");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdDelete-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FaturamentoApi;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        String id = id_example; // String | 
+        try {
+            apiInstance.apiFaturamentoIdDelete(id);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoIdDelete");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdDelete-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdDelete-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *id = id_example; // 
+
+FaturamentoApi *apiInstance = [[FaturamentoApi alloc] init];
+
+[apiInstance apiFaturamentoIdDeleteWith:id
+              completionHandler: ^(NSError* error) {
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdDelete-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var ProjetoGerenciar = require('projeto_gerenciar');
+
+var api = new ProjetoGerenciar.FaturamentoApi()
+var id = id_example; // {{String}} 
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+api.apiFaturamentoIdDelete(id, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdDelete-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdDelete-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class apiFaturamentoIdDeleteExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new FaturamentoApi();
+            var id = id_example;  // String | 
+
+            try
+            {
+                apiInstance.apiFaturamentoIdDelete(id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaturamentoApi.apiFaturamentoIdDelete: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdDelete-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiFaturamentoApi();
+$id = id_example; // String | 
+
+try {
+    $api_instance->apiFaturamentoIdDelete($id);
+} catch (Exception $e) {
+    echo 'Exception when calling FaturamentoApi->apiFaturamentoIdDelete: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdDelete-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::FaturamentoApi;
+
+my $api_instance = WWW::SwaggerClient::FaturamentoApi->new();
+my $id = id_example; # String | 
+
+eval { 
+    $api_instance->apiFaturamentoIdDelete(id => $id);
+};
+if ($@) {
+    warn "Exception when calling FaturamentoApi->apiFaturamentoIdDelete: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdDelete-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.FaturamentoApi()
+id = id_example # String | 
+
+try: 
+    api_instance.api_faturamento_id_delete(id)
+except ApiException as e:
+    print("Exception when calling FaturamentoApi->apiFaturamentoIdDelete: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">id*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_apiFaturamentoIdDelete_id">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Success </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-Faturamento-apiFaturamentoIdGet">
+                      <article id="api-Faturamento-apiFaturamentoIdGet-0" data-group="User" data-name="apiFaturamentoIdGet" data-version="0">
+                        <div class="pull-left">
+                          <h1>apiFaturamentoIdGet</h1>
+                          <p></p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/api/Faturamento/{id}</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Faturamento-apiFaturamentoIdGet-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdGet-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdGet-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoIdGet-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdGet-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdGet-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoIdGet-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdGet-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdGet-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdGet-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdGet-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Faturamento-apiFaturamentoIdGet-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: text/plain,application/json,text/json"\
+"//api/Faturamento/{id}"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdGet-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.FaturamentoApi;
+
+import java.io.File;
+import java.util.*;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        String id = id_example; // String | 
+        try {
+            Faturamento result = apiInstance.apiFaturamentoIdGet(id);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoIdGet");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdGet-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FaturamentoApi;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        String id = id_example; // String | 
+        try {
+            Faturamento result = apiInstance.apiFaturamentoIdGet(id);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoIdGet");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdGet-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdGet-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *id = id_example; // 
+
+FaturamentoApi *apiInstance = [[FaturamentoApi alloc] init];
+
+[apiInstance apiFaturamentoIdGetWith:id
+              completionHandler: ^(Faturamento output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdGet-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var ProjetoGerenciar = require('projeto_gerenciar');
+
+var api = new ProjetoGerenciar.FaturamentoApi()
+var id = id_example; // {{String}} 
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.apiFaturamentoIdGet(id, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdGet-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdGet-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class apiFaturamentoIdGetExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new FaturamentoApi();
+            var id = id_example;  // String | 
+
+            try
+            {
+                Faturamento result = apiInstance.apiFaturamentoIdGet(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaturamentoApi.apiFaturamentoIdGet: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdGet-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiFaturamentoApi();
+$id = id_example; // String | 
+
+try {
+    $result = $api_instance->apiFaturamentoIdGet($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FaturamentoApi->apiFaturamentoIdGet: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdGet-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::FaturamentoApi;
+
+my $api_instance = WWW::SwaggerClient::FaturamentoApi->new();
+my $id = id_example; # String | 
+
+eval { 
+    my $result = $api_instance->apiFaturamentoIdGet(id => $id);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling FaturamentoApi->apiFaturamentoIdGet: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdGet-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.FaturamentoApi()
+id = id_example # String | 
+
+try: 
+    api_response = api_instance.api_faturamento_id_get(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling FaturamentoApi->apiFaturamentoIdGet: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">id*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_apiFaturamentoIdGet_id">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Success </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-apiFaturamentoIdGet-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-apiFaturamentoIdGet-200-schema">
+                                  <div id='responses-apiFaturamentoIdGet-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "Success",
+  "content" : {
+    "text/plain" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    },
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    },
+    "text/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["text/plain"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-apiFaturamentoIdGet-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-apiFaturamentoIdGet-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-apiFaturamentoIdGet-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-Faturamento-apiFaturamentoIdPut">
+                      <article id="api-Faturamento-apiFaturamentoIdPut-0" data-group="User" data-name="apiFaturamentoIdPut" data-version="0">
+                        <div class="pull-left">
+                          <h1>apiFaturamentoIdPut</h1>
+                          <p></p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="put"><code><span class="pln">/api/Faturamento/{id}</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Faturamento-apiFaturamentoIdPut-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdPut-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdPut-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoIdPut-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdPut-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdPut-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoIdPut-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdPut-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdPut-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdPut-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoIdPut-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Faturamento-apiFaturamentoIdPut-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X PUT\
+-H "Content-Type: application/json,text/json,application/*+json"\
+"//api/Faturamento/{id}"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdPut-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.FaturamentoApi;
+
+import java.io.File;
+import java.util.*;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        String id = id_example; // String | 
+        Faturamento body = ; // Faturamento | 
+        try {
+            apiInstance.apiFaturamentoIdPut(id, body);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoIdPut");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdPut-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FaturamentoApi;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        String id = id_example; // String | 
+        Faturamento body = ; // Faturamento | 
+        try {
+            apiInstance.apiFaturamentoIdPut(id, body);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoIdPut");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdPut-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdPut-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *id = id_example; // 
+Faturamento *body = ; //  (optional)
+
+FaturamentoApi *apiInstance = [[FaturamentoApi alloc] init];
+
+[apiInstance apiFaturamentoIdPutWith:id
+    body:body
+              completionHandler: ^(NSError* error) {
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdPut-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var ProjetoGerenciar = require('projeto_gerenciar');
+
+var api = new ProjetoGerenciar.FaturamentoApi()
+var id = id_example; // {{String}} 
+var opts = { 
+  'body':  // {{Faturamento}} 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+api.apiFaturamentoIdPut(id, opts, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdPut-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdPut-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class apiFaturamentoIdPutExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new FaturamentoApi();
+            var id = id_example;  // String | 
+            var body = new Faturamento(); // Faturamento |  (optional) 
+
+            try
+            {
+                apiInstance.apiFaturamentoIdPut(id, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaturamentoApi.apiFaturamentoIdPut: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdPut-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiFaturamentoApi();
+$id = id_example; // String | 
+$body = ; // Faturamento | 
+
+try {
+    $api_instance->apiFaturamentoIdPut($id, $body);
+} catch (Exception $e) {
+    echo 'Exception when calling FaturamentoApi->apiFaturamentoIdPut: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdPut-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::FaturamentoApi;
+
+my $api_instance = WWW::SwaggerClient::FaturamentoApi->new();
+my $id = id_example; # String | 
+my $body = WWW::SwaggerClient::Object::Faturamento->new(); # Faturamento | 
+
+eval { 
+    $api_instance->apiFaturamentoIdPut(id => $id, body => $body);
+};
+if ($@) {
+    warn "Exception when calling FaturamentoApi->apiFaturamentoIdPut: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoIdPut-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.FaturamentoApi()
+id = id_example # String | 
+body =  # Faturamento |  (optional)
+
+try: 
+    api_instance.api_faturamento_id_put(id, body=body)
+except ApiException as e:
+    print("Exception when calling FaturamentoApi->apiFaturamentoIdPut: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">id*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_apiFaturamentoIdPut_id">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body </td>
+                                <td>
+                                
+                                
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    },
+    "text/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    },
+    "application/*+json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    }
+  }
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
+                                
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_apiFaturamentoIdPut_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_apiFaturamentoIdPut_body"></div>
+                                </td>
+                                </tr>
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Success </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-Faturamento-apiFaturamentoPost">
+                      <article id="api-Faturamento-apiFaturamentoPost-0" data-group="User" data-name="apiFaturamentoPost" data-version="0">
+                        <div class="pull-left">
+                          <h1>apiFaturamentoPost</h1>
+                          <p></p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/api/Faturamento</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Faturamento-apiFaturamentoPost-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoPost-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoPost-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoPost-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoPost-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoPost-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Faturamento-apiFaturamentoPost-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoPost-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoPost-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoPost-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Faturamento-apiFaturamentoPost-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Faturamento-apiFaturamentoPost-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+-H "Accept: text/plain,application/json,text/json"\
+-H "Content-Type: application/json,text/json,application/*+json"\
+"//api/Faturamento"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoPost-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.FaturamentoApi;
+
+import java.io.File;
+import java.util.*;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        Faturamento body = ; // Faturamento | 
+        try {
+            Faturamento result = apiInstance.apiFaturamentoPost(body);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoPost");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Faturamento-apiFaturamentoPost-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.FaturamentoApi;
+
+public class FaturamentoApiExample {
+
+    public static void main(String[] args) {
+        FaturamentoApi apiInstance = new FaturamentoApi();
+        Faturamento body = ; // Faturamento | 
+        try {
+            Faturamento result = apiInstance.apiFaturamentoPost(body);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling FaturamentoApi#apiFaturamentoPost");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Faturamento-apiFaturamentoPost-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoPost-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Faturamento *body = ; //  (optional)
+
+FaturamentoApi *apiInstance = [[FaturamentoApi alloc] init];
+
+[apiInstance apiFaturamentoPostWith:body
+              completionHandler: ^(Faturamento output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoPost-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var ProjetoGerenciar = require('projeto_gerenciar');
+
+var api = new ProjetoGerenciar.FaturamentoApi()
+var opts = { 
+  'body':  // {{Faturamento}} 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.apiFaturamentoPost(opts, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Faturamento-apiFaturamentoPost-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoPost-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class apiFaturamentoPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new FaturamentoApi();
+            var body = new Faturamento(); // Faturamento |  (optional) 
+
+            try
+            {
+                Faturamento result = apiInstance.apiFaturamentoPost(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FaturamentoApi.apiFaturamentoPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoPost-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiFaturamentoApi();
+$body = ; // Faturamento | 
+
+try {
+    $result = $api_instance->apiFaturamentoPost($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FaturamentoApi->apiFaturamentoPost: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoPost-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::FaturamentoApi;
+
+my $api_instance = WWW::SwaggerClient::FaturamentoApi->new();
+my $body = WWW::SwaggerClient::Object::Faturamento->new(); # Faturamento | 
+
+eval { 
+    my $result = $api_instance->apiFaturamentoPost(body => $body);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling FaturamentoApi->apiFaturamentoPost: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Faturamento-apiFaturamentoPost-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.FaturamentoApi()
+body =  # Faturamento |  (optional)
+
+try: 
+    api_response = api_instance.api_faturamento_post(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling FaturamentoApi->apiFaturamentoPost: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body </td>
+                                <td>
+                                
+                                
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    },
+    "text/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    },
+    "application/*+json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    }
+  }
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
+                                
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_apiFaturamentoPost_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_apiFaturamentoPost_body"></div>
+                                </td>
+                                </tr>
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Success </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-apiFaturamentoPost-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-apiFaturamentoPost-200-schema">
+                                  <div id='responses-apiFaturamentoPost-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "Success",
+  "content" : {
+    "text/plain" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    },
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    },
+    "text/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/Faturamento"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["text/plain"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-apiFaturamentoPost-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-apiFaturamentoPost-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-apiFaturamentoPost-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
