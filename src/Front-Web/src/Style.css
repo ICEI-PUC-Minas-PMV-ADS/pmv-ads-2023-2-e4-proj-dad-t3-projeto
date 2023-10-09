@@ -1,0 +1,111 @@
+.sidebar {
+    width: 220px;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 20px;
+    padding-top: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    color: #191970;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar a:hover {
+    background-color: #ADD8E6;
+  }
+  
+  .sidebar i {
+    margin-right: 10px;
+  }
+  
+  .sidebar a.active {
+    background-color: #ADD8E6;
+  }
+
+  .logo-container{
+    margin-left: 60px;
+    margin-top: 120px;
+    font-size: 90px;
+    color: #191970;
+  }
+
+
+  .Estoque {
+    margin-left: 230px;
+  }
+  .estoque-header {
+    text-align: left;
+    margin-left: 20px; 
+  }
+  
+  .estoque-title {
+    font-size: 30px;
+    color: #191970;
+    margin-left: 0;
+  }
+  
+  .estoque-subtitle {
+    font-size: 16px; 
+    margin: 0; 
+    color: #A9A9A9;
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .estoque-container {
+    margin-top: 80px;
+  }
+  
+  .estoque-title2 {
+    margin: 0;
+    font-size: 19px; 
+  }
+  
+  .add-button {
+    background-color: #00FF7F;
+    color: black;
+    padding: 4px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: darkgreen;
+  }
+
+  .home {
+    margin-left: 250px;
+  }
+
+  .recursosHumanos{
+    margin-left: 250px;
+  }
+
+  .despesas{
+    margin-left: 250px;
+  }
+
+  .suporte{
+    margin-left: 255px;
+  }
