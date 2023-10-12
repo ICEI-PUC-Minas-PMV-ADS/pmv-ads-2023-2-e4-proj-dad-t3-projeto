@@ -1,4 +1,3 @@
-import React from 'react';
 import './Style.css';
 import Sidebar from './Sidebar';
 
@@ -14,12 +13,11 @@ function Estoque() {
         {/* Outro conteúdo da página aqui */}
 
         <div className="estoque-container">
-      <div className="page-header">
-        <h1 className="estoque-title2">Produtos Cadastrados</h1>
-        <button className="add-button">Adicionar +</button>
-      </div>
-      </div>
-
+          <div className="page-header">
+            <h1 className="estoque-title2">Produtos Cadastrados</h1>
+            <button className="add-button">Adicionar +</button>
+          </div>
+        </div>
       </main>
     </div>
   );
