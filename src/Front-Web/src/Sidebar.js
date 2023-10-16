@@ -8,6 +8,7 @@ import {
   faBoxArchive,
   faGear,
   faRightFromBracket,
+  faDollarSign,
 } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faJoomla } from '@fortawesome/free-brands-svg-icons';
@@ -53,6 +54,15 @@ const Sidebar = () => {
             to="/estoque"
           >
             <FontAwesomeIcon icon={faBoxArchive} /> Estoque
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            className={({ isActive }) => (isActive ? 'active' : '')}
+            to="/faturamento"
+          >
+            <FontAwesomeIcon icon={faDollarSign} /> Faturamento
           </NavLink>
         </li>
 
