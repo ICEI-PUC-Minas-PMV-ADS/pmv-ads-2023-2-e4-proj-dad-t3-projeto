@@ -92,6 +92,11 @@
   margin: 0;
   font-size: 19px;
 }
+.container-add-button {
+  width: 95%;
+  text-align: end;
+  margin: 15px;
+}
 
 .add-button {
   background-color: #00ff7f;
@@ -125,15 +130,18 @@
   margin-left: 255px;
 }
 
+/* Modal Início */
+
 .modal-container {
   position: absolute;
   width: 50%;
-  height: 50%;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid red;
-  background-color: #ccc;
+  z-index: 300;
+  padding: 1.5rem;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -157,5 +165,85 @@
   border: 1px solid #ccc;
   padding: 5px;
   border: 1px solid #a9a9a9;
-  margin: 5px;
+  margin: 15px;
 }
+
+.fecharModal {
+  width: 100%;
+  text-align: end;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+/* Modal Fim */
+
+/* Componente Calendário Início */
+
+.input-calendario {
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  border-top: 10px solid #4d4b76;
+  width: 220px;
+}
+
+/* Componente Calendário Fim */
+
+/* Componente Módulos Início */
+
+.product-card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-info {
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+  margin: 0.2rem;
+  border-top: 2px solid rgba(67, 70, 89, 0.4);
+}
+
+.product-info h4 {
+  width: 40%;
+}
+
+.product-buttons {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.product-buttons button {
+  font-size: 1rem;
+  padding: 1px 25px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: rgba(10, 55, 110, 0.5);
+}
+
+.delete-button {
+  background-color: rgba(255, 65, 65, 0.7);
+}
+
+.campos-modulos {
+  width: 15%;
+}
+
+/* Componente Módulos Fim */
