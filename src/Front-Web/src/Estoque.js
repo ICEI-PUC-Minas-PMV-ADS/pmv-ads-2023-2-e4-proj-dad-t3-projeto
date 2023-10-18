@@ -28,7 +28,6 @@ function Estoque() {
           setIsLoaded(false);
         })
         .catch((error) => {
-          console.log(error.response.status);
           console.log(error);
           setIsLoaded(false);
         });

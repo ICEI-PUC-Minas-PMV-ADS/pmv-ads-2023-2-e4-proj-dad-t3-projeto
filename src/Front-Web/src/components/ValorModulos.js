@@ -1,7 +1,7 @@
 export default function ValorModulos(props) {
   const result = props.data;
 
-  if (result.length > 1) {
+  if (result.length >= 1) {
     return result.map((item) => {
       return (
         <div className="product-card" key={item.id}>
