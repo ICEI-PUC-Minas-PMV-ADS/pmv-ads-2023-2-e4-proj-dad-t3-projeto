@@ -6,34 +6,30 @@ import Modal from './components/Modal';
 import Backdrop from './components/Backdrop';
 import ValorModulos from './components/ValorModulos';
 import SeletorData from './components/SeletorData';
+import useAxios from './hooks/useAxios';
 
 function Estoque() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [products, setProducts] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
   const date = new Date();
   const [data, setData] = useState([date.getMonth(), date.getFullYear()]);
+  const [products, setProducts] = useState(null);
+  const token = localStorage.getItem('token');
+  const { response, loading, error } = useAxios({
+    method: 'get',
+    url: `Estoque/data?Ano=${data[0]}&Mes=${data[1]}`,
+    headers: JSON.stringify({
+      Authorization: 'Bearer ' + token,
+    }),
+  });
 
   useEffect(() => {
-    setIsLoaded(true);
-
-    const fetchData = async () => {
-      //Lógica por fazer a requisição para a API... Sem questão de token integrada por agora...
-      const response = await axios
-        .get(
-          `https://localhost:7162/api/Estoque/data?Ano=${data[0]}&Mes=${data[1]}`
-        )
-        .then((response) => {
-          setProducts(response.data);
-          setIsLoaded(false);
-        })
-        .catch((error) => {
-          console.log(error);
-          setIsLoaded(false);
-        });
-    };
-    fetchData();
-  }, [data]);
+    if (response && !error) {
+      setProducts(response.produtos);
+    } else if (error) {
+      console.log(error);
+      setProducts(null);
+    }
+  }, [data, response, error]);
 
   return (
     <div className="Estoque">
@@ -71,14 +67,16 @@ function Estoque() {
             <h1 className="estoque-title2">Produtos Cadastrados</h1>
             <SeletorData getDate={setData} />
           </div>
-          {products.produtos ? (
+          {response ? (
             <ValorModulos
-              data={products.produtos}
-              labels={['Quantidade', 'Valor']} // Título das colunas
-              valores={['nome', 'quantidade', 'preco']} // Valores do objeto
+              data={products}
+              labels={['Nome', 'Quantidade', 'Preço']} // Títulos das colunas
+              valores={['nome', 'quantidade', 'preco']} // Propriedades do objeto
             />
+          ) : loading ? (
+            <p>Carregando...</p>
           ) : (
-            isLoaded && <p>Carregando...</p>
+            <h2>Nenhum dado foi encontrado...</h2>
           )}
           <div className="container-add-button">
             <button

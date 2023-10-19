@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import './Style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,8 +13,10 @@ import {
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faJoomla } from '@fortawesome/free-brands-svg-icons';
 import { Link, NavLink } from 'react-router-dom';
+import AuthContext from './context/authContext';
 
 const Sidebar = () => {
+  const ctx = useContext(AuthContext);
   return (
     <div className="sidebar">
       <div className="logo-container">
@@ -75,7 +77,12 @@ const Sidebar = () => {
           </NavLink>
         </li>
       </ul>
-      <Link to="/" className="logoutLink">
+      <Link
+        className="logoutLink"
+        onClick={() => {
+          ctx.onLogout();
+        }}
+      >
         <FontAwesomeIcon icon={faRightFromBracket} /> Sair
       </Link>
     </div>

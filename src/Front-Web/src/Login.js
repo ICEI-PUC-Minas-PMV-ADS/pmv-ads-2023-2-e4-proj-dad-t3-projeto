@@ -1,11 +1,55 @@
+import React, { useState, useContext } from 'react';
+import axios from 'axios';
+import AuthContext from './context/authContext';
+
 export default function Login() {
+  const ctx = useContext(AuthContext);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const loginHandler = async (event) => {
+    event.preventDefault();
+    let token = null;
+    try {
+      const response = await axios.post(
+        'https://localhost:7162/api/user/authenticate',
+        {
+          email: email,
+          senha: password,
+        }
+      );
+      token = response.data.jwtToken;
+      ctx.onLogin(token);
+    } catch (error) {
+      if (error.response && error.response.status === 401) {
+        setError('E-mail e/ou senha inválidos. Por favor, tente novamente.');
+      } else {
+        setError('Um erro ocorreu, tente novamente mais tarde.');
+      }
+    }
+  };
+
   return (
     <>
       <h3>Login</h3>
-      <form>
-        <input placeholder="Usuário" />
-        <input placeholder="Senha" />
-        <button>Entrar</button>
+      {error && <div style={{ color: 'red' }}>{error}</div>}
+      <form onSubmit={loginHandler}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Senha"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit">Login</button>
       </form>
     </>
   );

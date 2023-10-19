@@ -36,11 +36,11 @@ public class RhController : ControllerBase
     }
     [HttpGet("data")]
     [Authorize(Roles = "AdminRh, AdminGeral")]
-    public async Task<ActionResult<List<Rh>>> GetByDate(int Ano, string? Mes)
+    public async Task<ActionResult<List<Rh>>> GetByDate(int Ano, int? Mes)
     {
         List<Rh> pessoa = new();
 
-        if (string.IsNullOrEmpty(Mes))
+        if (!Mes.HasValue)
         {
             pessoa = await _context.Pessoas.Find(p => p.AnoLancamento == Ano).ToListAsync();
         }
@@ -168,7 +168,7 @@ public class RhController : ControllerBase
 
     [HttpPatch("{id}/meslancamento")]
     [Authorize(Roles = "AdminRh, AdminGeral")]
-    public async Task<IActionResult> UpdateLaunchMonth(string id, [FromBody] string mesLancamento)
+    public async Task<IActionResult> UpdateLaunchMonth(string id, [FromBody] int mesLancamento)
     {
         var pessoa = await _context.Pessoas.Find(p => p.Id == id).FirstOrDefaultAsync();
 

@@ -53,13 +53,13 @@ public class EstoqueController : ControllerBase
 
     [HttpGet("data")]
     [Authorize(Roles = "AdminEstoque, Usuario, AdminGeral,AdminRh")]
-    public async Task<ActionResult<EstoqueDto>> GetByDate(int Ano, string? Mes)
+    public async Task<ActionResult<EstoqueDto>> GetByDate(int Ano, int? Mes)
     {
         try
         {
             List<Estoque> product = new();
 
-            if (string.IsNullOrEmpty(Mes))
+            if (!Mes.HasValue)
             {
                 product = await _context.Produtos.Find(p => p.AnoLancamento == Ano).ToListAsync();
             }

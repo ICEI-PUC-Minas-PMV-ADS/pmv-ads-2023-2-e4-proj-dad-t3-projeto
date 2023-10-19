@@ -46,13 +46,13 @@ public class VariavelController : ControllerBase
 
     [HttpGet("data")]
     [Authorize(Roles = "AdminGeral, AdminCusto")]
-    public async Task<ActionResult<List<Variavel>>> GetByDate(int Ano, string? Mes)
+    public async Task<ActionResult<List<Variavel>>> GetByDate(int Ano, int? Mes)
     {
         try
         {
             List<Variavel> product = new();
 
-            if (string.IsNullOrEmpty(Mes))
+            if (!Mes.HasValue)
             {
                 product = await _context.Variaveis.Find(p => p.AnoLancamento == Ano).ToListAsync();
             }

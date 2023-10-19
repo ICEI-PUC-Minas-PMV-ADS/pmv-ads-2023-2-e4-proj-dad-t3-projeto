@@ -20,12 +20,12 @@ public class Estoque
 
     [Required]
     [BsonElement("MesLancamento")]
-    public string? MesLancamento { get; set; }
+    public int MesLancamento { get; set; }
     [Required]
     [BsonElement("AnoLancamento")]
     public int AnoLancamento { get; set; }
 
-    public Estoque(string nome, int quantidade, double preco, string mesLancamento, int anoLancamento)
+    public Estoque(string nome, int quantidade, double preco, int mesLancamento, int anoLancamento)
     {
         Nome = nome;
         Quantidade = quantidade;

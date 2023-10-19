@@ -1,7 +1,7 @@
 export default function ValorModulos(props) {
   const result = props.data;
 
-  if (result.length >= 1) {
+  if (result !== null && result.length > 0) {
     return result.map((item) => {
       return (
         <div className="product-card" key={item.id}>
@@ -9,12 +9,10 @@ export default function ValorModulos(props) {
             {props.valores.map((campo, index) => {
               const uniqueKey = `${item.id}-${campo}`;
               return (
-                <>
-                  <h4 className="campos-modulos" key={uniqueKey}>
-                    {item[campo]}
-                  </h4>
+                <div className="campo-modulo" key={uniqueKey}>
                   <h4>{props.labels[index]}</h4>
-                </>
+                  <h4 className="campos-modulos">{item[campo]}</h4>
+                </div>
               );
             })}
             <div className="product-buttons">

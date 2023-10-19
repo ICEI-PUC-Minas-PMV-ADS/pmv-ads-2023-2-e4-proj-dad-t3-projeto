@@ -46,14 +46,15 @@ public class FaturamentoController : ControllerBase
     }
 
     [HttpGet("data")]
-    [Authorize(Roles = "AdminGeral, AdminCusto")]
-    public async Task<ActionResult<List<Faturamento>>> GetByDate(int Ano, string? Mes)
+    //[Authorize(Roles = "AdminGeral, AdminCusto")]
+    [AllowAnonymous]
+    public async Task<ActionResult<List<Faturamento>>> GetByDate(int Ano, int? Mes)
     {
         try
         {
             List<Faturamento> lancamento = new();
 
-            if (string.IsNullOrEmpty(Mes))
+            if (!Mes.HasValue)
             {
                 lancamento = await _context.Lancamentos.Find(p => p.AnoLancamento == Ano).ToListAsync();
             }

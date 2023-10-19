@@ -38,7 +38,7 @@ public class Rh
 
     [Required]
     [BsonElement("MesLancamento")]
-    public string? MesLancamento { get; set; }
+    public int MesLancamento { get; set; }
 
     [Required]
     [BsonElement("AnoLancamento")]

@@ -181,7 +181,6 @@
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  cursor: pointer;
 }
 
 /* Modal Fim */
@@ -214,10 +213,6 @@
   border-top: 2px solid rgba(67, 70, 89, 0.4);
 }
 
-.product-info h4 {
-  width: 40%;
-}
-
 .product-buttons {
   display: flex;
   width: 50%;
@@ -234,16 +229,18 @@
   cursor: pointer;
 }
 
+.campo-modulo {
+  width: 25%;
+}
+.campos-modulos {
+  width: 100%;
+}
 .edit-button {
   background-color: rgba(10, 55, 110, 0.5);
 }
 
 .delete-button {
   background-color: rgba(255, 65, 65, 0.7);
-}
-
-.campos-modulos {
-  width: 15%;
 }
 
 /* Componente Módulos Fim */

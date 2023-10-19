@@ -47,13 +47,13 @@ public class FixoController : ControllerBase
 
     [HttpGet("data")]
     [Authorize(Roles = "AdminGeral, AdminCusto")]
-    public async Task<ActionResult<List<Fixo>>> GetByDate(int Ano, string? Mes)
+    public async Task<ActionResult<List<Fixo>>> GetByDate(int Ano, int? Mes)
     {
         try
         {
             List<Fixo> product = new();
 
-            if (string.IsNullOrEmpty(Mes))
+            if (!Mes.HasValue)
             {
                 product = await _context.Fixos.Find(p => p.AnoLancamento == Ano).ToListAsync();
             }

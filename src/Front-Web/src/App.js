@@ -1,6 +1,7 @@
 // App.js
-import React from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AuthContext from './context/authContext';
 import Estoque from './Estoque';
 import Sidebar from './Sidebar';
 import Despesas from './Despesas';
@@ -10,12 +11,12 @@ import Suporte from './Suporte';
 import Faturamento from './Faturamento';
 import Login from './Login';
 
-const isLogged = true;
-
 function App() {
+  const authCtx = useContext(AuthContext);
+
   return (
     <Router>
-      {!isLogged ? (
+      {!authCtx.isLoggedIn ? (
         <Login />
       ) : (
         <>

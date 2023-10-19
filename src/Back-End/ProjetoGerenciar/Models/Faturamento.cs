@@ -20,11 +20,11 @@ public class Faturamento
     [Required]
     public double ValorFaturadoMes { get; set; }
     [Required]
-    public string? MesLancamento { get; set; }
+    public int MesLancamento { get; set; }
     [Required]
     public int AnoLancamento { get; set; }
 
-    public Faturamento(int clientesAtendidos, int numeroVendas, int numeroItensVendidos, double valorFaturadoMes, string mesLancamento, int anoLancamento)
+    public Faturamento(int clientesAtendidos, int numeroVendas, int numeroItensVendidos, double valorFaturadoMes, int mesLancamento, int anoLancamento)
     {
         ClientesAtendidos = clientesAtendidos;
         NumeroVendas = numeroVendas;
