@@ -57,7 +57,8 @@
   color: #191970;
 }
 
-.Estoque {
+/* --------------------CSS PADRÃO----------------------- */
+.main-all {
   margin-left: 230px;
 }
 .main-header {
@@ -73,6 +74,7 @@
 
 .main-subtitle {
   font-size: 16px;
+  font-weight: lighter;
   margin: 0;
   color: #a9a9a9;
 }
@@ -113,8 +115,10 @@
 }
 
 .add-button:hover {
-  background-color: darkgreen;
+  background-color: #3ba16e;
 }
+
+/* --------------------FIM CSS PADRÃO----------------------- */
 
 .home {
   margin-left: 250px;
@@ -249,4 +253,85 @@
   background-color: rgba(255, 65, 65, 0.7);
 }
 
+.modulo-vazio{
+  height: 100px;
+  border: 2px solid red;
+}
 /* Componente Módulos Fim */
+
+
+
+/* ---------------Início de construção css págiona de login--------------- */
+
+#box-login{
+  /* border: 1px solid red; */
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#input-position{
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  /* margin: 10px; */
+  width: 20vw;
+  height: 30vh;
+  justify-content: center;
+}
+
+.login-title{
+  font-weight: lighter;
+  font-size: 40px;
+  /* border: 2px solid yellow; */
+  width: 20vw;
+}
+
+.user-input{
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: lighter;
+  height: 40px;
+}
+
+.password-input{
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  margin-bottom: 40px;
+  font-size: 18px;
+  height: 40px
+}
+
+.enter-btn{
+  background-color: #0A376E;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: lighter;
+  padding: 1px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.enter-btn:hover{
+  background-color: #74a9e9;
+  color: black;
+  
+}
+
+#teste{
+  
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 60px #e4e4e4;
+}
+
+/* ---------------FIM de construção css págiona de login--------------- */
+

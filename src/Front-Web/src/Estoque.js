@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import './Style.css';
 import Sidebar from './Sidebar';
 import Modal from './components/Modal';
@@ -32,7 +31,7 @@ function Estoque() {
   }, [data, response, error]);
 
   return (
-    <div className="Estoque">
+    <div className="main-all">
       {/* Código Sidebar e Modal */}
       <Sidebar />
       {modalOpen && (
