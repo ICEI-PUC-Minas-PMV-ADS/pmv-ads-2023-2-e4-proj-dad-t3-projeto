@@ -60,18 +60,18 @@
 .Estoque {
   margin-left: 230px;
 }
-.estoque-header {
+.main-header {
   text-align: left;
   margin-left: 20px;
 }
 
-.estoque-title {
+.main-title {
   font-size: 30px;
   color: #191970;
   margin-left: 0;
 }
 
-.estoque-subtitle {
+.main-subtitle {
   font-size: 16px;
   margin: 0;
   color: #a9a9a9;
@@ -84,14 +84,20 @@
   padding: 10px 20px;
 }
 
-.estoque-container {
+.main-container {
   margin-top: 80px;
 }
 
-.estoque-title2 {
+.main-title2 {
   margin: 0;
   font-size: 19px;
 }
+
+.resultado-negativo {
+  margin: 20px;
+  font-size: 12px;
+}
+
 .container-add-button {
   width: 95%;
   text-align: end;
@@ -127,7 +133,7 @@
 }
 
 .suporte {
-  margin-left: 255px;
+  margin-left: 250px;
 }
 
 /* Modal Início */

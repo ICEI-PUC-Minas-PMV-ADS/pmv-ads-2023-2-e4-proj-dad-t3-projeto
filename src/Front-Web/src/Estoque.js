@@ -57,14 +57,14 @@ function Estoque() {
       )}
       <Backdrop show={modalOpen} closeModal={setModalOpen} />
       <main>
-        <div className="estoque-header">
-          <h1 className="estoque-title">Estoque</h1>
-          <h2 className="estoque-subtitle">Gerencie Seus Produtos</h2>
+        <div className="main-header">
+          <h1 className="main-title">Estoque</h1>
+          <h2 className="main-subtitle">Gerencie Seus Produtos</h2>
         </div>
 
-        <div className="estoque-container">
+        <div className="main-container">
           <div className="page-header">
-            <h1 className="estoque-title2">Produtos Cadastrados</h1>
+            <h1 className="main-title2">Produtos Cadastrados</h1>
             <SeletorData getDate={setData} />
           </div>
           {response ? (

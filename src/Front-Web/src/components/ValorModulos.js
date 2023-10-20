@@ -24,6 +24,6 @@ export default function ValorModulos(props) {
       );
     });
   } else {
-    return <h2>Nenhum dado foi encontrado...</h2>;
+    return <div className="resultado-negativo"><h2>Nenhum dado foi encontrado...</h2></div>;
   }
 }

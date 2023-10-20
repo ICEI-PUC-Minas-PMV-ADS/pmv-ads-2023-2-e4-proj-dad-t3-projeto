@@ -61,14 +61,14 @@ function Faturamento() {
       )}
       <Backdrop show={modalOpen} closeModal={setModalOpen} />
       <main>
-        <div className="estoque-header">
-          <h1 className="estoque-title">Faturamento</h1>
-          <h2 className="estoque-subtitle">Gerencie Suas Vendas</h2>
+        <div className="main-header">
+          <h1 className="main-title">Faturamento</h1>
+          <h2 className="main-subtitle">Gerencie Suas Vendas</h2>
         </div>
 
-        <div className="estoque-container">
+        <div className="main-container">
           <div className="page-header">
-            <h1 className="estoque-title2">Vendas Realizadas</h1>
+            <h1 className="main-title2">Vendas Realizadas</h1>
             <SeletorData getDate={setData} />
           </div>
           {result ? (
