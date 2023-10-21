@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import jwt_decode from 'jwt-decode';
 
 const AuthContext = React.createContext({
   isLoggedIn: false,
@@ -13,12 +14,26 @@ export const AuthContextProvider = (props) => {
 
   useEffect(() => {
     const storedUserLogged = localStorage.getItem('isLoggedIn');
+    const storedToken = localStorage.getItem('token');
 
-    if (storedUserLogged === '1') {
-      setIsLoggedIn(true);
+    if (storedUserLogged === '1' && storedToken) {
+      try {
+        const decodedToken = jwt_decode(storedToken);
+
+        console.log(decodedToken.exp > Date.now() / 1000);
+
+        if (decodedToken.exp > Date.now() / 1000) {
+          setIsLoggedIn(true);
+          setToken(storedToken);
+        } else {
+          logoutHandler();
+        }
+      } catch (error) {
+        logoutHandler();
+      }
+    } else {
+      setIsLoggedIn(false);
     }
-
-    //Validate expiration date of JWT token and take actions
   }, []);
 
   const logoutHandler = () => {

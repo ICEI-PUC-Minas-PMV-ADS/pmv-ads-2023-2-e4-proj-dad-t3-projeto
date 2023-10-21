@@ -11,7 +11,7 @@ function RecursosHumanos() {
   const [modalOpen, setModalOpen] = useState(false);
   const date = new Date();
   const [data, setData] = useState([date.getMonth(), date.getFullYear()]);
-  const [enplye, setEnplye] = useState(null);//alterar para setRH
+  const [enplye, setEnplye] = useState(null); //alterar para setRH
   const token = localStorage.getItem('token');
   const { response, loading, error } = useAxios({
     method: 'get',
@@ -23,10 +23,10 @@ function RecursosHumanos() {
 
   useEffect(() => {
     if (response && !error) {
-      setEnplye(response);//alterar para setRH
+      setEnplye(response); //alterar para setRH
     } else if (error) {
       console.log(error);
-      setEnplye(null);//alterar para setRH
+      setEnplye(null); //alterar para setRH
     }
   }, [data, response, error]);
 
@@ -39,10 +39,7 @@ function RecursosHumanos() {
           titulo="Cadastrar Funcionário"
           //passar os inputs que o modal terá
           inputs={[
-            { name: 'Nome', 
-              label: 'Nome do Funcionário', 
-              type: 'text' 
-            },
+            { name: 'Nome', label: 'Nome do Funcionário', type: 'text' },
             {
               name: 'Cargo',
               label: 'Cargo',
@@ -83,8 +80,8 @@ function RecursosHumanos() {
           ) : loading ? (
             <p>Carregando...</p>
           ) : (
-            <div className="modulo-vazio">
-            <h2>Nenhum dado foi encontrado...</h2>
+            <div className="resultado-negativo">
+              <h2>Nenhum dado foi encontrado...</h2>
             </div>
           )}
           <div className="container-add-button">
@@ -101,6 +98,6 @@ function RecursosHumanos() {
       </main>
     </div>
   );
-  }
-  
-  export default RecursosHumanos;
+}
+
+export default RecursosHumanos;

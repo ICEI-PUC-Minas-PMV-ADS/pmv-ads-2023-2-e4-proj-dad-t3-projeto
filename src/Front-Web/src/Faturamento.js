@@ -10,25 +10,30 @@ import useAxios from './hooks/useAxios';
 function Faturamento() {
   const [modalOpen, setModalOpen] = useState(false);
   const date = new Date();
-  const [data, setData] = useState([date.getMonth(), date.getFullYear()]);
-  const [result, setResults] = useState([]);
-
+  const dataAtual = [date.getMonth(), date.getFullYear()];
+  const [data, setData] = useState(dataAtual);
+  const [salesData, setsalesData] = useState(null);
+  const token = localStorage.getItem('token');
   const { response, loading, error } = useAxios({
     method: 'get',
     url: `Faturamento/data?Ano=${data[0]}&Mes=${data[1]}`,
+    headers: JSON.stringify({
+      Authorization: 'Bearer ' + token,
+    }),
   });
 
   useEffect(() => {
     if (response && !error) {
-      setResults(response);
-    } else {
+      console.log(response);
+      setsalesData(response);
+    } else if (error) {
       console.log(error);
-      setResults(null);
+      setsalesData(null);
     }
-  }, [data, response, error]);
+  }, [response, error]);
 
   return (
-    <div className="faturamento">
+    <div className="main-all">
       <Sidebar />
       {modalOpen && (
         <Modal
@@ -71,9 +76,9 @@ function Faturamento() {
             <h1 className="main-title2">Vendas Realizadas</h1>
             <SeletorData getDate={setData} />
           </div>
-          {result ? (
+          {salesData ? (
             <ValorModulos
-              data={result}
+              data={salesData}
               labels={[
                 'Clientes Atendidos',
                 'Número de Vendas',
@@ -91,8 +96,12 @@ function Faturamento() {
                 'valorFaturadoMes',
               ]} // Valores do objeto
             />
+          ) : loading ? (
+            <p>Carregando...</p>
           ) : (
-            loading && <p>Carregando...</p>
+            <div className="resultado-negativo">
+              <h2>Nenhum dado foi encontrado...</h2>
+            </div>
           )}
           <div className="container-add-button">
             <button

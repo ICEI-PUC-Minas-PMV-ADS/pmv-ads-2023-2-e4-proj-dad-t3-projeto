@@ -75,7 +75,9 @@ function Estoque() {
           ) : loading ? (
             <p>Carregando...</p>
           ) : (
-            <h2>Nenhum dado foi encontrado...</h2>
+            <div className="resultado-negativo">
+              <h2>Nenhum dado foi encontrado...</h2>
+            </div>
           )}
           <div className="container-add-button">
             <button
