@@ -19,10 +19,10 @@ const useAxios = ({ url, method, body = null, headers = null }) => {
       headers: JSON.parse(headers),
     })
       .then((res) => {
-        if (res.data.length === 0) {
-          setResponse(null);
-        } else {
+        if (res.data) {
           setResponse(res.data);
+        } else {
+          setResponse(null);
         }
       })
       .catch((err) => {

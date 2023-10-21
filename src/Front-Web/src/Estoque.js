@@ -10,7 +10,8 @@ import useAxios from './hooks/useAxios';
 function Estoque() {
   const [modalOpen, setModalOpen] = useState(false);
   const date = new Date();
-  const [data, setData] = useState([date.getMonth(), date.getFullYear()]);
+  const dataAtual = [date.getFullYear(), date.getMonth() + 1];
+  const [data, setData] = useState(dataAtual);
   const [products, setProducts] = useState(null);
   const token = localStorage.getItem('token');
   const { response, loading, error } = useAxios({
@@ -37,16 +38,18 @@ function Estoque() {
       {modalOpen && (
         <Modal
           titulo="Adicionar Produto"
-          //passar os inputs que o modal terá
+          url="Estoque"
+          data={data}
+          //passar os inputs que o modal terá - name precisa ser exatamente que nem o nome da propriedade do objeto
           inputs={[
-            { name: 'Nome', label: 'Nome do Produto', type: 'text' },
+            { name: 'nome', label: 'Nome do Produto', type: 'text' },
             {
-              name: 'Quantidade',
+              name: 'quantidade',
               label: 'Quantidade do Produto',
               type: 'number',
             },
             {
-              name: 'Preço',
+              name: 'preco',
               label: 'Preço do Produto',
               type: 'number',
             },
@@ -69,8 +72,8 @@ function Estoque() {
           {response ? (
             <ValorModulos
               data={products}
-              labels={['Nome', 'Quantidade', 'Preço']} // Títulos das colunas
-              valores={['nome', 'quantidade', 'preco']} // Propriedades do objeto
+              labels={['Nome', 'Quantidade', 'Preço', 'Valor Total']} // Títulos das colunas
+              valores={['nome', 'quantidade', 'preco', 'valorTotal']} // Propriedades do objeto
             />
           ) : loading ? (
             <p>Carregando...</p>

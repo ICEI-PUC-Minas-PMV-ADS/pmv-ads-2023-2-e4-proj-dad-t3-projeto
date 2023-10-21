@@ -10,7 +10,8 @@ import useAxios from './hooks/useAxios';
 function RecursosHumanos() {
   const [modalOpen, setModalOpen] = useState(false);
   const date = new Date();
-  const [data, setData] = useState([date.getMonth(), date.getFullYear()]);
+  const dataAtual = [date.getFullYear(), date.getMonth() + 1];
+  const [data, setData] = useState(dataAtual);
   const [enplye, setEnplye] = useState(null); //alterar para setRH
   const token = localStorage.getItem('token');
   const { response, loading, error } = useAxios({
@@ -37,22 +38,25 @@ function RecursosHumanos() {
       {modalOpen && (
         <Modal
           titulo="Cadastrar Funcionário"
-          //passar os inputs que o modal terá
+          url="Rh"
+          data={data}
+          //passar os inputs que o modal terá - name precisa ser exatamente que nem o nome da propriedade do objeto
+
           inputs={[
-            { name: 'Nome', label: 'Nome do Funcionário', type: 'text' },
+            { name: 'nome', label: 'Nome do Funcionário', type: 'text' },
             {
-              name: 'Cargo',
+              name: 'cargo',
               label: 'Cargo',
               type: 'text',
             },
             {
-              name: 'Setor',
+              name: 'setor',
               label: 'Setor',
               type: 'text',
             },
             {
-              name: 'Salário',
-              label: 'Salário',
+              name: 'salarioBruto',
+              label: 'Salário Bruto',
               type: 'number',
             },
           ]}
@@ -74,8 +78,20 @@ function RecursosHumanos() {
           {response ? (
             <ValorModulos
               data={enplye}
-              labels={['Nome', 'Cargo', 'Setor', 'Salário']} // Títulos das colunas
-              valores={['nome', 'cargo', 'setor', 'salarioBruto']} // Propriedades do objeto
+              labels={[
+                'Nome',
+                'Cargo',
+                'Setor',
+                'Salário Bruto',
+                'Salário Líquido',
+              ]} // Títulos das colunas
+              valores={[
+                'nome',
+                'cargo',
+                'setor',
+                'salarioBruto',
+                'salarioLiquido',
+              ]} // Propriedades do objeto
             />
           ) : loading ? (
             <p>Carregando...</p>

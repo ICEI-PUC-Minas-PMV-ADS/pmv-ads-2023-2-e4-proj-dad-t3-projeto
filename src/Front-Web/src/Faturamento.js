@@ -10,9 +10,9 @@ import useAxios from './hooks/useAxios';
 function Faturamento() {
   const [modalOpen, setModalOpen] = useState(false);
   const date = new Date();
-  const dataAtual = [date.getMonth(), date.getFullYear()];
+  const dataAtual = [date.getFullYear(), date.getMonth() + 1];
   const [data, setData] = useState(dataAtual);
-  const [salesData, setsalesData] = useState(null);
+  const [salesData, setsalesData] = useState([]);
   const token = localStorage.getItem('token');
   const { response, loading, error } = useAxios({
     method: 'get',
@@ -24,11 +24,9 @@ function Faturamento() {
 
   useEffect(() => {
     if (response && !error) {
-      console.log(response);
       setsalesData(response);
     } else if (error) {
       console.log(error);
-      setsalesData(null);
     }
   }, [response, error]);
 
@@ -38,15 +36,18 @@ function Faturamento() {
       {modalOpen && (
         <Modal
           titulo="Adicionar Compra"
-          //passar os inputs que o modal terá
+          data={data} //passar a data para o modal
+          url="Faturamento" //passar a url para o modal
+          //passar os inputs que o modal terá - name precisa ser exatamente que nem o nome da propriedade do objeto
+
           inputs={[
             {
-              name: 'ClientesAtendidos',
+              name: 'clientesAtendidos',
               label: 'Clientes Atendidos',
               type: 'number',
             },
             {
-              name: 'NumeroVendas',
+              name: 'numeroVendas',
               label: 'Número de Vendas',
               type: 'number',
             },
