@@ -9,11 +9,14 @@ import useAxios from './hooks/useAxios';
 
 function Faturamento() {
   const [modalOpen, setModalOpen] = useState(false);
+  //variaveis do seletor de data
   const date = new Date();
   const dataAtual = [date.getFullYear(), date.getMonth() + 1];
   const [data, setData] = useState(dataAtual);
+  //variavel que armazena os dados da requisição
   const [salesData, setsalesData] = useState([]);
   const token = localStorage.getItem('token');
+  //hook personalizado para requisições
   const { response, loading, error } = useAxios({
     method: 'get',
     url: `Faturamento/data?Ano=${data[0]}&Mes=${data[1]}`,
@@ -30,6 +33,14 @@ function Faturamento() {
     }
   }, [response, error]);
 
+  const [editId, setEditId] = useState(null);
+
+  useEffect(() => {
+    if (modalOpen === false) {
+      setEditId(null);
+    }
+  }, [modalOpen]);
+
   return (
     <div className="main-all">
       <Sidebar />
@@ -38,8 +49,10 @@ function Faturamento() {
           titulo="Adicionar Compra"
           data={data} //passar a data para o modal
           url="Faturamento" //passar a url para o modal
+          setModalOpen={setModalOpen}
+          editId={editId}
+          resetId={setEditId}
           //passar os inputs que o modal terá - name precisa ser exatamente que nem o nome da propriedade do objeto
-
           inputs={[
             {
               name: 'clientesAtendidos',
@@ -62,7 +75,6 @@ function Faturamento() {
               type: 'number',
             },
           ]}
-          setModalOpen={setModalOpen}
         />
       )}
       <Backdrop show={modalOpen} closeModal={setModalOpen} />
@@ -80,6 +92,8 @@ function Faturamento() {
           {salesData ? (
             <ValorModulos
               data={salesData}
+              openModal={setModalOpen}
+              setEditData={setEditId}
               labels={[
                 'Clientes Atendidos',
                 'Número de Vendas',

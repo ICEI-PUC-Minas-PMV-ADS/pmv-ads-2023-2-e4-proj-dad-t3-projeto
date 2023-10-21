@@ -14,14 +14,22 @@ export default function ValorModulos(props) {
           </thead>
           <tbody>
             {result.map((item) => (
-              <tr key={item.id}>
+              <tr key={item.id} id={item.id}>
                 {props.valores.map((campo, index) => {
                   const uniqueKey = `${item.id}-${campo}`;
                   return <td key={uniqueKey}>{item[campo]}</td>;
                 })}
                 <td>
                   <div className="table-buttons">
-                    <button className="edit-button">Editar</button>
+                    <button
+                      className="edit-button"
+                      onClick={(e) => {
+                        props.setEditData(item.id);
+                        props.openModal((prev) => !prev);
+                      }}
+                    >
+                      Editar
+                    </button>
                     <button className="delete-button">Excluir</button>
                   </div>
                 </td>

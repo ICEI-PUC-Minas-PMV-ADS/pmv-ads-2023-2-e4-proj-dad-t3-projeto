@@ -9,11 +9,14 @@ import useAxios from './hooks/useAxios';
 
 function Estoque() {
   const [modalOpen, setModalOpen] = useState(false);
+  //variaveis do seletor de data
   const date = new Date();
   const dataAtual = [date.getFullYear(), date.getMonth() + 1];
   const [data, setData] = useState(dataAtual);
+  //variavel que armazena os dados da requisição
   const [products, setProducts] = useState(null);
   const token = localStorage.getItem('token');
+  //hook personalizado para requisições
   const { response, loading, error } = useAxios({
     method: 'get',
     url: `Estoque/data?Ano=${data[0]}&Mes=${data[1]}`,
@@ -31,6 +34,14 @@ function Estoque() {
     }
   }, [data, response, error]);
 
+  const [editId, setEditId] = useState(null);
+
+  useEffect(() => {
+    if (modalOpen === false) {
+      setEditId(null);
+    }
+  }, [modalOpen]);
+
   return (
     <div className="main-all">
       {/* Código Sidebar e Modal */}
@@ -40,6 +51,8 @@ function Estoque() {
           titulo="Adicionar Produto"
           url="Estoque"
           data={data}
+          editId={editId}
+          resetId={setEditId}
           //passar os inputs que o modal terá - name precisa ser exatamente que nem o nome da propriedade do objeto
           inputs={[
             { name: 'nome', label: 'Nome do Produto', type: 'text' },
@@ -72,6 +85,8 @@ function Estoque() {
           {response ? (
             <ValorModulos
               data={products}
+              openModal={setModalOpen}
+              setEditData={setEditId}
               labels={['Nome', 'Quantidade', 'Preço', 'Valor Total']} // Títulos das colunas
               valores={['nome', 'quantidade', 'preco', 'valorTotal']} // Propriedades do objeto
             />

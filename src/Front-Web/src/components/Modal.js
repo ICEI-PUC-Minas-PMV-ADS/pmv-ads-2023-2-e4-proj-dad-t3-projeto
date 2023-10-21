@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
@@ -6,14 +6,36 @@ import axios from 'axios';
 axios.defaults.baseURL = 'https://localhost:7162/api/';
 
 function Modal(props) {
+  const inputs = props.inputs;
   const data = props.data;
   const token = localStorage.getItem('token');
   const [inputValues, setInputValues] = useState({
     mesLancamento: data[1],
     anoLancamento: data[0],
   });
+  const itemId = props.editId; //id do item que será editado, caso seja passado por props
+  const [editData, setEditData] = useState(null); //retorno da requisição get para o item que será editado
+
+  useEffect(() => {
+    //Caso esteja no modo de edição, faz uma requisição get para o item que será editado
+    if (itemId !== null) {
+      axios
+        .get(`${props.url}/${itemId}`, {
+          headers: {
+            Authorization: 'Bearer ' + token,
+          },
+        })
+        .then((res) => {
+          setEditData(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }, [itemId]);
+
   //Loop pelos inputs passados por props
-  const inputsRender = props.inputs.map((input) => {
+  const inputsRender = inputs.map((input) => {
     return (
       <div>
         <label htmlFor={input.name} className="modal-labels">
@@ -24,6 +46,7 @@ function Modal(props) {
           type={input.type}
           id={input.name}
           name={input.name}
+          {...(editData && { defaultValue: editData[input.name] })} //Caso esteja no modo de edição, o valor do input é recuperado
           onChange={(e) => {
             if (input.type === 'number') {
               setInputValues({
@@ -41,6 +64,32 @@ function Modal(props) {
       </div>
     );
   });
+
+  const putDataHandler = (e) => {
+    const putEditData = { ...editData };
+
+    Object.keys(editData).forEach((item) => {
+      if (inputValues[item] !== undefined) {
+        putEditData[item] = inputValues[item];
+      }
+    });
+
+    putEditData.anoLancamento = Number(putEditData.anoLancamento);
+    putEditData.mesLancamento = Number(putEditData.mesLancamento);
+
+    axios
+      .put(`${props.url}/${itemId}`, putEditData, {
+        headers: {
+          Authorization: 'Bearer ' + token,
+        },
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const postDataHandler = (e) => {
     setInputValues({
@@ -78,11 +127,14 @@ function Modal(props) {
         </div>
       }
       <h3>{props.titulo}</h3>
-      <form onSubmit={postDataHandler} className="form-modal">
+      <form
+        onSubmit={itemId ? putDataHandler : postDataHandler}
+        className="form-modal"
+      >
         <div className="modal-inputs">{inputsRender}</div>
         <div>
           <button className="add-button" type="submit">
-            Adicionar
+            {itemId ? 'Atualizar' : 'Adicionar'}
           </button>
         </div>
       </form>

@@ -12,6 +12,7 @@ const useAxios = ({ url, method, body = null, headers = null }) => {
   const ctx = useContext(AuthContext);
 
   const fetchData = () => {
+    //Lógica de requisição
     axios({
       method: method,
       url: url,

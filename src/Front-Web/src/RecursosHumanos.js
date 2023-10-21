@@ -9,11 +9,14 @@ import useAxios from './hooks/useAxios';
 
 function RecursosHumanos() {
   const [modalOpen, setModalOpen] = useState(false);
+  //variaveis do seletor de data
   const date = new Date();
   const dataAtual = [date.getFullYear(), date.getMonth() + 1];
   const [data, setData] = useState(dataAtual);
-  const [enplye, setEnplye] = useState(null); //alterar para setRH
+  //variavel que armazena os dados da requisição
+  const [employe, setEmploye] = useState(null); //alterar para setRH
   const token = localStorage.getItem('token');
+  //hook personalizado para requisições
   const { response, loading, error } = useAxios({
     method: 'get',
     url: `Rh/data?Ano=${data[0]}&Mes=${data[1]}`,
@@ -24,12 +27,20 @@ function RecursosHumanos() {
 
   useEffect(() => {
     if (response && !error) {
-      setEnplye(response); //alterar para setRH
+      setEmploye(response); //alterar para setRH
     } else if (error) {
       console.log(error);
-      setEnplye(null); //alterar para setRH
+      setEmploye(null); //alterar para setRH
     }
   }, [data, response, error]);
+
+  const [editId, setEditId] = useState(null);
+
+  useEffect(() => {
+    if (modalOpen === false) {
+      setEditId(null);
+    }
+  }, [modalOpen]);
 
   return (
     <div className="main-all">
@@ -40,8 +51,9 @@ function RecursosHumanos() {
           titulo="Cadastrar Funcionário"
           url="Rh"
           data={data}
+          editId={editId}
+          resetId={setEditId}
           //passar os inputs que o modal terá - name precisa ser exatamente que nem o nome da propriedade do objeto
-
           inputs={[
             { name: 'nome', label: 'Nome do Funcionário', type: 'text' },
             {
@@ -77,7 +89,9 @@ function RecursosHumanos() {
           </div>
           {response ? (
             <ValorModulos
-              data={enplye}
+              data={employe}
+              openModal={setModalOpen}
+              setEditData={setEditId}
               labels={[
                 'Nome',
                 'Cargo',
