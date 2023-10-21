@@ -22,6 +22,12 @@ function Despesas() {
             <SeletorData getDate={setData} />
           </div>
           
+        <div className='tipo-despesa'>
+          <h2 className='titulo-despesa'> Fixo</h2>
+        </div>
+        <div className='tipo-despesa'>
+          <h2 className='titulo-despesa'> Variável</h2>
+        </div>
         </div>
       </main>
     </div>

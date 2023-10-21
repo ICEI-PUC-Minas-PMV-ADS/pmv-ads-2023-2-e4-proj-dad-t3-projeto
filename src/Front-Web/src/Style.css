@@ -133,6 +133,11 @@
   margin-left: 250px;
 }
 
+.titulo-despesa {
+  padding: 10px 20px;
+  font-size: 19px;
+}
+
 .faturamento {
   margin-left: 250px;
 }
