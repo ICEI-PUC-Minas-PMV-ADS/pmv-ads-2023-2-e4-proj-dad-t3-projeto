@@ -1,9 +1,25 @@
+import { useState } from 'react';
+import Backdrop from './Backdrop';
+import ModalExcluir from './ModalExcluir';
+
 export default function ValorModulos(props) {
+  const [modalExcluir, setModalExcluir] = useState(false);
+  const [itemId, setItemId] = useState(null);
   const result = props.data;
+  const url = props.url;
 
   if (result !== null && result.length > 0) {
     return (
       <div className="valor-modulos">
+        <Backdrop show={modalExcluir} closeModal={setModalExcluir} />
+        {modalExcluir && (
+          <ModalExcluir
+            setModalOpen={setModalExcluir}
+            url={url}
+            itemId={itemId}
+          />
+        )}
+        ;
         <table className="table">
           <thead>
             <tr className="labels-cabecalho">
@@ -30,7 +46,15 @@ export default function ValorModulos(props) {
                     >
                       Editar
                     </button>
-                    <button className="delete-button">Excluir</button>
+                    <button
+                      className="delete-button"
+                      onClick={(e) => {
+                        setItemId(item.id);
+                        setModalExcluir((prev) => !prev);
+                      }}
+                    >
+                      Excluir
+                    </button>
                   </div>
                 </td>
               </tr>

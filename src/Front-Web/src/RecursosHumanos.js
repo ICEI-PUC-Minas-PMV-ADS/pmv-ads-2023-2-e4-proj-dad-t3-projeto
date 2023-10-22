@@ -92,6 +92,7 @@ function RecursosHumanos() {
               data={employe}
               openModal={setModalOpen}
               setEditData={setEditId}
+              url="Rh"
               labels={[
                 'Nome',
                 'Cargo',

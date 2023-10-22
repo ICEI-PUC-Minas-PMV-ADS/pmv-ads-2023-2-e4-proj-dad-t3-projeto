@@ -94,6 +94,7 @@ function Faturamento() {
               data={salesData}
               openModal={setModalOpen}
               setEditData={setEditId}
+              url="Faturamento"
               labels={[
                 'Clientes Atendidos',
                 'Número de Vendas',

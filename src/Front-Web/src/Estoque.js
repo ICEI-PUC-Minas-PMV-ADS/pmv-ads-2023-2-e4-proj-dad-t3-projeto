@@ -87,6 +87,7 @@ function Estoque() {
               data={products}
               openModal={setModalOpen}
               setEditData={setEditId}
+              url="Estoque"
               labels={['Nome', 'Quantidade', 'Preço', 'Valor Total']} // Títulos das colunas
               valores={['nome', 'quantidade', 'preco', 'valorTotal']} // Propriedades do objeto
             />
