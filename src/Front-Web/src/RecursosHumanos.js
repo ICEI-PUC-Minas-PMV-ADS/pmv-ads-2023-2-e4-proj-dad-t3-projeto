@@ -97,8 +97,8 @@ function RecursosHumanos() {
                 'Nome',
                 'Cargo',
                 'Setor',
-                'Salário Bruto',
-                'Salário Líquido',
+                'Salário Bruto (R$)',
+                'Salário Líquido (R$)',
               ]} // Títulos das colunas
               valores={[
                 'nome',

@@ -32,8 +32,15 @@ export default function ValorModulos(props) {
             {result.map((item) => (
               <tr key={item.id} id={item.id}>
                 {props.valores.map((campo, index) => {
+                  console.log(typeof item[campo]);
                   const uniqueKey = `${item.id}-${campo}`;
-                  return <td key={uniqueKey}>{item[campo]}</td>;
+                  return (
+                    <td key={uniqueKey}>
+                      {typeof item[campo] === 'number'
+                        ? Math.floor(item[campo])
+                        : item[campo]}
+                    </td>
+                  );
                 })}
                 <td>
                   <div className="table-buttons">

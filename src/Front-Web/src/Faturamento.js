@@ -100,8 +100,8 @@ function Faturamento() {
                 'Número de Vendas',
                 'Taxa de Conversão',
                 'Itens Vendidos',
-                'Valor Médio',
-                'Valor total Mês',
+                'Valor Médio (R$)',
+                'Valor total Mês (R$)',
               ]} // Título das colunas
               valores={[
                 'clientesAtendidos',

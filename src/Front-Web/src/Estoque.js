@@ -88,7 +88,7 @@ function Estoque() {
               openModal={setModalOpen}
               setEditData={setEditId}
               url="Estoque"
-              labels={['Nome', 'Quantidade', 'Preço', 'Valor Total']} // Títulos das colunas
+              labels={['Nome', 'Quantidade', 'Preço (R$)', 'Valor Total (R$)']} // Títulos das colunas
               valores={['nome', 'quantidade', 'preco', 'valorTotal']} // Propriedades do objeto
             />
           ) : loading ? (
