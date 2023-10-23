@@ -35,7 +35,8 @@ public class RhController : ControllerBase
         return pessoa;
     }
     [HttpGet("data")]
-    [Authorize(Roles = "AdminRh, AdminGeral")]
+    //[Authorize(Roles = "AdminRh, AdminGeral")]
+    [AllowAnonymous]
     public async Task<ActionResult<List<Rh>>> GetByDate(int Ano, int? Mes)
     {
         List<Rh> pessoa = new();

@@ -113,7 +113,9 @@ function Faturamento() {
               ]} // Valores do objeto
             />
           ) : loading ? (
-            <p>Carregando...</p>
+            <div className="resultado-negativo">
+              <p>Carregando...</p>
+            </div>
           ) : (
             <div className="resultado-negativo">
               <h2>Nenhum dado foi encontrado...</h2>

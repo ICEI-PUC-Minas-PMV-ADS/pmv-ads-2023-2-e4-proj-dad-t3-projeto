@@ -45,7 +45,8 @@ public class VariavelController : ControllerBase
     }
 
     [HttpGet("data")]
-    [Authorize(Roles = "AdminGeral, AdminCusto")]
+    //[Authorize(Roles = "AdminGeral, AdminCusto")]
+    [AllowAnonymous]
     public async Task<ActionResult<List<Variavel>>> GetByDate(int Ano, int? Mes)
     {
         try

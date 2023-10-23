@@ -46,7 +46,8 @@ public class FixoController : ControllerBase
     }
 
     [HttpGet("data")]
-    [Authorize(Roles = "AdminGeral, AdminCusto")]
+    //[Authorize(Roles = "AdminGeral, AdminCusto")]
+    [AllowAnonymous]
     public async Task<ActionResult<List<Fixo>>> GetByDate(int Ano, int? Mes)
     {
         try

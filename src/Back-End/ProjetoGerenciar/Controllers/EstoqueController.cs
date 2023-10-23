@@ -52,7 +52,8 @@ public class EstoqueController : ControllerBase
     }
 
     [HttpGet("data")]
-    [Authorize(Roles = "AdminEstoque, Usuario, AdminGeral,AdminRh")]
+    //[Authorize(Roles = "AdminEstoque, Usuario, AdminGeral,AdminRh")]
+    [AllowAnonymous]
     public async Task<ActionResult<EstoqueDto>> GetByDate(int Ano, int? Mes)
     {
         try
