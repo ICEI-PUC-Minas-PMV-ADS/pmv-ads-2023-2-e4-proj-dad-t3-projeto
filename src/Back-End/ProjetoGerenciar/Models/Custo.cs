@@ -4,15 +4,19 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProjetoGerenciar.Models
 {
-    public class Fixo
+    public class Custo
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
         [Required]
-        [BsonElement("Custo")]
-        public string? Custo { get; set; }
+        [BsonElement("TipoCusto")]
+        public TipoCusto TipoCusto { get; set; }
+
+        [Required]
+        [BsonElement("Nome")]
+        public string? Nome { get; set; }
 
         [Required]
         [BsonElement("Valor")]
@@ -28,5 +32,13 @@ namespace ProjetoGerenciar.Models
         [Required]
         [BsonElement("AnoLancamento")]
         public int AnoLancamento { get; set; }
+    }
+
+    public enum TipoCusto
+    {
+        [Display(Name = "Custo Fixo")]
+        CustoFixo = 0,
+        [Display(Name = "Custo Variável")]
+        CustoVariavel = 1
     }
 }

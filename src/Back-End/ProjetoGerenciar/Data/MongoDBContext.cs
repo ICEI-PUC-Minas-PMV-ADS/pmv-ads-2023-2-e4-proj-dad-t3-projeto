@@ -18,8 +18,7 @@ public class MongoDBContext
     public IMongoCollection<Estoque> Produtos => _database.GetCollection<Estoque>("Estoque");
     public IMongoCollection<Rh> Pessoas => _database.GetCollection<Rh>("Rh");
     public IMongoCollection<User> Users => _database.GetCollection<User>("User");
-    public IMongoCollection<Fixo> Fixos => _database.GetCollection<Fixo>("Fixo");
-    public IMongoCollection<Variavel> Variaveis => _database.GetCollection<Variavel>("Variavel");
+    public IMongoCollection<Custo> Custos=> _database.GetCollection<Custo>("Custos");
     public IMongoCollection<Faturamento> Lancamentos => _database.GetCollection<Faturamento>("Faturamento");
 }
 

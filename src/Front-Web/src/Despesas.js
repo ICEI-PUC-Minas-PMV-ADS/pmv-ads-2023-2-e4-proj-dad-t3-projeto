@@ -19,7 +19,7 @@ function Despesas() {
   //hook personalizado para requisições
   const { response, loading, error } = useAxios({
     method: 'get',
-    url: `Fixo/data?Ano=${data[0]}&Mes=${data[1]}`,
+    url: `Custo/data?Ano=${data[0]}&Mes=${data[1]}`,
     headers: JSON.stringify({
       Authorization: 'Bearer ' + token,
     }),
@@ -48,21 +48,22 @@ function Despesas() {
       <Sidebar />
       {modalOpen && (
         <Modal
-          titulo="Adicionar Custo Fixo"
-          url="Fixo"
+          titulo="Adicionar Custo"
+          url="Custo"
           data={data}
           editId={editId}
           resetId={setEditId}
+          select={true}
           //passar os inputs que o modal terá - name precisa ser exatamente que nem o nome da propriedade do objeto
           inputs={[
-            { name: 'custo', label: 'Descrição', type: 'text' },
+            { name: 'nome', label: 'Nome', type: 'text' },
             {
               name: 'valor',
               label: 'Valor',
               type: 'number',
             },
             {
-              name: 'observação',
+              name: 'observacao',
               label: 'Observação',
               type: 'text',
             },
@@ -83,18 +84,19 @@ function Despesas() {
             <SeletorData getDate={setData} />
           </div>
 
-        <div className='tipo-despesa'>
-          <h2 className='titulo-despesa'> Fixo</h2>
-        </div>
+          <div className="tipo-despesa">
+            <h2 className="titulo-despesa"> Fixo</h2>
+          </div>
 
           {response ? (
             <ValorModulos
               data={cost}
               openModal={setModalOpen}
               setEditData={setEditId}
-              url="Fixo"
-              labels={['Custo', 'Valor (R$)', 'Observação']} // Títulos das colunas
-              valores={['custo', 'valor', 'observacao',]} // Propriedades do objeto
+              url="Custo"
+              labels={['Tipo', 'Nome', 'Valor (R$)', 'Observação']} // Títulos das colunas
+              valores={['tipoCusto', 'nome', 'valor', 'observacao']} // Propriedades do objeto
+              valorSelect={{ 0: 'Fixo', 1: 'Variável' }}
             />
           ) : loading ? (
             <p>Carregando...</p>
@@ -103,7 +105,7 @@ function Despesas() {
               <h2>Nenhum dado foi encontrado...</h2>
             </div>
           )}
-          
+
           <div className="container-add-button">
             <button
               className="add-button"

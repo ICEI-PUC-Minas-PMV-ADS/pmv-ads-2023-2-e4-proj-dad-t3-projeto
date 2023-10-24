@@ -7,29 +7,29 @@ using ProjetoGerenciar.Models;
 [Authorize]
 [Route("api/[controller]")]
 [ApiController]
-public class VariavelController : ControllerBase
+public class CustoController : ControllerBase
 {
     private readonly MongoDBContext _context;
 
-    public VariavelController(MongoDBContext context)
+    public CustoController(MongoDBContext context)
     {
         _context = context;
     }
 
     [HttpGet]
     [Authorize(Roles = "AdminGeral, AdminCusto")]
-    public async Task<IEnumerable<Variavel>> Get()
+    public async Task<IEnumerable<Custo>> Get()
     {
-        return await _context.Variaveis.Find(_ => true).ToListAsync();
+        return await _context.Custos.Find(_ => true).ToListAsync();
     }
 
     [HttpGet("{id}")]
     [Authorize(Roles = "AdminGeral, AdminCusto")]
-    public async Task<ActionResult<Variavel>> GetById(string id)
+    public async Task<ActionResult<Custo>> GetById(string id)
     {
         try
         {
-            var product = await _context.Variaveis.Find(p => p.Id == id).FirstOrDefaultAsync();
+            var product = await _context.Custos.Find(p => p.Id == id).FirstOrDefaultAsync();
 
             if (product == null)
             {
@@ -47,19 +47,19 @@ public class VariavelController : ControllerBase
     [HttpGet("data")]
     //[Authorize(Roles = "AdminGeral, AdminCusto")]
     [AllowAnonymous]
-    public async Task<ActionResult<List<Variavel>>> GetByDate(int Ano, int? Mes)
+    public async Task<ActionResult<List<Custo>>> GetByDate(int Ano, int? Mes)
     {
         try
         {
-            List<Variavel> product = new();
+            List<Custo> product = new();
 
             if (!Mes.HasValue)
             {
-                product = await _context.Variaveis.Find(p => p.AnoLancamento == Ano).ToListAsync();
+                product = await _context.Custos.Find(p => p.AnoLancamento == Ano).ToListAsync();
             }
             else
             {
-                product = await _context.Variaveis.Find(p => p.MesLancamento == Mes && p.AnoLancamento == Ano).ToListAsync();
+                product = await _context.Custos.Find(p => p.MesLancamento == Mes && p.AnoLancamento == Ano).ToListAsync();
             }
 
             if (product == null)
@@ -78,11 +78,11 @@ public class VariavelController : ControllerBase
 
     [HttpPost]
     [Authorize(Roles = "AdminCusto,AdminGeral")]
-    public async Task<ActionResult<Variavel>> Create(Variavel product)
+    public async Task<ActionResult<Custo>> Create(Custo product)
     {
         try
         {
-            await _context.Variaveis.InsertOneAsync(product);
+            await _context.Custos.InsertOneAsync(product);
             return CreatedAtRoute(new { id = product.Id }, product);
         }
         catch (UnauthorizedAccessException)
@@ -93,18 +93,18 @@ public class VariavelController : ControllerBase
 
     [HttpPut("{id}")]
     [Authorize(Roles = "AdminCusto, AdminGeral")]
-    public async Task<IActionResult> Update(string id, Variavel productIn)
+    public async Task<IActionResult> Update(string id, Custo productIn)
     {
         try
         {
-            var product = await _context.Variaveis.Find(p => p.Id == id).FirstOrDefaultAsync();
+            var product = await _context.Custos.Find(p => p.Id == id).FirstOrDefaultAsync();
 
             if (product == null)
             {
                 return NotFound();
             }
 
-            await _context.Variaveis.ReplaceOneAsync(p => p.Id == id, productIn);
+            await _context.Custos.ReplaceOneAsync(p => p.Id == id, productIn);
 
             return Content("Atualização concluida com sucesso!");
         }
@@ -120,14 +120,14 @@ public class VariavelController : ControllerBase
     {
         try
         {
-            var product = await _context.Variaveis.Find(p => p.Id == id).FirstOrDefaultAsync();
+            var product = await _context.Custos.Find(p => p.Id == id).FirstOrDefaultAsync();
 
             if (product == null)
             {
                 return NotFound();
             }
 
-            await _context.Variaveis.DeleteOneAsync(p => p.Id == id);
+            await _context.Custos.DeleteOneAsync(p => p.Id == id);
 
             return Content("Custo deletado com sucesso!");
         }

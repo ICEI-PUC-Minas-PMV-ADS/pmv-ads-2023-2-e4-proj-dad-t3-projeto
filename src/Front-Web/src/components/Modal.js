@@ -15,6 +15,8 @@ function Modal(props) {
   });
   const itemId = props.editId; //id do item que será editado, caso seja passado por props
   const [editData, setEditData] = useState(null); //retorno da requisição get para o item que será editado
+  const hasSelect = props.select;
+  const [selectValue, setSelectValue] = useState(0);
 
   useEffect(() => {
     //Caso esteja no modo de edição, faz uma requisição get para o item que será editado
@@ -92,14 +94,16 @@ function Modal(props) {
   };
 
   const postDataHandler = (e) => {
+    // e.preventDefault();
+    const finalValue = { ...inputValues, tipoCusto: selectValue };
     setInputValues({
       ...inputValues,
       anoLancamento: Number(data[0]),
       mesLancamento: Number(data[1]),
     });
-    console.log(inputValues);
+    // console.log(inputValues);
     axios
-      .post(`${props.url}`, inputValues, {
+      .post(`${props.url}`, hasSelect ? finalValue : inputValues, {
         headers: {
           Authorization: 'Bearer ' + token,
         },
@@ -131,7 +135,19 @@ function Modal(props) {
         onSubmit={itemId ? putDataHandler : postDataHandler}
         className="form-modal"
       >
-        <div className="modal-inputs">{inputsRender}</div>
+        <div className="modal-inputs">
+          {hasSelect && (
+            <select
+              onChange={(e) => {
+                setSelectValue(Number(e.target.value));
+              }}
+            >
+              <option value={0}>Fixo</option>
+              <option value={1}>Variável</option>
+            </select>
+          )}
+          {inputsRender}
+        </div>
         <div>
           <button className="add-button" type="submit">
             {itemId ? 'Atualizar' : 'Adicionar'}
