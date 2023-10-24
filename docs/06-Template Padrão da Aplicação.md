@@ -1,5 +1,7 @@
 # Template Padrão da Aplicação
 
+O template padrão da aplicação desktop conta com um menu lateral, título, subtítulo e o respectivo contéudo de cada página, conforme mostra a imagem abaixo:
+
 <img src = "img/template.png" width="1600" />
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>
