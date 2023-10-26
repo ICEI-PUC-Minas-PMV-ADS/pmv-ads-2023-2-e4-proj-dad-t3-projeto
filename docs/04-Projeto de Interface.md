@@ -20,7 +20,29 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Abaixo serão apresentados os modelos wireframes do projeto nas seguintes divisões: Login/Home, Recursos Humanos, Despesas e Estoque.
+
+1 - Na imagem a seguir, será ilustrado as passagens de tela do Login e o acesso à aplicação(página Home):
+
+<img src="img/wireframe_images/fluxologin.png">
+
+2 - A seguir será ilustrado a tela de Recursos Humanos e seus fluxos:
+
+<img src="img/wireframe_images/rh.png">
+
+  2.1 - Fluxo de tela de adição de um novo funcionário:
+
+  <img src="img/wireframe_images/fluxoadicaofunc.png">
+
+  2.2 - Fluxo de tela de edição dos dados de um funcionário:
+
+  <img src="img/wireframe_images/fluxoedicaofunc.png">
+
+  2.3 - Fluxo de tela de remoção de um funcionário:
+
+  <img src="img/wireframe_images/fluxodesligarfunc.png">
+
+3 - Abaixo será ilustrado a tela de Despesas e seus fluxos:
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
