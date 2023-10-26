@@ -44,6 +44,64 @@ Abaixo serão apresentados os modelos wireframes do projeto nas seguintes divis�
 
 3 - Abaixo será ilustrado a tela de Despesas e seus fluxos:
 
+<img src="img/wireframe_images/despesas.png">
+
+  3.1 - Fluxo de tela de adição de uma nova despesa fixa:
+
+  <img src="img/wireframe_images/adicionardespesafixa.png">
+
+  3.2 - Fluxo de tela de edição de uma despesa fixa:
+
+  <img src="img/wireframe_images/editardespesafixa.png">
+
+  3.3 - Fluxo de tela de remoção de uma despesa fixa:
+
+  <img src="img/wireframe_images/excluirdespesafixa.png">
+  
+  3.4 - Fluxo de tela de adição de uma nova despesa variável:
+
+  <img src="img/wireframe_images/adicionardespesavariavel.png">
+
+  3.5 - Fluxo de tela de edição de uma despesa variavel:
+
+  <img src="img/wireframe_images/editardespesavariavel.png">
+
+  3.6 - Fluxo de tela de remoção de uma despesa variável:
+
+  <img src="img/wireframe_images/excluirdespesavariavel.png">
+
+4 - Abaixo será ilustrado a tela de Estoque e seus fluxos:
+
+<img src="img/wireframe_images/produto.png">
+
+  4.1 - Fluxo de tela de adição de um novo produto:
+
+  <img src="img/wireframe_images/adicionarproduto.png">
+
+  4.2 - Fluxo de tela de edição de um produto:
+
+  <img src="img/wireframe_images/editarproduto.png">
+
+  4.3 - Fluxo de tela de remoção de um produto:
+
+  <img src="img/wireframe_images/excluirproduto.png">
+
+5 - Abaixo será ilustrado a tela de Faturamento e seus fluxos:
+
+<img src="img/wireframe_images/faturamento.png">
+
+  5.1 - Fluxo de tela de adição de um novo faturamento:
+
+  <img src="img/wireframe_images/adicionarfaturamento.png">
+
+  5.2 - Fluxo de tela de edição de um faturamento:
+
+  <img src="img/wireframe_images/editarfaturamento.png">
+
+6 - Abaixo será ilustrado a tela de Suporte:
+
+<img src="img/wireframe_images/suporte.png">
+
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
 > **Links Úteis**:
