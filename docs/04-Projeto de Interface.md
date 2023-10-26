@@ -23,9 +23,11 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 Abaixo serão apresentados os modelos wireframes do projeto nas seguintes divisões: Login/Home, Recursos Humanos, Despesas e Estoque.
 
 1 - Na imagem a seguir, será ilustrado as passagens de tela do Login e o acesso à aplicação(página Home):
+Os requisitos funcionais atendidos por essa implementação foram os requistos RF01, RF08, RF10, que visão permitir que o usuário faça login na aplicação, que a aplicação calcule o custo mensal e o faturamento mensal, respectivamente.
 
 <img src="img/wireframe_images/fluxologin.png">
 
+Os requisitos funcionais atendidos no ítens de 2 à 5, foram os RF02, RF03 e RF04, que visam permirtir que o usuário cadastre, edite e exclua novos dados, respectivamente.
 2 - A seguir será ilustrado a tela de Recursos Humanos e seus fluxos:
 
 <img src="img/wireframe_images/rh.png">
