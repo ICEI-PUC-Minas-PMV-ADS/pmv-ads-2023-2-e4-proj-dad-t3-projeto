@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
 import Sidebar from './Sidebar';
 import './Style.css';
 import SeletorData from './components/SeletorData';
-import FaturamentoChart from './components/FaturamentoChart';
+
 
 function Home() {
   const date = new Date();
@@ -24,8 +25,7 @@ function Home() {
             <SeletorData getDate={setData} />
           </div>
           
-          {/* Adicione o componente FaturamentoChart aqui e passe 'ano' e 'mes' como props */}
-          <FaturamentoChart ano={data[0]} mes={data[1]} />
+
         </div>
       </main>
     </div>

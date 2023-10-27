@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj": {}
+    "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj": {
+    "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj",
+        "projectUniqueName": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj",
         "projectName": "ProjetoGerenciar",
-        "projectPath": "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj",
-        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\obj\\",
+        "projectPath": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj",
+        "packagesPath": "C:\\Users\\ferne\\.nuget\\packages\\",
+        "outputPath": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ferne\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,8 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -82,25 +76,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj": {
+    "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj",
-        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\obj\\",
+        "projectPath": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj",
+        "packagesPath": "C:\\Users\\ferne\\.nuget\\packages\\",
+        "outputPath": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ferne\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -108,15 +98,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj": {
-                "projectPath": "C:\\Users\\Eduardo\\Source\\Repos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj"
+              "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj": {
+                "projectPath": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj"
               }
             }
           }
@@ -168,7 +157,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
