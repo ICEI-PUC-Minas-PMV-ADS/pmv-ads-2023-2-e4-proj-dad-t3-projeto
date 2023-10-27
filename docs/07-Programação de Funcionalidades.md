@@ -19,6 +19,16 @@ RF-04 - A aplicação deve permitir o usuário excluir dados das tabelas.
 
 
 
+A seguir será apresentada a implementação das funcionalidades de login e autenticação no sistema. Para demonstrar tal implementação será exposto o código fonte do backend de login.
+
+Tal implementação seguiu a solicitação dos seguintes requisitos:
+
+RF-01	- A aplicação deve permitir o usuário acessar sua conta.
+
+RNF-04 - A aplicação deve implementar autenticação baseada em tokens JWT (JSON Web Tokens) e autorização baseada em funções para garantir que apenas usuários autorizados tenham acesso a recursos específicos.
+
+ <img src="img/funcionalidades/autenticacao.png">
+ <img src="img/funcionalidades/telalogin.png">
 
 Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
 
