@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using ProjetoGerenciar.Models;
+using ProjetoGerenciar.Repositories.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -10,18 +11,18 @@ using System.Threading.Tasks;
 [Route("api/[controller]")]
 public class FaturamentoController : ControllerBase
 {
-    private readonly MongoDBContext _context;
+    private readonly IFaturamentoService _faturamentoService;
 
-    public FaturamentoController(MongoDBContext context)
+    public FaturamentoController(IFaturamentoService service)
     {
-        _context = context;
+        _faturamentoService = service;
     }
 
     [HttpGet]
     [Authorize(Roles = "AdminEstoque, Usuario, AdminGeral,AdminRh")]
     public async Task<IEnumerable<Faturamento>> Get()
     {
-        return await _context.Lancamentos.Find(_ => true).ToListAsync();
+        return await _faturamentoService.Get();
     }
 
     [HttpGet("{id}")]
@@ -30,14 +31,7 @@ public class FaturamentoController : ControllerBase
     {
         try
         {
-            var lancamento = await _context.Lancamentos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-            if (lancamento == null)
-            {
-                return NotFound();
-            }
-
-            return lancamento;
+            return await _faturamentoService.GetById(id);
         }
         catch (UnauthorizedAccessException)
         {
@@ -52,24 +46,7 @@ public class FaturamentoController : ControllerBase
     {
         try
         {
-            List<Faturamento> lancamento = new();
-
-            if (!Mes.HasValue)
-            {
-                lancamento = await _context.Lancamentos.Find(p => p.AnoLancamento == Ano).ToListAsync();
-            }
-            else
-            {
-                lancamento = await _context.Lancamentos.Find(p => p.MesLancamento == Mes && p.AnoLancamento == Ano).ToListAsync();
-            }
-
-
-            if (lancamento == null)
-            {
-                return NotFound();
-            }
-
-            return lancamento;
+            return await _faturamentoService.GetByDate(Ano, Mes);
         }
         catch (UnauthorizedAccessException)
         {
@@ -84,8 +61,7 @@ public class FaturamentoController : ControllerBase
     {
         try
         {
-            await _context.Lancamentos.InsertOneAsync(lancamento);
-            return CreatedAtRoute(new { id = lancamento.Id }, lancamento);
+            return await _faturamentoService.Create(lancamento);
         }
         catch (UnauthorizedAccessException)
         {
@@ -100,16 +76,7 @@ public class FaturamentoController : ControllerBase
     {
         try
         {
-            var lancamento = await _context.Lancamentos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-            if (lancamento == null)
-            {
-                return NotFound();
-            }
-
-            await _context.Lancamentos.ReplaceOneAsync(p => p.Id == id, lancamentoIn);
-
-            return NoContent();
+            return await _faturamentoService.Update(id, lancamentoIn);
         }
         catch (UnauthorizedAccessException)
         {
@@ -123,16 +90,7 @@ public class FaturamentoController : ControllerBase
     {
         try
         {
-            var lancamento = await _context.Lancamentos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-            if (lancamento == null)
-            {
-                return NotFound();
-            }
-
-            await _context.Lancamentos.DeleteOneAsync(p => p.Id == id);
-
-            return NoContent();
+            return await _faturamentoService.Delete(id);
         }
         catch (UnauthorizedAccessException)
         {

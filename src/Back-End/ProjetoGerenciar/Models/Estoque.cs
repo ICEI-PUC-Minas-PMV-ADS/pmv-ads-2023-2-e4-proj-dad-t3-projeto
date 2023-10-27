@@ -34,4 +34,14 @@ public class Estoque
         AnoLancamento = anoLancamento;
         ValorTotal = Quantidade * Preco;
     }
+    public Estoque(string id,string nome, int quantidade, double preco, int mesLancamento, int anoLancamento)
+    {
+        Id = id;
+        Nome = nome;
+        Quantidade = quantidade;
+        Preco = preco;
+        MesLancamento = mesLancamento;
+        AnoLancamento = anoLancamento;
+        ValorTotal = Quantidade * Preco;
+    }
 }

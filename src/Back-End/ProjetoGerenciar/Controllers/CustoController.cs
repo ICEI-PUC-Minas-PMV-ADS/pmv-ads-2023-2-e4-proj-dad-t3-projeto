@@ -3,24 +3,25 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using ProjetoGerenciar.Models;
+using ProjetoGerenciar.Repositories.Interfaces;
 
 [Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class CustoController : ControllerBase
 {
-    private readonly MongoDBContext _context;
-
-    public CustoController(MongoDBContext context)
+    private readonly ICustoService _custoService;
+    public CustoController(ICustoService custoService)
     {
-        _context = context;
+        _custoService = custoService;
     }
 
+   
     [HttpGet]
     [Authorize(Roles = "AdminGeral, AdminCusto")]
     public async Task<IEnumerable<Custo>> Get()
     {
-        return await _context.Custos.Find(_ => true).ToListAsync();
+        return await _custoService.Get();
     }
 
     [HttpGet("{id}")]
@@ -29,14 +30,7 @@ public class CustoController : ControllerBase
     {
         try
         {
-            var product = await _context.Custos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return product;
+            return await _custoService.GetById(id);
         }
         catch (UnauthorizedAccessException)
         {
@@ -51,23 +45,7 @@ public class CustoController : ControllerBase
     {
         try
         {
-            List<Custo> product = new();
-
-            if (!Mes.HasValue)
-            {
-                product = await _context.Custos.Find(p => p.AnoLancamento == Ano).ToListAsync();
-            }
-            else
-            {
-                product = await _context.Custos.Find(p => p.MesLancamento == Mes && p.AnoLancamento == Ano).ToListAsync();
-            }
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return product;
+            return await _custoService.GetByDate(Ano, Mes);
         }
         catch (UnauthorizedAccessException)
         {
@@ -82,8 +60,7 @@ public class CustoController : ControllerBase
     {
         try
         {
-            await _context.Custos.InsertOneAsync(product);
-            return CreatedAtRoute(new { id = product.Id }, product);
+            return await _custoService.Create(product);
         }
         catch (UnauthorizedAccessException)
         {
@@ -97,16 +74,7 @@ public class CustoController : ControllerBase
     {
         try
         {
-            var product = await _context.Custos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            await _context.Custos.ReplaceOneAsync(p => p.Id == id, productIn);
-
-            return Content("Atualização concluida com sucesso!");
+           return await _custoService.Update(id, productIn);
         }
         catch (UnauthorizedAccessException)
         {
@@ -120,16 +88,7 @@ public class CustoController : ControllerBase
     {
         try
         {
-            var product = await _context.Custos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            await _context.Custos.DeleteOneAsync(p => p.Id == id);
-
-            return Content("Custo deletado com sucesso!");
+            return await _custoService.Delete(id);
         }
         catch (UnauthorizedAccessException)
         {

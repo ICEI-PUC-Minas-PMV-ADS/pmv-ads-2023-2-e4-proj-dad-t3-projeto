@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using ProjetoGerenciar.Models;
+using ProjetoGerenciar.Repositories.Interfaces;
 
 [Authorize]
 [ApiController]
@@ -14,75 +15,39 @@ using ProjetoGerenciar.Models;
 public class UserController : ControllerBase
 {
     private readonly MongoDBContext _context;
+    private readonly IUserService _userService;
 
-    public UserController(MongoDBContext context)
+    public UserController(MongoDBContext context, IUserService userService)
     {
         _context = context;
+        _userService = userService;
     }
     [HttpGet]
     [AllowAnonymous]
     public async Task<IEnumerable<User>> Get()
     {
-        return await _context.Users.Find(_ => true).ToListAsync();
+        return await _userService.Get();
     }
     [HttpGet("{id}")]
     [AllowAnonymous]
     public async Task<ActionResult<User>> GetById(string id)
     {
-        var user = await _context.Users.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-        if (user == null)
-        {
-            return NotFound();
-        }
-        return user;
+        return await _userService.GetById(id);
     }
     [AllowAnonymous]
     [HttpPost]
     public async Task<ActionResult<User>> Create(UserDto user)
     {
-        var findEmail = await _context.Users.Find(e => e.Email == user.Email).FirstOrDefaultAsync();
-
-        if (findEmail != null)
-        {
-            return BadRequest("E-mail já cadastrado no sistema");
-        }
-        User novoUser = new User()
-        {
-            Id = user.Id,
-            Nome = user.Nome,
-            Senha = BCrypt.Net.BCrypt.HashPassword(user.Senha),
-            Email = user.Email,
-            Perfil = user.Perfil
-        };
-        await _context.Users.InsertOneAsync(novoUser);
-        return CreatedAtRoute(new { id = novoUser.Id }, novoUser);
+        return await _userService.Create(user);
     }
     [HttpPut("{id}")]
     [Authorize(Roles = "AdminRh,AdminGeral")]
     public async Task<IActionResult> Update(string id, UserDto userIn)
     {
-        var user = await _context.Users.Find(u => u.Id == id).FirstOrDefaultAsync();
+
         try
         {
-            if (user == null)
-            {
-                return NotFound();
-            }
-            var userHasPermission = User.IsInRole("AdminRh") || User.IsInRole("AdminGeral");
-            if (!userHasPermission)
-            {
-                return Unauthorized("Usuário não autorizado");
-            }
-            User novoUser = new User()
-            {
-                Nome = user.Nome,
-                Senha = BCrypt.Net.BCrypt.HashPassword(user.Senha),
-                Email = user.Email,
-                Perfil = user.Perfil
-            };
-            await _context.Users.ReplaceOneAsync(u => u.Id == id, novoUser);
-            return NoContent();
+            return await _userService.Update(id, userIn, User);
         }
         catch (UnauthorizedAccessException)
         {
@@ -95,20 +60,7 @@ public class UserController : ControllerBase
     {
         try
         {
-            var user = await _context.Users.Find(u => u.Id == id).FirstOrDefaultAsync();
-
-            if (user == null)
-            {
-                return NotFound();
-            }
-            var userHasPermission = User.IsInRole("AdminRh") || User.IsInRole("AdminGeral");
-
-            if (!userHasPermission)
-            {
-                return Unauthorized("Usuário não autorizado");
-            }
-            await _context.Users.DeleteOneAsync(u => u.Id == id);
-            return NoContent();
+            return await _userService.Delete(id, User);
         }
         catch (UnauthorizedAccessException)
         {

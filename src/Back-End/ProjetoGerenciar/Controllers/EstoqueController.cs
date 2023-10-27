@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using ProjetoGerenciar.Models;
+using ProjetoGerenciar.Repositories.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -10,24 +11,18 @@ using System.Threading.Tasks;
 [Route("api/[controller]")]
 public class EstoqueController : ControllerBase
 {
-    private readonly MongoDBContext _context;
+    private readonly IEstoqueService _estoqueService;
 
-    public EstoqueController(MongoDBContext context)
+    public EstoqueController(IEstoqueService service)
     {
-        _context = context;
+        _estoqueService = service;
     }
 
     [HttpGet]
     [Authorize(Roles = "AdminEstoque, Usuario, AdminGeral,AdminRh")]
     public async Task<ActionResult<EstoqueDto>> Get()
     {
-        var estoque = await _context.Produtos.Find(_ => true).ToListAsync();
-        var resultado = new EstoqueDto();
-        {
-            resultado.Produtos = estoque;
-            resultado.TotalEstoque = estoque.Sum(p => p.ValorTotal);
-        }
-        return resultado;
+       return await _estoqueService.Get();  
     }
 
     [HttpGet("{id}")]
@@ -36,14 +31,7 @@ public class EstoqueController : ControllerBase
     {
         try
         {
-            var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return product;
+            return await _estoqueService.GetById(id);
         }
         catch (UnauthorizedAccessException)
         {
@@ -58,30 +46,7 @@ public class EstoqueController : ControllerBase
     {
         try
         {
-            List<Estoque> product = new();
-
-            if (!Mes.HasValue)
-            {
-                product = await _context.Produtos.Find(p => p.AnoLancamento == Ano).ToListAsync();
-            }
-            else
-            {
-                product = await _context.Produtos.Find(p => p.MesLancamento == Mes && p.AnoLancamento == Ano).ToListAsync();
-            }
-
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            var resultado = new EstoqueDto();
-            {
-                resultado.Produtos = product;
-                resultado.TotalEstoque = product.Sum(p => p.ValorTotal);
-            }
-
-            return resultado;
+            return await _estoqueService.GetByDate(Ano, Mes);
         }
         catch (UnauthorizedAccessException)
         {
@@ -96,8 +61,7 @@ public class EstoqueController : ControllerBase
     {
         try
         {
-            await _context.Produtos.InsertOneAsync(product);
-            return CreatedAtRoute(new { id = product.Id }, product);
+            return await _estoqueService.Create(product);
         }
         catch (UnauthorizedAccessException)
         {
@@ -112,16 +76,7 @@ public class EstoqueController : ControllerBase
     {
         try
         {
-            var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            await _context.Produtos.ReplaceOneAsync(p => p.Id == id, productIn);
-
-            return NoContent();
+            return await _estoqueService.Update(id, productIn);
         }
         catch (UnauthorizedAccessException)
         {
@@ -135,16 +90,7 @@ public class EstoqueController : ControllerBase
     {
         try
         {
-            var product = await _context.Produtos.Find(p => p.Id == id).FirstOrDefaultAsync();
-
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            await _context.Produtos.DeleteOneAsync(p => p.Id == id);
-
-            return NoContent();
+            return await _estoqueService.Delete(id);
         }
         catch (UnauthorizedAccessException)
         {

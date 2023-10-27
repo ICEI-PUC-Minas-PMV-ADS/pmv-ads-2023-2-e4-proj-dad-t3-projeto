@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using ProjetoGerenciar.Repositories.Interfaces;
+using ProjetoGerenciar.Repositories.Services;
 using System.Text;
 
 
@@ -20,7 +22,11 @@ builder.Services.AddCors(options =>
 // Add services to the container.
 
 builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection(nameof(MongoDBSettings)));
-
+builder.Services.AddScoped<IEstoqueService, EstoqueService>();
+builder.Services.AddScoped<ICustoService, CustoService>();
+builder.Services.AddScoped<IFaturamentoService, FaturamentoService>();
+builder.Services.AddScoped<IRhService, RhService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddSingleton<MongoDBContext>(serviceProvider =>
 {
     var settings = serviceProvider.GetRequiredService<IOptions<MongoDBSettings>>().Value;
