@@ -20,14 +20,18 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 ## Wireframes
 
-Abaixo serão apresentados os modelos wireframes do projeto nas seguintes divisões: Login/Home, Recursos Humanos, Despesas e Estoque.
+Abaixo serão apresentados os modelos wireframes (desktop e mobile) do projeto nas seguintes divisões: Login/Home, Recursos Humanos, Despesas e Estoque.
+
+A - Wireframes desktop
 
 1 - Na imagem a seguir, será ilustrado as passagens de tela do Login e o acesso à aplicação(página Home):
+
 Os requisitos funcionais atendidos por essa implementação foram os requistos RF01, RF08, RF10, que visão permitir que o usuário faça login na aplicação, que a aplicação calcule o custo mensal e o faturamento mensal, respectivamente.
 
 <img src="img/wireframe_images/fluxologin.png">
 
 Os requisitos funcionais atendidos no ítens de 2 à 5, foram os RF02, RF03 e RF04, que visam permirtir que o usuário cadastre, edite e exclua novos dados, respectivamente.
+
 2 - A seguir será ilustrado a tela de Recursos Humanos e seus fluxos:
 
 <img src="img/wireframe_images/rh.png">
@@ -103,6 +107,38 @@ Os requisitos funcionais atendidos no ítens de 2 à 5, foram os RF02, RF03 e RF
 6 - Abaixo será ilustrado a tela de Suporte:
 
 <img src="img/wireframe_images/suporte.png">
+
+B - Wireframe mobile
+
+1 - Na imagem a seguir será apresentado o fluxo de Login e navegação menu
+
+<img src="img/wireframe_images/fluxologinmobile.png">
+
+2 - Abaixo será apresentado o fluxo de tela de Recursos Humanos
+
+<img src="img/wireframe_images/fluxorhmobile.png">
+
+3 - A seguir será apresentado o fluxo de tela de Despesas
+
+  3.1 - Fluxo de tela de despesas fixas:
+
+   <img src="img/wireframe_images/fluxodespesasfixasmobile.png">
+
+  3.2 - Fluxo de tela de despesas variáveis:
+
+   <img src="img/wireframe_images/fluxodespesasvariaveismobile.png">
+
+4 - Abaixo será apresentado o fluxo de tela de Estoque
+
+<img src="img/wireframe_images/fluxoestoquemobile.png">
+
+5 - Abaixo será apresentado o fluxo de tela de Faturamento
+
+<img src="img/wireframe_images/fluxofaturamentomobile.png">
+
+6 - Abaixo será apresentado a tela de Suporte
+
+<img src="img/wireframe_images/suportemobile.png">
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
