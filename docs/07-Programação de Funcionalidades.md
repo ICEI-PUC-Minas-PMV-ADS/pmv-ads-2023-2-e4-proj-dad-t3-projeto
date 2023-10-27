@@ -2,6 +2,24 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
 
+
+Abaixo será apresentada a implementação das funcionalidades de criação, edição e exclusão de dados, no sistema. Para demonstrar tal implementação será exposto o código fonte do backend de estoque, com os endpoints de criação, edição e exclusão de produtos.
+
+Tal implementação seguiu a solicitação dos seguintes requisitos:
+
+RF-02 - A aplicação deve permitir o usuário cadastrar novos dados.
+
+RF-03 - A aplicação deve permitir o usuário realizar alterações nos dados cadastrados/preenchidos.
+
+RF-04 - A aplicação deve permitir o usuário excluir dados das tabelas.
+
+ <img src="img/funcionalidades/estoquebackend.png">
+ <img src="img/funcionalidades/estoquebackend1.png">
+ <img src="img/funcionalidades/estoquebackend2.png">
+
+
+
+
 Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
 
 Para cada requisito funcional, pode ser entregue um artefato desse tipo
