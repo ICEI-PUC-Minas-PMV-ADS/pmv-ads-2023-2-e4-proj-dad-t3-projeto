@@ -2,7 +2,11 @@
 
 O template padrão da aplicação desktop conta com um menu lateral, título, subtítulo e o respectivo contéudo de cada página, conforme mostra a imagem abaixo:
 
-<img src = "img/template.png" width="1600" />
+<img src = "img/template.png" />
+
+O template padrão da aplicação mobile conta com um menu, título, subtítulo, e o respectivo conteúdo da página, conforme a imagem a seguir:
+
+<img src = "img/templatepadraomobile.png"/>
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>
 
