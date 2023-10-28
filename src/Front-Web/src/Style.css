@@ -368,3 +368,40 @@
 }
 
 /* ---------------FIM de construção css págiona de login--------------- */
+
+/* CSS Faturamento Chart Início */
+
+.chart-container {
+  width: 100%;
+  display: flex;
+  margin-left: 0.5rem;
+}
+
+.chart-item {
+  width: 70%;
+  display: flex;
+}
+
+.circle-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 120px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle h1 {
+  font-size: 1.8rem;
+  color: #222222;
+}
+
+/* CSS Faturamento Chart Fim */
