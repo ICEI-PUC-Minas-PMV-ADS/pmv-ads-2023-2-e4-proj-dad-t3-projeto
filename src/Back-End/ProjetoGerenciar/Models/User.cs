@@ -22,7 +22,7 @@ namespace ProjetoGerenciar.Models
         public string? Senha { get; set; }
         [Required]
         [BsonElement("Perfil")]
-        public Perfil Perfil {get; set;} 
+        public Perfil Perfil {get; set;}
     }
     public enum Perfil
     {
@@ -32,4 +32,5 @@ namespace ProjetoGerenciar.Models
         AdminGeral,
         AdminCusto
     }
+   
 }

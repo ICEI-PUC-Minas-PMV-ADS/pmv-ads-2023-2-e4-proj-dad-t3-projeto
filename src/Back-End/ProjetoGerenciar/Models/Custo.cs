@@ -32,6 +32,20 @@ namespace ProjetoGerenciar.Models
         [Required]
         [BsonElement("AnoLancamento")]
         public int AnoLancamento { get; set; }
+        public Custo(string? id, TipoCusto tipoCusto, string? nome, double valor, string? observacao, int mesLancamento, int anoLancamento)
+        {
+            Id = id;
+            TipoCusto = tipoCusto;
+            Nome = nome;
+            Valor = valor;
+            Observacao = observacao;
+            MesLancamento = mesLancamento;
+            AnoLancamento = anoLancamento;
+        }
+        public Custo()
+        {
+
+        }
     }
 
     public enum TipoCusto

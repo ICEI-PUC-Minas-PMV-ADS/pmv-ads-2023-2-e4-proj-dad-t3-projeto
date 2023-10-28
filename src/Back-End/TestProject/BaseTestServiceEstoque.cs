@@ -101,11 +101,15 @@ namespace TestServices
         public Task<IActionResult> Update(string id, Estoque productIn)
         {
             var product = estoques.Find(p => p.Id == id);
+
             if (product == null)
             {
                 return Task.FromResult<IActionResult>(new NotFoundResult());
             }
-            estoques.Remove(product);
+
+            product.Nome = productIn.Nome;
+            product.Quantidade = productIn.Quantidade;
+
             return Task.FromResult<IActionResult>(new OkObjectResult(product));
         }
     }
