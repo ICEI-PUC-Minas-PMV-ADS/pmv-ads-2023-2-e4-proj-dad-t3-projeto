@@ -54,14 +54,15 @@ const FaturamentoChart = ({
 
   useEffect(() => {
     try {
-      if (values.length === 0) charValues = [];
-      setTotalValue(values.reduce((a, b) => a + b, 0));
-      const diasLength = [];
-      for (let i = 0; i < values.length; i++) {
-        diasLength.push(i + 1);
+      if (values) {
+        charValues = [];
+        setTotalValue(values.reduce((a, b) => a + b, 0));
+        const diasLength = [];
+        for (let i = 0; i < values.length; i++) {
+          diasLength.push(i + 1);
+        }
+        setDias(diasLength);
       }
-      setDias(diasLength);
-      console.log(chartData);
     } catch (error) {
       console.log(error);
     }
