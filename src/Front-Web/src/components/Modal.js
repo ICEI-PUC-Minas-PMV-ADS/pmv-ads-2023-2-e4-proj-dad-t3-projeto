@@ -39,7 +39,7 @@ function Modal(props) {
   //Loop pelos inputs passados por props
   const inputsRender = inputs.map((input) => {
     return (
-      <div>
+      <div className='container-modal'>
         <label htmlFor={input.name} className="modal-labels">
           {input.label}
         </label>
@@ -158,14 +158,16 @@ function Modal(props) {
               props.setModalOpen((prev) => !prev);
             }}
           />
+          
         </div>
       }
-      <h3>{props.titulo}</h3>
+      
       <form
         onSubmit={itemId ? putDataHandler : postDataHandler}
         className="form-modal"
       >
         <div className="modal-inputs">
+        <h3>{props.titulo}</h3>
           {hasSelect && (
             <select
               onChange={(e) => {
@@ -178,7 +180,7 @@ function Modal(props) {
           )}
           {inputsRender}
         </div>
-        <div>
+        <div >
           <button className="add-button" type="submit">
             {itemId ? 'Atualizar' : 'Adicionar'}
           </button>

@@ -43,7 +43,7 @@ function Faturamento() {
 
   return (
     <div className="main-all">
-      <Sidebar />
+      
       {modalOpen && (
         <Modal
           titulo="Adicionar Compra"

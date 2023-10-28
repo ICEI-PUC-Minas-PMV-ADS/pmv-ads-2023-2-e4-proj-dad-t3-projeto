@@ -31,8 +31,6 @@ function Home() {
 
   return (
     <div className="main-all">
-      <Sidebar />
-
       <main>
         <div className="main-header">
           <h1 className="main-title">Dashboard</h1>

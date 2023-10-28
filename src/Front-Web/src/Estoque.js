@@ -45,7 +45,7 @@ function Estoque() {
   return (
     <div className="main-all">
       {/* Código Sidebar e Modal */}
-      <Sidebar />
+      
       {modalOpen && (
         <Modal
           titulo="Adicionar Produto"

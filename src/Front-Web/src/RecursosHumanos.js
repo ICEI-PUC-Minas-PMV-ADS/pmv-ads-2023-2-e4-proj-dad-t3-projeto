@@ -45,7 +45,6 @@ function RecursosHumanos() {
   return (
     <div className="main-all">
       {/* Código Sidebar e Modal */}
-      <Sidebar />
       {modalOpen && (
         <Modal
           titulo="Cadastrar Funcionário"

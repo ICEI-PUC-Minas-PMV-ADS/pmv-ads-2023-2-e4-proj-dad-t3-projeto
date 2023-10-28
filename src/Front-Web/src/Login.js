@@ -31,14 +31,14 @@ export default function Login() {
   };
 
   return (
-    <>
+    
       <div id="box-login">
         <div id="teste">
-          <h3 class="login-title">Login</h3>
+          <h3 className="login-title">Login</h3>
           {error && <div style={{ color: "red" }}>{error}</div>}
           <form id="input-position" onSubmit={loginHandler}>
             <input
-              class="user-input"
+              className="user-input"
               type="email"
               placeholder="Email"
               value={email}
@@ -46,19 +46,19 @@ export default function Login() {
               required
             />
             <input
-              class="password-input"
+              className="password-input"
               type="password"
               placeholder="Senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <button class="enter-btn" type="submit">
-              Login
+            <button className="enter-btn" type="submit">
+              Entrar
             </button>
           </form>
         </div>
       </div>
-    </>
+    
   );
 }

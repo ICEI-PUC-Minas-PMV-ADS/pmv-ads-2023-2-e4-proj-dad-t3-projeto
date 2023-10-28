@@ -45,7 +45,7 @@ function Despesas() {
   return (
     <div className="main-all">
       {/* Código Sidebar e Modal */}
-      <Sidebar />
+      
       {modalOpen && (
         <Modal
           titulo="Adicionar Custo"
@@ -84,10 +84,6 @@ function Despesas() {
             <SeletorData getDate={setData} />
           </div>
 
-          <div className="tipo-despesa">
-            <h2 className="titulo-despesa"> Fixo</h2>
-          </div>
-
           {response ? (
             <ValorModulos
               data={cost}
@@ -122,36 +118,5 @@ function Despesas() {
   );
 }
 
-/*function Despesas() {
-  const date = new Date();
-  const [data, setData] = useState([date.getMonth(), date.getFullYear()]);
-  return (
-    <div className="main-all">
-      <Sidebar />
-      
-      <main>
-        <div className="main-header">
-          <h1 className="main-title">Despesas</h1>
-          <h2 className="main-subtitle">Gerencie suas despesas</h2>
-        </div>
-
-        <div className="main-container">
-          <div className="page-header">
-            <h1 className="main-title2">Tipo de despesa</h1>
-            <SeletorData getDate={setData} />
-          </div>
-          
-        <div className='tipo-despesa'>
-          <h2 className='titulo-despesa'> Fixo</h2>
-          teste
-        </div>
-        <div className='tipo-despesa'>
-          <h2 className='titulo-despesa'> Variável</h2>
-        </div>
-        </div>
-      </main>
-    </div>
-  );
-}*/
 
 export default Despesas;
