@@ -44,4 +44,7 @@ public class Estoque
         AnoLancamento = anoLancamento;
         ValorTotal = Quantidade * Preco;
     }
+    public Estoque(){
+        
+    }
 }
