@@ -68,6 +68,8 @@ function Modal(props) {
   });
 
   const putDataHandler = (e) => {
+    e.preventDefault();
+    let permission = true;
     const putEditData = { ...editData };
 
     Object.keys(editData).forEach((item) => {
@@ -90,18 +92,32 @@ function Modal(props) {
       })
       .catch((err) => {
         console.log(err);
+        if (
+          (err.response && err.response.status === 401) ||
+          err.response.status === 403
+        ) {
+          console.log('AAAAAAAAAAAAAAAAAAAAAAAAA');
+          permission = false;
+          console.log(permission);
+          alert('Você não possui permissão para realizar esta tarefa');
+        }
+      })
+      .finally(() => {
+        if (permission) {
+          window.location.reload();
+        }
       });
   };
 
   const postDataHandler = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
+    let permission = true;
     const finalValue = { ...inputValues, tipoCusto: selectValue };
     setInputValues({
       ...inputValues,
       anoLancamento: Number(data[0]),
       mesLancamento: Number(data[1]),
     });
-    // console.log(inputValues);
     axios
       .post(`${props.url}`, hasSelect ? finalValue : inputValues, {
         headers: {
@@ -113,6 +129,20 @@ function Modal(props) {
       })
       .catch((err) => {
         console.log(err);
+        if (
+          (err.response && err.response.status === 401) ||
+          err.response.status === 403
+        ) {
+          console.log('AAAAAAAAAAAAAAAAAAAAAAAAA');
+          permission = false;
+          console.log(permission);
+          alert('Você não possui permissão para realizar esta tarefa');
+        }
+      })
+      .finally(() => {
+        if (permission) {
+          window.location.reload();
+        }
       });
   };
 
