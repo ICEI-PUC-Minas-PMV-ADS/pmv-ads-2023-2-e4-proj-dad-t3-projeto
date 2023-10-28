@@ -5,55 +5,66 @@
 Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
 
 ## Avaliação
+Os testes foram executados com sucesso, validando a robustez e funcionalidade dos serviços. A equipe dedicou-se a garantir uma cobertura abrangente, resultando em um conjunto de testes confiável para a API. O GitHub Actions contribuiu para uma integração contínua eficiente.
 
 ## Testes Unitários
 
 ### Cenário de Teste 1:  Resultado do teste do Método `Get`
   
 **Evidência:**
+
 ![Teste 1 - Método Get do IEstoqueService](img/teste_unitario_get_estoque.png)
 
 ### Cenário de Teste 2: Resultado do teste do Método `Create`
 
 **Evidência:**
+
 ![Teste 2 - Método Create do IEstoqueService](img/teste_unitario_create_estoque.png)
 
 ### Cenário de Teste 3: Resultado do teste do Método `Delete` 
 **Evidência:**
+
 ![Teste 3 - Método Delete do IEstoqueService](img/teste_unitario_delete_estoque.png)
 
 ### Cenário de Teste 4: Resultado do teste do Método `Update` 
 
 **Evidência:**
+
 ![Teste 4 - Método Update do IEstoqueService](img/teste_unitario_update_estoque.png)
 
 ### Cenário de Teste 5: Resultado do teste do Método `GetByDate` 
 
 **Evidência:**
+
 ![Teste 5 - Método GetByDate do IEstoqueService](img/teste_unitario_get_by_date_estoque.png)
 
 ### Cenário de Teste 6: Resultado do teste do Método `Get` 
 
 **Evidência:**
+
 ![Teste 6 - Método Get do ICustoService](img/teste_unitario_get_custo.png)
 
 ### Cenário de Teste 7: Resultado do teste do Método `Create` 
 
 **Evidência:**
+
 ![Teste 7 - Método Create do ICustoService](img/teste_unitario_create_custo.png)
 
 ### Cenário de Teste 8: Resultado do teste do Método `Delete` 
 
 **Evidência:**
+
 ![Teste 8 - Método Delete do ICustoService](img/teste_unitario_delete_custo.png)
 
 ### Cenário de Teste 9 Resultado do teste do Método `Update` 
 
 **Evidência:**
+
 ![Teste 9 - Método Update do ICustoService](img/teste_unitario_update_custo.png)
 
 ### Cenário de Teste 10: Resultado do teste do Método `GetByDate` 
 **Evidência:**
+
 ![Teste 10 - Método GetByDate do ICustoService](img/teste_unitario_get_by_date_custo.png)
 
 # Testes de Integração com Swagger
