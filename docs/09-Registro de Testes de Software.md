@@ -11,50 +11,50 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 ### Cenário de Teste 1:  Resultado do teste do Método `Get`
   
 **Evidência:**
-![Teste 1 - Método Get do IEstoqueService](evidencias/teste_unitario_get_estoque.png)
+![Teste 1 - Método Get do IEstoqueService](img/teste_unitario_get_estoque.png)
 
 ### Cenário de Teste 2: Resultado do teste do Método `Create`
 
 **Evidência:**
-![Teste 2 - Método Create do IEstoqueService](evidencias/teste_unitario_create_estoque.png)
+![Teste 2 - Método Create do IEstoqueService](img/teste_unitario_create_estoque.png)
 
 ### Cenário de Teste 3: Resultado do teste do Método `Delete` 
 **Evidência:**
-![Teste 3 - Método Delete do IEstoqueService](evidencias/teste_unitario_delete_estoque.png)
+![Teste 3 - Método Delete do IEstoqueService](img/teste_unitario_delete_estoque.png)
 
 ### Cenário de Teste 4: Resultado do teste do Método `Update` 
 
 **Evidência:**
-![Teste 4 - Método Update do IEstoqueService](evidencias/teste_unitario_update_estoque.png)
+![Teste 4 - Método Update do IEstoqueService](img/teste_unitario_update_estoque.png)
 
 ### Cenário de Teste 5: Resultado do teste do Método `GetByDate` 
 
 **Evidência:**
-![Teste 5 - Método GetByDate do IEstoqueService](evidencias/teste_unitario_get_by_date_estoque.png)
+![Teste 5 - Método GetByDate do IEstoqueService](img/teste_unitario_get_by_date_estoque.png)
 
 ### Cenário de Teste 6: Resultado do teste do Método `Get` 
 
 **Evidência:**
-![Teste 6 - Método Get do ICustoService](evidencias/teste_unitario_get_custo.png)
+![Teste 6 - Método Get do ICustoService](img/teste_unitario_get_custo.png)
 
 ### Cenário de Teste 7: Resultado do teste do Método `Create` 
 
 **Evidência:**
-![Teste 7 - Método Create do ICustoService](evidencias/teste_unitario_create_custo.png)
+![Teste 7 - Método Create do ICustoService](img/teste_unitario_create_custo.png)
 
 ### Cenário de Teste 8: Resultado do teste do Método `Delete` 
 
 **Evidência:**
-![Teste 8 - Método Delete do ICustoService](evidencias/teste_unitario_delete_custo.png)
+![Teste 8 - Método Delete do ICustoService](img/teste_unitario_delete_custo.png)
 
 ### Cenário de Teste 9 Resultado do teste do Método `Update` 
 
 **Evidência:**
-![Teste 9 - Método Update do ICustoService](evidencias/teste_unitario_update_custo.png)
+![Teste 9 - Método Update do ICustoService](img/teste_unitario_update_custo.png)
 
 ### Cenário de Teste 10: Resultado do teste do Método `GetByDate` 
 **Evidência:**
-![Teste 10 - Método GetByDate do ICustoService](evidencias/teste_unitario_get_by_date_custo.png)
+![Teste 10 - Método GetByDate do ICustoService](img/teste_unitario_get_by_date_custo.png)
 
 # Testes de Integração com Swagger
 ## Objetivo
@@ -63,68 +63,68 @@ Realizar testes de integração utilizando o Swagger para verificar o correto fu
 
 ## Testes Realizados
 
-### Teste 1: Execução do Endpoint de Recuperação de Dados de Estoque
+### Cenário de Teste 1: Execução do Endpoint de Recuperação de Dados de Estoque
 
 - **Endpoint Testado:** `GET /api/estoque`
    
 **Evidência:**
-![Teste 1 - Recuperação de Dados de Estoque](evidencias/teste_swagger_estoque.png)
+![Teste 1 - Recuperação de Dados de Estoque](img/teste_swagger_estoque.png)
 
-### Teste 2: Execução do Endpoint de Criação de Registro de Estoque
+### Cenário de Teste 2: Execução do Endpoint de Criação de Registro de Estoque
 
 - **Endpoint Testado:** `POST /api/estoque`
 
 **Evidência:**
-![Teste 2 - Criação de Registro de Estoque](evidencias/teste_swagger_criacao_estoque.png)
+![Teste 2 - Criação de Registro de Estoque](img/teste_swagger_criacao_estoque.png)
 
-### Teste 3: Execução do Endpoint de Exclusão de Registro de Estoque
+### Cenário de Teste 3: Execução do Endpoint de Exclusão de Registro de Estoque
 
 - **Endpoint Testado:** `DELETE /api/estoque/{id}`
 
 **Evidência:**
-![Teste 3 - Exclusão de Registro de Estoque](evidencias/teste_swagger_exclusao_estoque.png)
+![Teste 3 - Exclusão de Registro de Estoque](img/teste_swagger_exclusao_estoque.png)
 
-### Teste 4: Execução do Endpoint de Atualização de Registro de Estoque
+### Cenário de Teste 4: Execução do Endpoint de Atualização de Registro de Estoque
 
 - **Endpoint Testado:** `PUT /api/estoque/{id}`
 
 **Evidência:**
-![Teste 4 - Atualização de Registro de Estoque](evidencias/teste_swagger_atualizacao_estoque.png)
+![Teste 4 - Atualização de Registro de Estoque](img/teste_swagger_atualizacao_estoque.png)
 
-### Teste 5: Execução do Endpoint de Recuperação de Dados de Custo
+### Cenário de Teste 5: Execução do Endpoint de Recuperação de Dados de Custo
 
 - **Endpoint Testado:** `GET /api/custo`
 
 **Evidência:**
-![Teste 5 - Recuperação de Dados de Custo](evidencias/teste_swagger_custo.png)
+![Teste 5 - Recuperação de Dados de Custo](img/teste_swagger_custo.png)
 
-### Teste 6: Execução do Endpoint de Criação de Registro de Custo
+### Cenário de Teste 6: Execução do Endpoint de Criação de Registro de Custo
 
 - **Endpoint Testado:** `POST /api/custo`
   
 **Evidência:**
-![Teste 6 - Criação de Registro de Custo](evidencias/teste_swagger_criacao_custo.png)
+![Teste 6 - Criação de Registro de Custo](img/teste_swagger_criacao_custo.png)
 
-### Teste 7: Execução do Endpoint de Exclusão de Registro de Custo
+### Cenário de Teste 7: Execução do Endpoint de Exclusão de Registro de Custo
 
 - **Endpoint Testado:** `DELETE /api/custo/{id}`
    
 **Evidência:**
-![Teste 7 - Exclusão de Registro de Custo](evidencias/teste_swagger_exclusao_custo.png)
+![Teste 7 - Exclusão de Registro de Custo](img/teste_swagger_exclusao_custo.png)
 
-### Teste 8: Execução do Endpoint de Atualização de Registro de Custo
+### Cenário de Teste 8: Execução do Endpoint de Atualização de Registro de Custo
 
 - **Endpoint Testado:** `PUT /api/custo/{id}`
 
 **Evidência:**
-![Teste 8 - Atualização de Registro de Custo](evidencias/teste_swagger_atualizacao_custo.png)
+![Teste 8 - Atualização de Registro de Custo](img/teste_swagger_atualizacao_custo.png)
 
-### Teste 9: Execução do Endpoint de Recuperação de Dados de Custo por Data
+### Cenário de Teste 9: Execução do Endpoint de Recuperação de Dados de Custo por Data
 
 - **Endpoint Testado:** `GET /api/custo/data`
 
 **Evidência:**
-![Teste 9 - Recuperação de Dados de Custo por Data](evidencias/teste_swagger_custo_data.png)
+![Teste 9 - Recuperação de Dados de Custo por Data](img/teste_swagger_custo_data.png)
 
 ## Comentários e Avalições da equipe de desenvolvedores
 - Eduardo: "investi tempo extra para entender a autenticação no Swagger, contribuindo para a integração perfeita."
