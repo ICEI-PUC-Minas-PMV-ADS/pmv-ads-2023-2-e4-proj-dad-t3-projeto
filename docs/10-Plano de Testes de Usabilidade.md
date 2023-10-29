@@ -11,8 +11,8 @@ Abaixo serão listados os objetivos do Teste de Usabilidade.
 |--|-------------------------------------------------------|
 |01| Validar o fluxo de navegação e encontrabilidade das informações na interface; |
 |02| Validar o funcionamento das funcionalidades implementadas; |
-|02| Validar o fluxo da nevegação da aplicação; |
-|02| Colher a percepção do usuário dda aplicação. |
+|02| Validar o fluxo da navegação da aplicação; |
+|02| Colher a percepção do usuário da aplicação. |
 
 <br>
 
@@ -21,17 +21,17 @@ Para todas as tarefas, o usuário deve deixar um comentário a respeito das suas
 
 |ID| TAREFAS                                            |
 |--|-------------------------------------------------------|
-|T-01| Entre na aplicação com loging e senha; |
+|T-01| Entre na aplicação com login e senha; |
 |T-02| Realizar a mudança de mês no Dashboard (Home Page); |
 |T-03| Acessar a área de Recursos Humanos e mudar o mês, adicionar, modificar e excluir um empregado; |
-|T-04| Acessar a área de Despesase mudar o mês, adicionar, modificar e excluir uma despesa; |
-|T-05| Acessar a área de Estoquee mudar o mês, adicionar, modificar e excluir um produto;  |
-|T-06| Acessar a área de Faturamentoe mudar o mês, adicionar, modificar e excluir um faturamento ; |
+|T-04| Acessar a área de Despesas mudar o mês, adicionar, modificar e excluir uma despesa; |
+|T-05| Acessar a área de Estoque mudar o mês, adicionar, modificar e excluir um produto;  |
+|T-06| Acessar a área de Faturamento e mudar o mês, adicionar, modificar e excluir um faturamento; |
 |T-07| Fazer um logout. |
 
 <br>
 
-## Perfeil para testes
+## Perfil para testes
 Para a execução das tarefas desse ciclo, será priorizada o perfil de Usuário encontrado nas personas.
 
 <br>
@@ -56,8 +56,8 @@ Formato: Remoto, Data e horário de acordo com a disposição dos usuários.
 
 <br>
 
-## Pessoas do time envovlidas
-Desenvolvedores responsaveis pela aplicação web.
+## Pessoas do time envolvidas
+Desenvolvedores responsáveis pela aplicação web.
 
 <br>
 
@@ -69,6 +69,8 @@ O teste terá duração máxima de 20 minutos.
 ## Tempo de time
 Estima-se cerca de 24 horas para planejamento, execução, análise e apresentação dos resultados.
 
+<br>
+<br>
 
 > **Links Úteis**:
 > - [Teste De Usabilidade: O Que É e Como Fazer Passo a Passo (neilpatel.com)](https://neilpatel.com/br/blog/teste-de-usabilidade/)
