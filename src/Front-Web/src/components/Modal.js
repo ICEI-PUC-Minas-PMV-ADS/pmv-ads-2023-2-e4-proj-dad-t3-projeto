@@ -16,7 +16,7 @@ function Modal(props) {
   const itemId = props.editId; //id do item que será editado, caso seja passado por props
   const [editData, setEditData] = useState(null); //retorno da requisição get para o item que será editado
   const hasSelect = props.select;
-  const [selectValue, setSelectValue] = useState(0);
+  const [selectValue, setSelectValue] = useState();
 
   useEffect(() => {
     //Caso esteja no modo de edição, faz uma requisição get para o item que será editado
@@ -29,6 +29,7 @@ function Modal(props) {
         })
         .then((res) => {
           setEditData(res.data);
+          setSelectValue(res.data.tipoCusto);
         })
         .catch((err) => {
           console.log(err);
@@ -39,7 +40,7 @@ function Modal(props) {
   //Loop pelos inputs passados por props
   const inputsRender = inputs.map((input) => {
     return (
-      <div className='container-modal'>
+      <div className="container-modal">
         <label htmlFor={input.name} className="modal-labels">
           {input.label}
         </label>
@@ -80,6 +81,7 @@ function Modal(props) {
 
     putEditData.anoLancamento = Number(putEditData.anoLancamento);
     putEditData.mesLancamento = Number(putEditData.mesLancamento);
+    putEditData.tipoCusto = selectValue;
 
     axios
       .put(`${props.url}/${itemId}`, putEditData, {
@@ -158,18 +160,18 @@ function Modal(props) {
               props.setModalOpen((prev) => !prev);
             }}
           />
-          
         </div>
       }
-      
+
       <form
         onSubmit={itemId ? putDataHandler : postDataHandler}
         className="form-modal"
       >
         <div className="modal-inputs">
-        <h3>{props.titulo}</h3>
+          <h3>{props.titulo}</h3>
           {hasSelect && (
             <select
+              value={selectValue}
               onChange={(e) => {
                 setSelectValue(Number(e.target.value));
               }}
@@ -180,7 +182,7 @@ function Modal(props) {
           )}
           {inputsRender}
         </div>
-        <div >
+        <div>
           <button className="add-button" type="submit">
             {itemId ? 'Atualizar' : 'Adicionar'}
           </button>
