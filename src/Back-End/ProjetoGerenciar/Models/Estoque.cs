@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 public class Estoque
@@ -24,6 +25,7 @@ public class Estoque
     [Required]
     [BsonElement("AnoLancamento")]
     public int AnoLancamento { get; set; }
+    [JsonConstructorAttribute]
 
     public Estoque(string nome, int quantidade, double preco, int mesLancamento, int anoLancamento)
     {
