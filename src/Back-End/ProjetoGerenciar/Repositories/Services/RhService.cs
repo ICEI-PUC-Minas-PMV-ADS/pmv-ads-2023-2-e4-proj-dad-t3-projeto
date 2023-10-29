@@ -68,17 +68,14 @@ namespace ProjetoGerenciar.Repositories.Services
 
         public async Task<IActionResult> Update(string id, Rh pessoaIn)
         {
-            var user = await _context.Users.Find(u => u.Id == id).FirstOrDefaultAsync();
+            var user = await _context.Pessoas.Find(u => u.Id == id).FirstOrDefaultAsync();
 
-            User novoUser = new User()
+            if(user == null)
             {
-                Nome = user.Nome,
-                Senha = BCrypt.Net.BCrypt.HashPassword(user.Senha),
-                Email = user.Email,
-                Perfil = user.Perfil
-            };
-            await _context.Users.ReplaceOneAsync(u => u.Id == id, novoUser);
-            return new OkObjectResult(novoUser);
+                return new NotFoundResult();
+            }
+            await _context.Pessoas.ReplaceOneAsync(u => u.Id == id, pessoaIn);
+            return new OkObjectResult(pessoaIn);
         }
 
         public async Task<IActionResult> UpdateLaunchMonth(string id, [FromBody] int mesLancamento)
