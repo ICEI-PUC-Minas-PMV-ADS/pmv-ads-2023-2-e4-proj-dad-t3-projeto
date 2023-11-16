@@ -21,18 +21,24 @@ export default function Navigation() {
         component={Dashboard}
         options={{
           drawerIcon: ({ focused, size }) => (
-            <Icon name="home" size={size} color={focused ? '#333' : '#333'} />
+            <Icon 
+              name="home" 
+              size={size} 
+              color={focused ? '#333' : '#333'} />
           ),
           drawerActiveBackgroundColor: '#e5f0ff',
           drawerActiveTintColor: 'black',
         }}
       />
       <Drawer.Screen
-        name="RecursosHumanos"
+        name="Recursos Humanos"
         component={RecursosHumanos}
         options={{
           drawerIcon: ({ focused, size }) => (
-            <Icon name="person" size={size} color={focused ? '#333' : '#333'} />
+            <Icon 
+              name="person" 
+              size={size} 
+              color={focused ? '#333' : '#333'} />
           ),
           drawerActiveBackgroundColor: '#e5f0ff',
           drawerActiveTintColor: 'black',
