@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function RecursosHumanos() {
   return (
     <View style={styles.container}>      
-      <Text style={styles.mainSubtitle}>Gerencie suas Despesas</Text>
+      <Text style={styles.mainSubtitle}>Gerencia de pessoal</Text>
     </View>
   );
 }
