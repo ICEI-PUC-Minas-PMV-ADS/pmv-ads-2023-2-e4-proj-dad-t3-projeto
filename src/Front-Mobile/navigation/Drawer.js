@@ -15,7 +15,16 @@ const Drawer = createDrawerNavigator();
 export default function Navigation() {
   const ctx = React.useContext(AuthContext);
   return ctx.isLoggedIn ? (
-    <Drawer.Navigator initialRouteName="Dashboard" itemStyle={{ color: 'red' }}>
+    <Drawer.Navigator initialRouteName="Dashboard" 
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: 'white', // Estilo de fundo do cabeçalho
+      },
+      headerTintColor: '#191970', // Cor do icone do menu
+      headerTitleStyle: {
+        color: '#191970', // Cor do título da Drawer
+      },
+    }}>
       <Drawer.Screen
         name="Dashboard"
         component={Dashboard}
