@@ -13,7 +13,7 @@ import useAxios from '../hooks/useAxios';
 import ValorModulos from '../components/ValorModulos';
 import ModalModulo from '../components/Modal';
 
-export default function Estoque() {
+export default function Faturamento() {
   const apiUrl = process.env.EXPO_PUBLIC_API_URL;
   const ctx = useContext(AuthContext);
   const token = ctx.token;

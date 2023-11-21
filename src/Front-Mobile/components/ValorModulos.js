@@ -9,7 +9,7 @@ export default function ValorModulos(props) {
   if (result !== null && result.length > 0) {
     return result.map((item, itemIndex) => (
       <Pressable
-        key={item.nome + itemIndex + Math.random() * 100}
+        key={item.nome ? item.nome : Math.random() * 1000 + itemIndex}
         style={styles.main}
         onPress={() =>
           setOpenedItems((prev) =>
@@ -25,10 +25,7 @@ export default function ValorModulos(props) {
         {openedItems.includes(item.id) && (
           <View style={styles.mainValues}>
             {props.labels.map((valor, index) => (
-              <View
-                key={valor + index + Math.random() * 100}
-                style={styles.valueRow}
-              >
+              <View key={valor + index} style={styles.valueRow}>
                 <Text style={styles.labels}>{valor}: </Text>
                 <Text>{result[itemIndex][props.valores[index]]}</Text>
               </View>
