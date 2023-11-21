@@ -25,7 +25,6 @@ const useAxios = ({ url, method, reload, body = null, headers = null }) => {
       .then((res) => {
         if (res.data) {
           setResponse(res.data);
-          console.log(res.data);
         } else {
           setResponse(null);
         }
@@ -33,6 +32,7 @@ const useAxios = ({ url, method, reload, body = null, headers = null }) => {
       .catch((err) => {
         setError(err);
         if (err.response && err.response.status === 401) {
+          console.log(err.response);
           ctx.onLogout();
         }
       })
