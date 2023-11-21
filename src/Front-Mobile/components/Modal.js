@@ -4,19 +4,16 @@ import {
   Text,
   TextInput,
   Pressable,
-  Picker,
   StyleSheet,
   Modal,
 } from 'react-native';
 import axios from 'axios';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import AuthContext from '../context/authContext';
-
-const apiUrl = process.env.EXPO_PUBLIC_API_URL;
-
-axios.defaults.baseURL = `${apiUrl}:5193/api/`;
+import { Picker } from '@react-native-picker/picker';
 
 function ModalModulo(props) {
+  const apiUrl = process.env.EXPO_PUBLIC_API_URL;
   const ctx = useContext(AuthContext);
   const token = ctx.token;
   const inputs = props.inputs;
@@ -33,7 +30,7 @@ function ModalModulo(props) {
   useEffect(() => {
     if (itemId !== null) {
       axios
-        .get(`${props.url}/${itemId}`, {
+        .get(`${apiUrl}/api/${props.url}/${itemId}`, {
           headers: {
             Authorization: 'Bearer ' + token,
           },
@@ -93,7 +90,7 @@ function ModalModulo(props) {
     putEditData.tipoCusto = Number(selectValue);
 
     axios
-      .put(`${props.url}/${itemId}`, putEditData, {
+      .put(`${apiUrl}/api/${props.url}/${itemId}`, putEditData, {
         headers: {
           Authorization: 'Bearer ' + token,
         },
@@ -126,11 +123,15 @@ function ModalModulo(props) {
     const finalValue = { ...inputValues, tipoCusto: Number(selectValue) };
 
     axios
-      .post(`${props.url}`, hasSelect ? finalValue : inputValues, {
-        headers: {
-          Authorization: 'Bearer ' + token,
-        },
-      })
+      .post(
+        `${apiUrl}/api/${props.url}`,
+        hasSelect ? finalValue : inputValues,
+        {
+          headers: {
+            Authorization: 'Bearer ' + token,
+          },
+        }
+      )
       .then((res) => {
         console.log(res);
       })
