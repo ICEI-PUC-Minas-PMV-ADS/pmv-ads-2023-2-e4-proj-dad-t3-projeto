@@ -15,10 +15,13 @@ export default function Login({ navigation }) {
     event.preventDefault();
     let token = null;
     try {
-      const response = await axios.post(`${apiUrl}/api/user/authenticate`, {
-        email: email,
-        senha: password,
-      });
+      const response = await axios.post(
+        `http://192.168.2.12:5193/api/user/authenticate`,
+        {
+          email: email,
+          senha: password,
+        }
+      );
       token = response.data.jwtToken;
       // console.log(token);
       ctx.onLogin(token);

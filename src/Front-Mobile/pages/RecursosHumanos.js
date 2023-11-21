@@ -14,6 +14,7 @@ import ValorModulos from '../components/ValorModulos';
 import ModalModulo from '../components/Modal';
 
 export default function RecursosHumanos() {
+  const apiUrl = process.env.EXPO_PUBLIC_API_URL;
   const ctx = useContext(AuthContext);
   const token = ctx.token;
   const [date, setDate] = useState(new Date());
@@ -33,7 +34,8 @@ export default function RecursosHumanos() {
   const { response, loading, error } = useAxios({
     reload: reload,
     method: 'get',
-    url: `Rh/data?Ano=${monthYear[1]}&Mes=${monthYear[0]}`,
+    url: `${apiUrl}/api/Rh/data?Ano=${monthYear[1]}&Mes=${monthYear[0]}`,
+
     headers: JSON.stringify({
       Authorization: 'Bearer ' + token,
     }),

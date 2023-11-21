@@ -2,10 +2,6 @@ import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import AuthContext from '../context/authContext';
 
-const apiUrl = process.env.EXPO_PUBLIC_API_URL;
-
-axios.defaults.baseURL = `${apiUrl}/api/`;
-
 const useAxios = ({ url, method, reload, body = null, headers = null }) => {
   const [response, setResponse] = useState(null);
   const [error, setError] = useState('');
@@ -30,11 +26,10 @@ const useAxios = ({ url, method, reload, body = null, headers = null }) => {
         }
       })
       .catch((err) => {
-        setError(err);
         if (err.response && err.response.status === 401) {
-          console.log(err.response);
           ctx.onLogout();
         }
+        setError(err);
       })
       .finally(() => {
         setloading(false);
