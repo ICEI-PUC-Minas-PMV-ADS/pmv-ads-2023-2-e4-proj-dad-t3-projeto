@@ -9,12 +9,11 @@ export default function Despesas() {
 }
 
 const styles = StyleSheet.create({
-
   mainSubtitle: {
     marginTop: 10,
     fontSize: 16,
     fontWeight: '400',
     textAlign: 'center',
-    color: '#a9',
-  }
-})
+    color: '#a9a9a9',
+  },
+});

@@ -56,6 +56,7 @@ export default function Login({ navigation }) {
           style={styles.loginInput}
           onChangeText={onChangePassword}
           value={password}
+          secureTextEntry={true}
         />
       </View>
       <Pressable style={styles.loginButton} onPress={loginHandler}>

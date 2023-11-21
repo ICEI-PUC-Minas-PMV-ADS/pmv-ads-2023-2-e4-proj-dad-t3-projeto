@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj": {}
+    "E:\\Projetos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj": {}
   },
   "projects": {
-    "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj": {
+    "E:\\Projetos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj",
+        "projectUniqueName": "E:\\Projetos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj",
         "projectName": "ProjetoGerenciar",
-        "projectPath": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj",
-        "packagesPath": "C:\\Users\\ferne\\.nuget\\packages\\",
-        "outputPath": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\obj\\",
+        "projectPath": "E:\\Projetos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj",
+        "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
+        "outputPath": "E:\\Projetos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ferne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,21 +76,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj": {
+    "E:\\Projetos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "E:\\Projetos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj",
-        "packagesPath": "C:\\Users\\ferne\\.nuget\\packages\\",
-        "outputPath": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\obj\\",
+        "projectPath": "E:\\Projetos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\TestProject.csproj",
+        "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
+        "outputPath": "E:\\Projetos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\TestProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ferne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,8 +104,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj": {
-                "projectPath": "D:\\ferne\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj"
+              "E:\\Projetos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj": {
+                "projectPath": "E:\\Projetos\\pmv-ads-2023-2-e4-proj-dad-t3-projeto\\src\\Back-End\\ProjetoGerenciar\\ProjetoGerenciar.csproj"
               }
             }
           }
@@ -157,7 +157,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
