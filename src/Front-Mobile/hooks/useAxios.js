@@ -33,7 +33,6 @@ const useAxios = ({ url, method, reload, body = null, headers = null }) => {
       .catch((err) => {
         setError(err);
         if (err.response && err.response.status === 401) {
-          localStorage.removeItem('token');
           ctx.onLogout();
         }
       })

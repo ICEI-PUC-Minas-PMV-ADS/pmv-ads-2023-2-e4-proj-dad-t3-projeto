@@ -48,7 +48,7 @@ export default function Estoque() {
   }, [date]);
 
   useEffect(() => {
-    if (response && !error) {
+    if (response) {
       setProdutos(response.produtos);
     } else if (error) {
       console.log(error);
