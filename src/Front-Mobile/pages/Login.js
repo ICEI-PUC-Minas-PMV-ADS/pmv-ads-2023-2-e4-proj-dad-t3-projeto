@@ -16,7 +16,8 @@ export default function Login({ navigation }) {
     let token = null;
     try {
       const response = await axios.post(
-        `http://192.168.2.12:5193/api/user/authenticate`,
+         // `http://192.168.2.12:5193/api/user/authenticate`, // Alternativa 1 do caminho
+        `${apiUrl}/api/user/authenticate`, // Alternativa 2 do caminho
         {
           email: email,
           senha: password,

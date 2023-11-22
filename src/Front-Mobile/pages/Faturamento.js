@@ -94,7 +94,7 @@ export default function Faturamento() {
         />
       )}
       <View style={styles.header}>
-        <Text style={styles.mainSubtitle}>Gerencia de pessoal</Text>
+        <Text style={styles.mainSubtitle}>Gerencie suas Vendas</Text>
         <SeletorData updateDate={setDate} />
         <View style={styles.addButtonView}>
           <Pressable
@@ -143,12 +143,13 @@ const styles = StyleSheet.create({
   },
 
   mainSubtitle: {
-    marginTop: 10,
+    marginTop: 4,
     fontSize: 16,
     fontWeight: '400',
     textAlign: 'center',
-    color: '#a9a9a9',
-  },
+    color: '#191970',
+  },  
+  
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',

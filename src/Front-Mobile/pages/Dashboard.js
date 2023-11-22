@@ -13,10 +13,10 @@ export default function Dashboard() {
 
 const styles = StyleSheet.create({
   mainSubtitle: {
-    marginTop: 10,
+    marginTop: 4,
     fontSize: 16,
     fontWeight: '400',
     textAlign: 'center',
-    color: '#a9a9a9',
+    color: '#191970',
   },
 });
