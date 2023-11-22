@@ -69,16 +69,16 @@ export default function Estoque() {
           reload={setReload}
           //passar os inputs que o modal terá - name precisa ser exatamente que nem o nome da propriedade do objeto
           inputs={[
-            { name: 'nome', label: 'Nome do Produto', type: 'text' },
+            { name: 'nome', label: 'Nome do Produto', type: 'default' },
             {
               name: 'quantidade',
               label: 'Quantidade do Produto',
-              type: 'number',
+              type: 'numeric',
             },
             {
               name: 'preco',
               label: 'Preço do Produto',
-              type: 'number',
+              type: 'numeric',
             },
           ]}
           setModalOpen={setModalOpen}
@@ -106,6 +106,7 @@ export default function Estoque() {
           url="Estoque"
           labels={['Nome', 'Quantidade', 'Preço (R$)', 'Valor Total (R$)']} // Títulos das colunas
           valores={['nome', 'quantidade', 'preco', 'valorTotal']} // Propriedades do objeto
+          setReload={setReload}
         />
       </ScrollView>
     </View>

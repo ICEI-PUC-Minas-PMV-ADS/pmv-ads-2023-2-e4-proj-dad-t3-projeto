@@ -57,7 +57,7 @@ function ModalModulo(props) {
         <Text style={styles.modalLabels}>{input.label}</Text>
         <TextInput
           style={styles.input}
-          /*  type={input.type} */
+          keyboardType={input.type}
           id={input.name}
           name={input.name}
           {...(editData && { defaultValue: editData[input.name].toString() })}

@@ -70,16 +70,16 @@ export default function Despesas() {
           select={true}
           //passar os inputs que o modal terá - name precisa ser exatamente que nem o nome da propriedade do objeto
           inputs={[
-            { name: 'nome', label: 'Nome', type: 'text' },
+            { name: 'nome', label: 'Nome', type: 'default' },
             {
               name: 'valor',
               label: 'Valor',
-              type: 'number',
+              type: 'numeric',
             },
             {
               name: 'observacao',
               label: 'Observação',
-              type: 'text',
+              type: 'default',
             },
           ]}
           setModalOpen={setModalOpen}
@@ -108,6 +108,7 @@ export default function Despesas() {
           labels={['Tipo', 'Nome', 'Valor (R$)', 'Observação']} // Títulos das colunas
           valores={['tipoCusto', 'nome', 'valor', 'observacao']} // Propriedades do objeto
           valorSelect={{ 0: 'Fixo', 1: 'Variável' }}
+          setReload={setReload}
         />
       </ScrollView>
     </View>

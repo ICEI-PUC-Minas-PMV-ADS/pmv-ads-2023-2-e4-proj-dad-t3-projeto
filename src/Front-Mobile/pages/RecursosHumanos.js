@@ -74,17 +74,17 @@ export default function RecursosHumanos() {
             {
               name: 'cargo',
               label: 'Cargo',
-              type: 'text',
+              type: 'default',
             },
             {
               name: 'setor',
               label: 'Setor',
-              type: 'text',
+              type: 'default',
             },
             {
               name: 'salarioBruto',
               label: 'Salário Bruto',
-              type: 'number',
+              type: 'numeric',
             },
           ]}
           setModalOpen={setModalOpen}
@@ -118,6 +118,7 @@ export default function RecursosHumanos() {
             'Salário Líquido (R$)',
           ]} // Títulos das colunas
           valores={['nome', 'cargo', 'setor', 'salarioBruto', 'salarioLiquido']} // Propriedades do objeto
+          setReload={setReload}
         />
       </ScrollView>
     </View>
@@ -138,7 +139,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#191970',
   },
-  
+
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',

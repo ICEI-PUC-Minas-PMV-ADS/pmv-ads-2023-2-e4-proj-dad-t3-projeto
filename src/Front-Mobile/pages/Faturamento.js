@@ -129,6 +129,7 @@ export default function Faturamento() {
             'precoMedioProduto',
             'valorFaturadoMes',
           ]} // Valores do objeto
+          setReload={setReload}
         />
       </ScrollView>
     </View>
@@ -148,8 +149,8 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     textAlign: 'center',
     color: '#191970',
-  },  
-  
+  },
+
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',

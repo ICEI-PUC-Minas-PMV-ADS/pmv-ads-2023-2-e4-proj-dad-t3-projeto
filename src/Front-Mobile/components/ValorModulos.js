@@ -1,10 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
+import axios from 'axios';
+import AuthContext from '../context/authContext';
 
 export default function ValorModulos(props) {
+  const ctx = useContext(AuthContext);
+  const apiUrl = process.env.EXPO_PUBLIC_API_URL;
+  const token = ctx.token;
   const [openedItems, setOpenedItems] = useState([]);
+  const [deleteItems, setDeleteItems] = useState([]);
 
   const result = props.data;
+
+  const deleteHandler = (id) => {
+    if (deleteItems.includes(id)) {
+      axios
+        .delete(`${apiUrl}/api/${props.url}/${id}`, {
+          headers: {
+            Authorization: 'Bearer ' + token,
+          },
+        })
+        .then((res) => {
+          // console.log(res);
+          props.setReload((prev) => !prev);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      setDeleteItems((prev) => prev.filter((item) => item !== id));
+    } else {
+      setDeleteItems((prev) => [...prev, id]);
+    }
+  };
 
   if (result !== null && result.length > 0) {
     return result.map((item, itemIndex) => (
@@ -27,7 +54,12 @@ export default function ValorModulos(props) {
             {props.labels.map((valor, index) => (
               <View key={valor + index} style={styles.valueRow}>
                 <Text style={styles.labels}>{valor}: </Text>
-                <Text>{result[itemIndex][props.valores[index]]}</Text>
+                <Text style={styles.values}>
+                  {props.valorSelect &&
+                  props.valorSelect[result[itemIndex][props.valores[index]]]
+                    ? props.valorSelect[result[itemIndex][props.valores[index]]]
+                    : result[itemIndex][props.valores[index]]}
+                </Text>
               </View>
             ))}
             <View style={styles.buttonsView}>
@@ -40,8 +72,15 @@ export default function ValorModulos(props) {
               >
                 <Text>Editar</Text>
               </Pressable>
-              <Pressable style={styles.deleteButton}>
-                <Text>Excluir</Text>
+              <Pressable
+                style={styles.deleteButton}
+                onPress={() => {
+                  deleteHandler(item.id);
+                }}
+              >
+                <Text>
+                  {deleteItems.includes(item.id) ? 'Tem certeza?' : 'Excluir'}
+                </Text>
               </Pressable>
             </View>
           </View>
@@ -88,6 +127,10 @@ const styles = StyleSheet.create({
   },
   labels: {
     width: 150,
+  },
+  values: {
+    width: 120,
+    textAlign: 'right',
   },
   buttonsView: {
     width: '100%',
