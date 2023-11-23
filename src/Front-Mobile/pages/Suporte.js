@@ -1,19 +1,31 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TextInput } from 'react-native';
 
 export default function Suporte() {
   return (
     <View>
       <Text style={styles.mainSubtitle}>Contate-nos</Text>
-    </View>
+      <Text style={styles.email}>projeto@gerenciar.com.br</Text>
+    </View>   
+
   );
 }
 
+
+
 const styles = StyleSheet.create({
   mainSubtitle: {
-    marginTop: 10,
+    margin: 10,
     fontSize: 16,
     fontWeight: '400',
     textAlign: 'center',
-    color: '#a9a9a9',
+    color: '#191970',
+  },
+
+  email: {
+    margin: 10,
+    fontSize: 16,
+    fontWeight: '400',
+    textAlign: 'center',
+    color: '#2828B8',
   },
 });

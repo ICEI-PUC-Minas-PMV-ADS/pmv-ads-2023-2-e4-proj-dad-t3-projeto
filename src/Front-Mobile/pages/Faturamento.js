@@ -35,6 +35,7 @@ export default function Faturamento() {
     reload: reload,
     method: 'get',
     url: `${apiUrl}/api/Faturamento/data?Ano=${monthYear[1]}&Mes=${monthYear[0]}`,
+    
     headers: JSON.stringify({
       Authorization: 'Bearer ' + token,
     }),

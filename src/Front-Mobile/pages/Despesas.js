@@ -35,6 +35,7 @@ export default function Despesas() {
     reload: reload,
     method: 'get',
     url: `${apiUrl}/api/Custo/data?Ano=${monthYear[1]}&Mes=${monthYear[0]}`,
+    
     headers: JSON.stringify({
       Authorization: 'Bearer ' + token,
     }),
