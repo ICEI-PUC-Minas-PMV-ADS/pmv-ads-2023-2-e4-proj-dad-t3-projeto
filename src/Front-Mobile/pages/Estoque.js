@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '400',
     textAlign: 'center',
-    color: '##191970',
+    color: '#191970',
   },
   header: {
     flexDirection: 'row',

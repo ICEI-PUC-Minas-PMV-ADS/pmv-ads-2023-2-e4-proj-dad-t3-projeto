@@ -10,9 +10,11 @@ export default function SeletorData({ updateDate }) {
 
   const onChange = (event, selectedDate) => {
     const currentDate = selectedDate;
-    updateDate(currentDate);
+    // const currentDate = selectedDate || date;
+    // updateDate(currentDate);
     setShow(false);
     setDate(currentDate);
+    updateDate(currentDate);
   };
 
   const showMode = (currentMode) => {
@@ -23,6 +25,10 @@ export default function SeletorData({ updateDate }) {
   const showMonthYearPicker = () => {
     showMode('date');
   };
+
+  //const showMonthYearPicker = () => {
+    //setShow(true);
+  //}
 
   return (
     <SafeAreaView style={styles.container}>
