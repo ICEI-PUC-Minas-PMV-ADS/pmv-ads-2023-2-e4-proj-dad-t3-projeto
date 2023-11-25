@@ -35,7 +35,7 @@ export default function Faturamento() {
     reload: reload,
     method: 'get',
     url: `${apiUrl}/api/Faturamento/data?Ano=${monthYear[1]}&Mes=${monthYear[0]}`,
-    
+
     headers: JSON.stringify({
       Authorization: 'Bearer ' + token,
     }),
@@ -73,22 +73,22 @@ export default function Faturamento() {
             {
               name: 'clientesAtendidos',
               label: 'Clientes Atendidos',
-              type: 'number',
+              type: 'numeric',
             },
             {
               name: 'numeroVendas',
               label: 'Número de Vendas',
-              type: 'number',
+              type: 'numeric',
             },
             {
               name: 'numeroItensVendidos',
               label: 'Quantidade Vendida',
-              type: 'number',
+              type: 'numeric',
             },
             {
               name: 'valorFaturadoMes',
               label: 'Valor Faturado',
-              type: 'number',
+              type: 'numeric',
             },
           ]}
           setModalOpen={setModalOpen}
