@@ -25,7 +25,7 @@ function ModalModulo(props) {
   const itemId = props.editId;
   const [editData, setEditData] = useState(null);
   const hasSelect = props.select;
-  const [selectValue, setSelectValue] = useState();
+  const [selectValue, setSelectValue] = useState(0);
 
   useEffect(() => {
     if (itemId !== null) {
