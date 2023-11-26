@@ -1,7 +1,5 @@
 # Plano de Testes de Usabilidade
 
-## Web
-
 O teste de usabilidade permite avaliar a qualidade da interface com o usuário da aplicação interativa. O Plano de Testes de Software é gerado a partir da especificação do sistema e consiste em casos de testes que deverão ser executados quando a implementação estiver parcial ou totalmente pronta.
 <br>
 ## Objetivos
@@ -42,7 +40,7 @@ Serão necessários 03 usuários para a realização dos testes.
 <br>
 
 ## Recursos necessários
-Um computador com o endereço da aplicação.
+Um computador com o endereço da aplicação para a versão web e um celular com a aplicação instalada para a versão mobile
 
 <br>
 
@@ -52,12 +50,17 @@ O recrutamento será realizado por meio de divulgação pela equipe responsável
 <br>
 
 ## Local, data e hora
-Formato: Remoto, Data e horário de acordo com a disposição dos usuários.
+
+### Aplicação Web
+Remoto, Data e horário de acordo com a disposição dos usuários.
+
+### Aplicação Mobile
+Presencial com o local a ser definido para uma melhor compatibiliade com o usuário e com a equipe de testes. A data e horário de acordo com a disposição dos usuários
 
 <br>
 
 ## Pessoas do time envolvidas
-Desenvolvedores responsáveis pela aplicação web.
+Desenvolvedores responsáveis pela aplicação web e pela aplicação mobile para os seus respectivos testes.
 
 <br>
 
