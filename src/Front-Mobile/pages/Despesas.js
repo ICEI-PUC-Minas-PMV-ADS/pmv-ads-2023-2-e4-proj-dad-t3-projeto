@@ -87,7 +87,7 @@ export default function Despesas() {
         />
       )}
       <View style={styles.header}>
-        <Text style={styles.mainSubtitle}>erencie Suas Despesas</Text>
+        <Text style={styles.mainSubtitle}>Gerencie Suas Despesas</Text>
         <SeletorData updateDate={setDate} />
         <View style={styles.addButtonView}>
           <Pressable
