@@ -10,6 +10,7 @@ import RecursosHumanos from './RecursosHumanos';
 import Suporte from './Suporte';
 import Faturamento from './Faturamento';
 import Login from './Login';
+import Admin from './Admin';
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -28,6 +29,7 @@ function App() {
             <Route path="/Estoque" element={<Estoque />} />
             <Route path="/Faturamento" element={<Faturamento />} />
             <Route path="/Suporte" element={<Suporte />} />
+            <Route path="/Admin" element={<Admin />} />
           </Routes>
         </>
       )}

@@ -47,7 +47,7 @@ namespace ProjetoGerenciar.Repositories.Services
             {
                 return new NotFoundResult();
             }
-            var userHasPermission = User.IsInRole("AdminRh") || User.IsInRole("AdminGeral");
+            var userHasPermission = User.IsInRole("AdminSistema");
 
             if (!userHasPermission)
             {
@@ -80,7 +80,7 @@ namespace ProjetoGerenciar.Repositories.Services
             {
                 return new NotFoundResult();
             }
-            var userHasPermission = User.IsInRole("AdminRh") || User.IsInRole("AdminGeral");
+            var userHasPermission = User.IsInRole("AdminSistema");
             if (!userHasPermission)
             {
                 return new UnauthorizedObjectResult("Usuário não autorizado");

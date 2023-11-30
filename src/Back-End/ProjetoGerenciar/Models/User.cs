@@ -30,7 +30,8 @@ namespace ProjetoGerenciar.Models
         AdminRh,
         AdminEstoque,
         AdminGeral,
-        AdminCusto
+        AdminCusto,
+        AdminSistema
     }
    
 }

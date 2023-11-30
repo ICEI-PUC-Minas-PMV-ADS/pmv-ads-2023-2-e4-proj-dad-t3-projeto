@@ -23,25 +23,25 @@ public class UserController : ControllerBase
         _userService = userService;
     }
     [HttpGet]
-    [AllowAnonymous]
+    [Authorize(Roles = "AdminSistema")]
     public async Task<IEnumerable<User>> Get()
     {
         return await _userService.Get();
     }
     [HttpGet("{id}")]
-    [AllowAnonymous]
+    [Authorize(Roles = "AdminSistema")]
     public async Task<ActionResult<User>> GetById(string id)
     {
         return await _userService.GetById(id);
     }
-    [AllowAnonymous]
     [HttpPost]
+    [AllowAnonymous]
     public async Task<ActionResult<User>> Create(UserDto user)
     {
         return await _userService.Create(user);
     }
     [HttpPut("{id}")]
-    [Authorize(Roles = "AdminRh,AdminGeral")]
+    [Authorize(Roles = "AdminSistema")]
     public async Task<IActionResult> Update(string id, UserDto userIn)
     {
 
@@ -55,7 +55,7 @@ public class UserController : ControllerBase
         }
     }
     [HttpDelete("{id}")]
-    [Authorize(Roles = "AdminRh,AdminGeral")]
+    [Authorize(Roles = "AdminSistema")]
     public async Task<IActionResult> Delete(string id)
     {
         try
