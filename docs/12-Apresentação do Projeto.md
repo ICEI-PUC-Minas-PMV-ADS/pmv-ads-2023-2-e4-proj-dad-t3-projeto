@@ -6,9 +6,13 @@ Conjunto de slides em um arquivo PowerPoint ou PDF com a apresentação do proje
 
 ## Título do Projeto
 
-Nome e marca do projeto
+Projeto Gerenciar
 
 ## Identidade Visual (Marca, Design)
+
+<img src="img/wireframe_images/Logo.svg" width="150">
+Logo da Gerenciar
+
 
 O grupo deve ter o cuidado em utilizar figuras, imagens, e cores dentro do contexto da solução proposta, de forma a manter a temática do problema.
 
