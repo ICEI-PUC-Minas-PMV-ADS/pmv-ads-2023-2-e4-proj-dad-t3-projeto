@@ -1,10 +1,10 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import Drawer from './Drawer';
 import Login from '../pages/Login';
+import Despesas from '../pages/Despesas';
 
 const Stack = createStackNavigator();
-
-export default function RootNavigation() {
+ export default function RootNavigation() {
   return (
     <Stack.Navigator
       initialRouteName="Login"
@@ -28,4 +28,4 @@ export default function RootNavigation() {
       />
     </Stack.Navigator>
   );
-}
+} 

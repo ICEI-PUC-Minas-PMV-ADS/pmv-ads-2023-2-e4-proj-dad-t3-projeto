@@ -1,4 +1,4 @@
-import * as React from 'react';
+ import * as React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Dashboard from '../pages/Dashboard';
@@ -113,4 +113,4 @@ export default function Navigation() {
   ) : (
     <Login />
   );
-}
+} 
