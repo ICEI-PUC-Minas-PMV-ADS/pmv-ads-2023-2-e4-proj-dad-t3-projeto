@@ -1,0 +1,220 @@
+casos de teste de sistema
+
+Funcionalidade: Login do Usuário
+  Como um usuário da aplicação móvel
+  Eu quero fazer login com meu e-mail e senha
+  Para acessar as funcionalidades restritas da aplicação
+
+  Contexto:
+    Dado que o usuário está na tela de login
+
+  Cenário: Login com sucesso
+    Quando o usuário insere um e-mail e senha válidos
+    E clica no botão "Entrar"
+    Então ele deve ser redirecionado para a tela principal do aplicativo
+
+  Cenário: Login com e-mail inválido
+    Quando o usuário insere um e-mail inválido e uma senha válida
+    E clica no botão "Entrar"
+    Então uma mensagem de erro deve ser exibida informando "E-mail e/ou senha inválidos. Por favor, tente novamente."
+
+  Cenário: Login com senha inválida
+    Quando o usuário insere um e-mail válido e uma senha inválida
+    E clica no botão "Entrar"
+    Então uma mensagem de erro deve ser exibida informando "E-mail e/ou senha inválidos. Por favor, tente novamente."
+
+  Cenário: Login com campos vazios
+    Quando o usuário não insere o e-mail e a senha
+    E clica no botão "Entrar"
+    Então uma mensagem de erro deve ser exibida informando "E-mail e/ou senha inválidos. Por favor, tente novamente."
+
+  Cenário: Tratamento de erros de servidor
+    Quando o usuário insere um e-mail e senha corretos
+    Mas o servidor está inacessível
+    Então uma mensagem de erro deve ser exibida informando "Um erro ocorreu, tente novamente mais tarde."
+
+funcionalidade: dashboard
+Cenário 1: Verificar a exibição inicial do Dashboard
+Dado que estou na tela de "Dashboard"
+E não realizei nenhuma ação
+Então o subtítulo "Acompanhe suas finanças" deve ser visível
+E a mensagem "Nenhum dado foi encontrado" deve ser exibida
+E o seletor de data deve estar presente para seleção do período desejado
+Cenário 2: Atualizar dados após mudança de data
+Dado que estou na tela de "Dashboard"
+Quando eu altero a data no seletor de data
+Então uma solicitação deve ser enviada para atualizar os dados de faturamento com base no mês e ano selecionados
+E os novos dados de faturamento devem ser exibidos na tela
+Cenário 3: Exibir mensagem de erro quando a solicitação falhar
+Dado que estou na tela de "Dashboard"
+E o serviço de dados de faturamento está indisponível
+Quando eu tento atualizar os dados de faturamento
+Então uma mensagem de erro deve ser exibida informando sobre a falha na atualização dos dados
+Cenário 4: Verificar a consistência dos dados após recarga da tela
+Dado que estou na tela de "Dashboard"
+E já existem dados de faturamento exibidos
+Quando eu faço uma ação de recarga da tela
+Então os dados de faturamento devem ser mantidos ou atualizados de acordo com a última seleção de data
+Cenário 5: Verificar a resposta para grandes volumes de dados
+Dado que estou na tela de "Dashboard"
+E o período selecionado contém um grande volume de dados de faturamento
+Quando eu atualizo a tela
+Então os dados de faturamento devem ser carregados e exibidos de forma eficiente sem prejudicar o desempenho do aplicativo
+Cenário 6: Resposta da aplicação a uma mudança rápida de datas
+Dado que estou na tela de "Dashboard"
+Quando eu altero rapidamente a seleção de datas várias vezes
+Então o aplicativo deve responder corretamente, atualizando os dados de faturamento para corresponder à última data selecionada
+
+funcionalidade verificar e adicionar despesas
+Cenário 1: Adicionar uma despesa fixa
+Dado que estou na tela de "Despesas"
+E não há despesas listadas
+Quando eu pressiono o botão "Adicionar"
+E preencho os campos "Nome", "Valor" e "Observação" com dados válidos
+E seleciono o tipo de custo como "Fixo"
+E pressiono o botão "Adicionar" no modal
+Então a nova despesa deve ser listada na tela com o tipo "Fixo"
+Cenário 2: Adicionar uma despesa variável
+Dado que estou na tela de "Despesas"
+E não há despesas listadas
+Quando eu pressiono o botão "Adicionar"
+E preencho os campos "Nome", "Valor" e "Observação" com dados válidos
+E seleciono o tipo de custo como "Variável"
+E pressiono o botão "Adicionar" no modal
+Então a nova despesa deve ser listada na tela com o tipo "Variável"
+Cenário 3: Adicionar uma despesa sem preencher todos os campos
+Dado que estou na tela de "Despesas"
+Quando eu pressiono o botão "Adicionar"
+E preencho o campo "Nome" mas deixo "Valor" e "Observação" em branco
+E pressiono o botão "Adicionar" no modal
+Então uma mensagem de erro deve ser exibida solicitando que todos os campos sejam preenchidos
+Cenário 4: Fechar o modal de adicionar despesa
+Dado que estou na tela de "Despesas"
+Quando eu pressiono o botão "Adicionar"
+E o modal de adicionar custo é exibido
+E eu pressiono o botão de fechar (X) no modal
+Então o modal deve ser fechado e eu devo retornar à tela de "Despesas"
+Cenário 5: Cancelar após preencher os campos no modal de adicionar despesa
+Dado que estou na tela de "Despesas"
+Quando eu pressiono o botão "Adicionar"
+E preencho os campos "Nome", "Valor" e "Observação" com dados válidos
+E eu pressiono o botão de fechar (X) no modal
+Então o modal deve ser fechado e nenhum dado deve ser adicionado à lista de despesas
+Cenário 6: Atualizar a lista de despesas após adicionar uma nova despesa
+Dado que estou na tela de "Despesas"
+E já existem despesas listadas
+Quando eu adiciono uma nova despesa com dados válidos
+E pressiono o botão "Adicionar" no modal
+Então a lista de despesas deve ser atualizada com a nova despesa adicionada
+
+funcionalidade tela de estoque e adição de produto no estoque
+Cenário 1: Adicionar um produto ao estoque
+Dado que estou na tela de "Estoque"
+E não há produtos listados
+Quando eu pressiono o botão "Adicionar"
+E preencho os campos "Nome do Produto", "Quantidade do Produto" e "Preço do Produto" com dados válidos
+E pressiono o botão "Adicionar" no modal
+Então o novo produto deve ser listado na tela com a quantidade e preço especificados
+Cenário 2: Tentativa de adicionar produto sem preencher todos os campos
+Dado que estou na tela de "Estoque"
+Quando eu pressiono o botão "Adicionar"
+E preencho o campo "Nome do Produto" mas deixo "Quantidade do Produto" e "Preço do Produto" em branco
+E pressiono o botão "Adicionar" no modal
+Então uma mensagem de erro deve ser exibida solicitando que todos os campos sejam preenchidos
+Cenário 3: Cancelar a adição de um novo produto
+Dado que estou na tela de "Estoque"
+Quando eu pressiono o botão "Adicionar"
+E o modal de adicionar produto é exibido
+E eu pressiono o botão de fechar (X) no modal
+Então o modal deve ser fechado e nenhum novo produto deve ser adicionado ao estoque
+Cenário 4: Atualizar a lista de produtos após adicionar um novo produto
+Dado que estou na tela de "Estoque"
+E já existem produtos listados
+Quando eu adiciono um novo produto com dados válidos
+E pressiono o botão "Adicionar" no modal
+Então a lista de produtos deve ser atualizada com o novo produto adicionado
+Cenário 5: Verificar cálculo do valor total após adicionar produto
+Dado que estou na tela de "Estoque"
+Quando eu adiciono um novo produto com a quantidade e preço por unidade especificados
+E pressiono o botão "Adicionar" no modal
+Então o valor total do produto adicionado deve ser calculado e exibido corretamente baseado na quantidade e preço por unidade
+
+funcionalidade listar faturamentos e adicionar novos faturamentos
+Cenário 1: Adicionar um lançamento de faturamento
+Dado que estou na tela de "Faturamento"
+E não há lançamentos listados
+Quando eu pressiono o botão "Adicionar"
+E preencho os campos "Clientes Atendidos", "Número de Vendas", "Quantidade Vendida" e "Valor Faturado" com dados válidos
+E pressiono o botão "Adicionar" no modal
+Então o novo lançamento deve ser listado na tela com os detalhes fornecidos
+Cenário 2: Tentar adicionar um lançamento de faturamento sem preencher todos os campos
+Dado que estou na tela de "Faturamento"
+Quando eu pressiono o botão "Adicionar"
+E preencho apenas alguns dos campos necessários
+E pressiono o botão "Adicionar" no modal
+Então uma mensagem de erro deve ser exibida solicitando o preenchimento de todos os campos obrigatórios
+Cenário 3: Cancelar a adição de um novo lançamento de faturamento
+Dado que estou na tela de "Faturamento"
+Quando eu pressiono o botão "Adicionar"
+E o modal de "Adicionar Lançamento" é exibido
+E eu pressiono o botão de fechar (X) no modal
+Então o modal deve ser fechado e nenhum lançamento deve ser adicionado
+Cenário 4: Verificar os dados após adicionar um lançamento de faturamento
+Dado que estou na tela de "Faturamento"
+E já existem lançamentos listados
+Quando eu adiciono um novo lançamento com dados válidos
+E pressiono o botão "Adicionar" no modal
+Então a lista de lançamentos deve ser atualizada com o novo lançamento
+E os valores de "Taxa de Conversão", "Valor Médio (R$)" e "Valor total Mês (R$)" devem ser calculados e exibidos corretamente
+Cenário 5: Atualizar a tela após adição de lançamento
+Dado que estou na tela de "Faturamento"
+Quando eu adiciono um novo lançamento e pressiono o botão "Adicionar" no modal
+E a lista de lançamentos atualiza com sucesso
+Quando eu puxo para baixo na tela para atualizar
+Então a lista de lançamentos deve ser atualizada para mostrar todos os lançamentos, incluindo o mais recente
+
+funcionalidade listar quadro de funcionários e cadastrar novos funcionários
+Cenário 1: Cadastrar um novo funcionário
+Dado que estou na tela de "Recursos Humanos"
+E não há funcionários listados
+Quando eu pressiono o botão "Adicionar"
+E preencho os campos "Nome do Funcionário", "Cargo", "Setor" e "Salário Bruto" com dados válidos
+E pressiono o botão "Adicionar" no modal
+Então o novo funcionário deve ser listado na tela com os detalhes fornecidos
+Cenário 2: Tentar cadastrar um funcionário sem preencher todos os campos
+Dado que estou na tela de "Recursos Humanos"
+Quando eu pressiono o botão "Adicionar"
+E preencho apenas alguns dos campos necessários, deixando outros em branco
+E pressiono o botão "Adicionar" no modal
+Então uma mensagem de erro deve ser exibida solicitando o preenchimento de todos os campos obrigatórios
+Cenário 3: Cancelar o cadastro de um novo funcionário
+Dado que estou na tela de "Recursos Humanos"
+Quando eu pressiono o botão "Adicionar"
+E o modal de "Cadastrar Funcionário" é exibido
+E eu pressiono o botão de fechar (X) no modal
+Então o modal deve ser fechado e nenhum novo funcionário deve ser adicionado à lista
+Cenário 4: Atualizar a lista de funcionários após o cadastro
+Dado que estou na tela de "Recursos Humanos"
+E já existem funcionários listados
+Quando eu cadastro um novo funcionário com dados válidos
+E pressiono o botão "Adicionar" no modal
+Então a lista de funcionários deve ser atualizada com o novo funcionário
+Cenário 5: Validar o cálculo do salário líquido após cadastro
+Dado que estou na tela de "Recursos Humanos"
+Quando eu cadastro um novo funcionário com um "Salário Bruto" especificado
+E pressiono o botão "Adicionar" no modal
+Então o "Salário Líquido (R$)" do funcionário deve ser calculado e exibido corretamente, 
+
+funcionalidade suporte aos usuários
+Cenário 1: Verificar a exibição das informações de contato na tela de Suporte
+Dado que estou na tela de "Suporte"
+Então o título "Contate-nos" deve ser visível
+E o endereço de e-mail "projeto@gerenciar.com.br" deve estar visível e acessível para contato
+Cenário 2: Verificar a funcionalidade de envio de e-mail
+Dado que estou na tela de "Suporte"
+Quando eu clico no endereço de e-mail "projeto@gerenciar.com.br"
+Então meu cliente de e-mail padrão deve ser aberto com o endereço de e-mail preenchido no campo de destinatário
+Cenário 3: Verificar a resposta ao clicar no endereço de e-mail em dispositivos sem cliente de e-mail configurado
+Dado que estou na tela de "Suporte" em um dispositivo sem cliente de e-mail configurado
+Quando eu clico no endereço de e-mail "projeto@gerenciar.com.br"
+Então uma mensagem deve ser exibida informando que nenhum cliente de e-mail está configurado e sugerindo copiar o endereço de e-mail
