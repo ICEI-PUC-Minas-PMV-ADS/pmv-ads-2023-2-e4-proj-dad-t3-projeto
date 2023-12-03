@@ -1,0 +1,213 @@
+Testes de Integração para o Aplicativo
+Teste de Integração 1: Adicionar Despesa
+•
+Objetivo: Verificar se a despesa adicionada pelo usuário no front-end é corretamente criada no banco de dados.
+•
+Passos:
+1.
+Usuário preenche o formulário de adicionar despesa no front-end e submete.
+2.
+Verificar se uma solicitação POST é feita para o endpoint correto do back-end.
+3.
+Back-end processa a solicitação e cria um novo documento de despesa no MongoDB.
+4.
+Verificar se a resposta do back-end para o front-end está correta.
+5.
+Front-end atualiza a interface do usuário com a nova despesa.
+•
+Validação:
+1.
+A despesa deve existir no banco de dados com todos os campos corretos.
+2.
+A interface do usuário deve refletir a adição da nova despesa.
+Teste de Integração 2: Atualização de Estoque
+•
+Objetivo: Verificar se a atualização do estoque no front-end é refletida no banco de dados.
+•
+Passos:
+1.
+Usuário atualiza a quantidade de um produto no front-end.
+2.
+Verificar se uma solicitação PUT é feita para o endpoint correto do back-end.
+3.
+Back-end processa a solicitação e atualiza o documento do produto no MongoDB.
+4.
+Verificar se a resposta do back-end é recebida pelo front-end.
+5.
+Front-end exibe a quantidade atualizada do produto.
+•
+Validação:
+1.
+O produto no banco de dados deve ter a quantidade atualizada.
+2.
+A interface do usuário deve mostrar a quantidade de estoque atualizada.
+Teste de Integração 3: Relatórios de Faturamento
+•
+Objetivo: Verificar se a seleção de data no front-end recupera corretamente os dados de faturamento do back-end e do MongoDB.
+•
+Passos:
+1.
+Usuário seleciona um período de data no front-end.
+2.
+Verificar se uma solicitação GET é feita para o endpoint correto do back-end com os parâmetros de data corretos.
+3.
+Back-end consulta o MongoDB para recuperar dados de faturamento para o período especificado.
+4.
+Back-end envia os dados de faturamento para o front-end.
+5.
+Front-end exibe os dados de faturamento recebidos.
+•
+Validação:
+1.
+A resposta do back-end deve conter os dados de faturamento corretos para o período selecionado.
+2.
+A interface do usuário deve mostrar os relatórios de faturamento corretos.
+Teste de Integração 4: Cadastro de Funcionários
+•
+Objetivo: Verificar se o cadastro de um novo funcionário no front-end é persistido corretamente no banco de dados.
+•
+Passos:
+1.
+Usuário insere informações de um novo funcionário no front-end e submete.
+2.
+Verificar se uma solicitação POST é enviada ao back-end.
+3.
+Back-end cria um novo registro de funcionário no MongoDB.
+4.
+Back-end responde ao front-end com sucesso ou erro.
+5.
+Front-end atualiza a lista de funcionários exibida.
+•
+Validação:
+1.
+O novo funcionário deve ser encontrado no banco de dados com os dados corretos.
+2.
+A interface do usuário deve refletir o novo cadastro.
+Teste de Integração 5: Excluir Despesa
+•
+Objetivo: Verificar se a exclusão de uma despesa no front-end remove o registro correspondente do banco de dados.
+•
+Passos:
+1.
+Usuário solicita a exclusão de uma despesa existente no front-end.
+2.
+Verificar se uma solicitação DELETE é feita para o endpoint correto do back-end com o ID correto da despesa.
+3.
+Back-end processa a solicitação e remove o documento de despesa do MongoDB.
+4.
+Back-end retorna uma resposta de sucesso para o front-end.
+5.
+Front-end remove a despesa da visualização do usuário.
+•
+Validação:
+1.
+A despesa não deve mais existir no banco de dados.
+2.
+A interface do usuário não deve mais listar a despesa excluída.
+Teste de Integração 6: Atualizar Dados do Funcionário
+•
+Objetivo: Verificar se a atualização das informações de um funcionário no front-end é persistida no banco de dados.
+•
+Passos:
+1.
+Usuário modifica informações de um funcionário existente no front-end e submete a atualização.
+2.
+Verificar se uma solicitação PUT é enviada ao back-end com os novos dados e o ID correto do funcionário.
+3.
+Back-end atualiza o registro do funcionário no MongoDB.
+4.
+Back-end retorna uma resposta de sucesso para o front-end.
+5.
+Front-end atualiza a visualização com as informações atualizadas do funcionário.
+•
+Validação:
+1.
+O registro do funcionário no banco de dados deve refletir as alterações feitas.
+2.
+A interface do usuário deve exibir as informações atualizadas do funcionário.
+Teste de Integração 7: Resposta de Erro de Autenticação
+•
+Objetivo: Verificar como o front-end lida com erros de autenticação do back-end.
+•
+Passos:
+1.
+Usuário tenta realizar uma ação que requer autenticação, como adicionar ou excluir uma despesa, sem estar logado ou com um token expirado.
+2.
+Verificar se a solicitação ao back-end é feita sem um token de autenticação válido.
+3.
+Back-end responde com um erro de autenticação.
+4.
+Front-end recebe a resposta e exibe uma mensagem solicitando que o usuário faça login.
+•
+Validação:
+1.
+Nenhuma alteração deve ocorrer no banco de dados devido à falta de autenticação.
+2.
+O usuário deve ser informado sobre o problema de autenticação e possivelmente redirecionado para a tela de login.
+Teste de Integração 8: Persistência de Sessão do Usuário
+•
+Objetivo: Garantir que a sessão do usuário seja mantida após o login, permitindo a realização de ações subsequentes sem a necessidade de reautenticação.
+•
+Passos:
+1.
+Usuário faz login no aplicativo.
+2.
+Usuário navega para o dashboard e realiza várias ações que requerem autenticação.
+3.
+Verificar se todas as solicitações subsequentes ao back-end incluem o token de autenticação da sessão.
+4.
+Back-end valida o token e permite a ação.
+•
+Validação:
+1.
+As ações do usuário devem ser bem-sucedidas e os dados correspondentes atualizados no banco de dados.
+2.
+O usuário não deve ser solicitado a fazer login novamente durante a sessão ativa.
+Teste de Integração 9: Recuperação de Dados após Erro de Servidor
+•
+Objetivo: Verificar a resiliência do front-end quando ocorrem erros no back-end.
+•
+Passos:
+1.
+Ocorre um erro de servidor durante uma solicitação de dados (como uma falha temporária do banco de dados).
+2.
+O front-end exibe uma mensagem de erro e oferece uma opção para tentar novamente.
+3.
+O usuário seleciona para tentar novamente após o back-end estar operacional.
+4.
+Verificar se a nova solicitação recupera os dados com sucesso.
+•
+Validação:
+1.
+O aplicativo deve se recuperar do erro e exibir os dados corretos uma vez que a solicitação seja bem-sucedida.
+Teste de Integração 10:   Autenticação bem sucessedida via Tela de Login
+•
+Objetivo: Assegurar que o processo de login funcione corretamente, autenticando o usuário no backend e redirecionando para o dashboard quando as credenciais estão corretas.
+•
+Passos:
+1.
+O usuário abre a tela de login do aplicativo.
+2.
+O usuário insere um e-mail válido e a senha correspondente nos campos de entrada.
+3.
+O usuário clica no botão "Entrar".
+4.
+A solicitação de login é enviada ao backend, incluindo e-mail e senha.
+5.
+O backend valida as credenciais contra o banco de dados.
+6.
+Uma resposta é enviada do backend para o front-end: sucesso e token de autenticação se as credenciais estiverem corretas, ou uma mensagem de erro se estiverem incorretas.
+7.
+Se o login for bem-sucedido, o front-end redireciona o usuário para o dashboard.
+8.
+Se o login falhar, o front-end exibe uma mensagem de erro.
+•
+Validação:
+1.
+Em caso de credenciais válidas, o usuário deve ser autenticado e redirecionado para o dashboard.
+2.
+O token de autenticação recebido deve ser armazenado corretamente para uso em solicitações subsequentes.
+3.
+Em caso de falha de autenticação, o usuário deve permanecer na tela de login e receber uma mensagem de erro adequada, como "E-mail ou senha incorretos".
+4.
+Não deve haver alteração no estado de autenticação do usuário no aplicativo se o login falhar.
