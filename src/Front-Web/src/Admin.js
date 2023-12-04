@@ -25,8 +25,6 @@ export default function Admin() {
     }
   }, [response, error]);
 
-  const handleEditUser = (id) => {};
-
   const handleDeleteUser = (id) => {
     if (deleteItems.includes(id)) {
       axios.delete(`https://localhost:7162/api/User/${id}`, {
@@ -120,7 +118,6 @@ export default function Admin() {
                   <th>Nome</th>
                   <th>Email</th>
                   <th>Tipo Perfil</th>
-                  <th>Editar</th>
                   <th>Deletar</th>
                 </tr>
               </thead>
@@ -130,14 +127,6 @@ export default function Admin() {
                     <td>{user.nome}</td>
                     <td>{user.email}</td>
                     <td>{user.perfil}</td>
-                    <td>
-                      <button
-                        className={`edit-button admin-button`}
-                        onClick={() => handleEditUser(user.id)}
-                      >
-                        Editar
-                      </button>
-                    </td>
                     <td>
                       <button
                         className={`delete-button admin-button`}
