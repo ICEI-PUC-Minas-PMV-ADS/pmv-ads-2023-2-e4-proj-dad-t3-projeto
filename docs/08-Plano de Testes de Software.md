@@ -137,64 +137,33 @@ Realizar testes de integração utilizando o navegador e a aplicação mobile pa
 ## Função tela de dashboard
 
 ### Cenário 1: Verificar a exibição inicial do Dashboard
-- Dado que estou na tela de "Dashboard"
-- E não realizei nenhuma ação
-- Então o subtítulo "Acompanhe suas finanças" deve ser visível
-- E a mensagem "Nenhum dado foi encontrado" deve ser exibida
-- E o seletor de data deve estar presente para seleção do período desejado
+
+- Dado que estou na tela de "Dashboard" e não realizei nenhuma ação então o subtítulo "Acompanhe suas finanças" deve ser visível assim como os dados do mês atual.
 
 ### Cenário 2: Atualizar dados após mudança de data
-- Dado que estou na tela de "Dashboard"
-- Quando eu altero a data no seletor de data
-- Então uma solicitação deve ser enviada para atualizar os dados de faturamento com base no mês e ano selecionados
-- E os novos dados de faturamento devem ser exibidos na tela
+- Dado que estou na tela de "Dashboard" quando eu altero a data no seletor de data então uma solicitação deve ser enviada para atualizar os dados de faturamento com base no mês e ano selecionados e os novos dados de faturamento devem ser exibidos na tela.
 
 ### Cenário 3: Verificar a resposta para grandes volumes de dados
-- Dado que estou na tela de "Dashboard"
-- E o período selecionado contém um grande volume de dados de faturamento
-- Quando eu atualizo a tela
-- Então os dados de faturamento devem ser carregados e exibidos de forma eficiente sem prejudicar o desempenho do aplicativo
+- Dado que estou na tela de "Dashboard" e o período selecionado contém um grande volume de dados de faturamento, quando eu atualizo a tela, os dados de faturamento devem ser carregados e exibidos de forma eficiente sem prejudicar o desempenho do aplicativo.
 
 ### Cenário 4: Resposta da aplicação a uma mudança rápida de datas
-- Dado que estou na tela de "Dashboard"
-- Quando eu altero rapidamente a seleção de datas várias vezes
-- Então o aplicativo deve responder corretamente, atualizando os dados de faturamento para corresponder à última data selecionada
+- Dado que estou na tela de "Dashboard", quando eu altero rapidamente a seleção de datas várias vezes, então o aplicativo deve responder corretamente, atualizando os dados de faturamento para corresponder à última data selecionada.
 
 <br>
 
 ## Função tela de estoque e adição de produto no estoque
 
 ### Cenário 1: Adicionar um produto ao estoque
-- Dado que estou na tela de "Estoque"
-- E não há produtos listados
-- Quando eu pressiono o botão "Adicionar"
-- E preencho os campos "Nome do Produto", "Quantidade do Produto" e "Preço do Produto" com dados válidos
-- E pressiono o botão "Adicionar" no modal
-- Então o novo produto deve ser listado na tela com a quantidade e preço especificados
+- Dado que estou na tela de "Estoque" e não há produtos listados, quando eu pressiono o botão "Adicionar" e preencho os campos "Nome do Produto", "Quantidade do Produto" e "Preço do Produto" com dados válidos e pressiono o botão "Adicionar" no modal, então o novo produto deve ser listado na tela com a quantidade e preço especificados.
 
 ### Cenário 2: Tentativa de adicionar produto sem preencher todos os campos
-- Dado que estou na tela de "Estoque"
-- Quando eu pressiono o botão "Adicionar"
-- E preencho o campo "Nome do Produto" mas deixo "Quantidade do Produto" e "Preço do Produto" em branco
-- E pressiono o botão "Adicionar" no modal
-- Então uma mensagem de erro deve ser exibida solicitando que todos os campos sejam preenchidos
+- Dado que estou na tela de "Estoque", quando eu pressiono o botão "Adicionar" e preencho o campo "Nome do Produto" mas deixo "Quantidade do Produto" e "Preço do Produto" em branco e pressiono o botão "Adicionar" no modal, então uma mensagem de erro deve ser exibida solicitando que todos os campos sejam preenchidos.
 
 ### Cenário 3: Cancelar a adição de um novo produto
-- Dado que estou na tela de "Estoque"
-- Quando eu pressiono o botão "Adicionar"
-- E o modal de adicionar produto é exibido
-- E eu pressiono o botão de fechar (X) no modal
-- Então o modal deve ser fechado e nenhum novo produto deve ser adicionado ao estoque
+- Dado que estou na tela de "Estoque", quando eu pressiono o botão "Adicionar" e o modal de adicionar produto é exibido e eu pressiono o botão de fechar (X) no modal depois de ter preenchido todos os campos, então o modal deve ser fechado e nenhum novo produto deve ser adicionado ao estoque.
 
 ### Cenário 4: Atualizar a lista de produtos após adicionar um novo produto
-- Dado que estou na tela de "Estoque"
-- E já existem produtos listados
-- Quando eu adiciono um novo produto com dados válidos
-- E pressiono o botão "Adicionar" no modal
-- Então a lista de produtos deve ser atualizada com o novo produto adicionado
+- Dado que estou na tela de "Estoque" e já existem produtos listados, quando eu adiciono um novo produto com dados válidos e pressiono o botão "Adicionar" no modal, então a lista de produtos deve ser atualizada com o novo produto adicionado.
 
 ### Cenário 5: Verificar cálculo do valor total após adicionar produto
-- Dado que estou na tela de "Estoque"
-- Quando eu adiciono um novo produto com a quantidade e preço por unidade especificados
-- E pressiono o botão "Adicionar" no modal
-- Então o valor total do produto adicionado deve ser calculado e exibido corretamente baseado na quantidade e preço por unidade
+- Dado que estou na tela de "Estoque", quando eu adiciono um novo produto com a quantidade e preço por unidade especificados e pressiono o botão "Adicionar" no modal, então o valor total do produto adicionado deve ser calculado e exibido corretamente baseado na quantidade e preço por unidade.
