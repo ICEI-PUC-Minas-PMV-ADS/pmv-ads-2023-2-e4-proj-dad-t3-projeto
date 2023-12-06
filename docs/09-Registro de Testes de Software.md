@@ -144,3 +144,79 @@ Realizar testes de integração utilizando o Swagger para verificar o correto fu
 - Erick: "superei desafios na configuração inicial do Swagger, destacando sua habilidade em resolver problemas."
 - Mike: "refinei os testes de integração, investindo tempo na geração realista de dados para os testes de custo."
 - Leticia: "aprimorei os testes de atualização do estoque, garantindo a sincronização eficiente com o banco de dados."
+
+<br>
+
+# Testes de Integração
+
+## Objetivo
+
+Realizar testes de integração utilizando o navegador e a aplicação mobile para verificar o correto funcionamento da aplicação. Certifique-se de que a aplicação está funcionando da maneira correta para os usuários.
+
+## Resultados Obtidos dos Testes Realizados
+
+<br>
+
+## Função tela de dashboard
+
+### Cenário 1: Verificar a exibição inicial do Dashboard
+
+O teste foi realizado com sucesso tanto na Web quanto no Mobile.
+
+**Evidências:**
+
+![1-1 web](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/f162a2cb-79dc-473a-ad9d-ec601609c2fd)
+Tela Web
+
+![Captura de tela 2023-12-06 084201](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/a7a6552f-04f5-4c35-a67e-46e775066a57)
+
+Tela Mobile
+
+<br>
+
+### Cenário 2: Atualizar dados após mudança de data
+
+O teste foi realizado com sucesso tanto na Web quanto no Mobile.
+
+**Evidências:**
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/0988abfe-7aac-4a43-91a0-b7d2ae84e0d0
+
+Tela Web
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/f80948f8-f7cf-48d1-bfb6-b8b42d4de1d0
+
+Tela Mobile
+
+<br>
+
+### Cenário 3: Verificar a resposta para grandes volumes de dados
+
+O teste foi realizado com sucesso tanto na Web quanto no Mobile.
+
+**Evidências:**
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/4cfbd1db-e824-4e82-8951-93e1be3a143e
+
+Tela Web
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/10a00ccd-afba-460f-8704-f82e6ee82d40
+
+Tela Mobile
+
+<br>
+
+### Cenário 4: Resposta da aplicação a uma mudança rápida de datas
+
+O teste foi realizado com sucesso tanto na Web quanto no Mobile.
+
+**Evidências:**
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/3d5d881b-7dd7-4e8b-8b42-e008fd65f44c
+
+Tela Web
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/320020b4-6fcb-4bc0-bb4a-b3dc70a58d27
+
+Tela Mobile
+
