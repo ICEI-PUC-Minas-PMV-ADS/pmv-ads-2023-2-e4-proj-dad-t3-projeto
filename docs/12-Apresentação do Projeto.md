@@ -47,3 +47,12 @@ O grupo deve distribuir de forma coerente o conteúdo a ser apresentado, dentro 
 > - [A regra 10-20-30 para apresentações de sucesso](https://revistapegn.globo.com/Noticias/noticia/2014/07/regra-10-20-30-para-apresentacoes-de-sucesso.html)
 > - [Top Tips for Effective Presentations](https://www.skillsyouneed.com/present/presentation-tips.html)
 > - [How to make a great presentation](https://www.ted.com/playlists/574/how_to_make_a_great_presentation)
+ 
+<br>
+
+## Contribuições
+
+A contrinuiição de cada membro da equipe dentro do Github está demontrado na imagem abaixo:
+![GutHub Contributors](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/9e37d268-6c5d-4bf2-bd35-cd65f9fa7a1f)
+
+Todos os participantes tiveram uma participação ativa no grupo e nos encontro, dando opiniões na definição de detalhes do projeto e auxiliando outros membros em suas dúvidas e/ou dificuldades. Há casos ainda de proplema na hora do Push para um membro que foi resolvido com o envio dos códigos por outro membro da equipe.
