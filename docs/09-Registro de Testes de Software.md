@@ -220,3 +220,82 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/
 
 Tela Mobile
 
+<br>
+
+## Função tela de estoque e adição de produto no estoque
+
+### Cenário 1: Adicionar um produto ao estoque
+
+O teste foi realizado com sucesso tanto na Web quanto no Mobile.
+
+**Evidências:**
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/84dc0d71-a654-42f9-af59-25123e82718a
+
+Tela Web
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/23992843-a901-488b-9872-ed110c6daaeb
+
+Tela Mobile
+
+<br>
+
+### Cenário 2: Tentativa de adicionar produto sem preencher todos os campos
+
+O teste foi realizado com sucesso na versão Web. Na versão mobile, o produto era inserido mesmo quando todos os campos não eram preenchidos.
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/7548de79-966c-4eba-8d5f-b826d9929d90
+
+Tela Web
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/a97f8359-2f99-4d35-acb6-e4d99435c66a
+
+Tela Mobile
+
+<br>
+
+### Cenário 3: Cancelar a adição de um novo produto
+
+O teste foi realizado com sucesso tanto na Web quanto no Mobile.
+
+**Evidências:**
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/d2010e50-42f8-4264-87de-7fe48fdd1091
+
+Tela Web
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/cd61bd78-b601-4737-bf28-7722448042df
+
+Tela Mobile
+
+<br>
+
+### Cenário 4: Atualizar a lista de produtos após adicionar um novo produto
+
+O teste foi realizado com sucesso tanto na Web quanto no Mobile.
+
+**Evidências:**
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/66eab3d6-3e1d-4c83-bcad-4eee05dbd3b7
+
+Tela Web
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/c5505185-cd64-4718-aa25-24b596be0f9e
+
+Tela Mobile
+
+<br>
+
+### Cenário 5: Verificar cálculo do valor total após adicionar produto
+
+O teste foi realizado com sucesso tanto na Web quanto no Mobile.
+
+**Evidências:**
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/e135e562-5ee9-44b3-b89a-13aa235ab178
+
+Tela Web
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/assets/90225435/ff836ae8-2931-4425-be25-64810885f49f
+
+Tela Mobiel
