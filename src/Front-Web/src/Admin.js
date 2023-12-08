@@ -66,6 +66,9 @@ export default function Admin() {
           setModalOpen((prev) => !prev);
         }
       })
+      .then(() => {
+        window.location.reload();
+      })
       .catch((err) => {
         console.log(err);
       });
