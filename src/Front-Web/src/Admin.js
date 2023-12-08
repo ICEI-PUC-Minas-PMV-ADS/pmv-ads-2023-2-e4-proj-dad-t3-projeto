@@ -146,7 +146,9 @@ export default function Admin() {
           </div>
         </div>
       ) : (
-        <h3>Sem Permissão</h3>
+        <div className="main-admin">
+          <h3 style={{ color: 'wine' }}>Sem Permissão</h3>
+        </div>
       )}
     </>
   );

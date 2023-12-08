@@ -70,7 +70,7 @@ export default function RecursosHumanos() {
           reload={setReload}
           //passar os inputs que o modal terá - name precisa ser exatamente que nem o nome da propriedade do objeto
           inputs={[
-            { name: 'nome', label: 'Nome do Funcionário', type: 'text' },
+            { name: 'nome', label: 'Nome do Funcionário', type: 'default' },
             {
               name: 'cargo',
               label: 'Cargo',

@@ -96,7 +96,7 @@ const FaturamentoChart = ({
       <div className="circle-container">
         <h3>{titleCircle}</h3>
         <div className="circle" style={{ border: `14px solid ${colorBorder}` }}>
-          <h1>{totalValue}</h1>
+          <h1>{totalValue.toLocaleString('pt-BR')}</h1>
         </div>
       </div>
     </div>
