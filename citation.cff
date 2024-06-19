@@ -1,0 +1,29 @@
+message: Please cite this software using these metadata.
+title: Gerenciar
+authors:
+  - family-names: Dutra Berton
+    given-names: Alex Vinicius  
+  - family-names: Ramos da Silva
+    given-names:  Eduardo
+  - family-names: Machado Reis
+    given-names: Erick   
+  - family-names: Maia Torres Alves
+    given-names: Fernando 
+  - family-names: Possidonio Da Silva
+    given-names: Jhody Mike    
+  - family-names: Teodoro Campos
+    given-names: Leticia Isabela  
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Vilela Cardoso
+    given-names: Leonardo 
+keywords:
+  - Gestão
+  - Financeiro
+  - Contábil 
+  - Despesas
+  - Estoque
+  - Recursos Humanos
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-dad-t3-projeto/tree/main
+version: 1.0.0
+date-released: 2023-12-10
